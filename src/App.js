@@ -114,7 +114,7 @@ function App() {
     <div className="App">
       <header className="app-header">
         <h1>NBA Scorigami</h1>
-        <p className="subtitle">asdasd every unique score combination in NBA history</p>
+        <p className="subtitle">Visualizing every unique score combination in NBA history</p>
       </header>
 
       <div className="info-box">
