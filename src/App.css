@@ -1,38 +1,402 @@
 .App {
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header h1 {
+  font-size: 2.5rem;
+  color: #1d428a;
+  margin-bottom: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 0;
+}
+
+.controls {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.control-group {
+  margin: 0 15px;
+}
+
+.control-group label {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.control-group select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.info-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid #1d428a;
+  padding: 15px;
+  margin-bottom: 30px;
+  text-align: left;
+  border-radius: 0 4px 4px 0;
+}
+
+.info-box h3 {
+  margin-top: 0;
+  color: #1d428a;
+}
+
+.green-text {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.white-text {
+  color: #333;
+  font-weight: bold;
+}
+
+.black-text {
+  color: #000;
+  font-weight: bold;
+}
+
+.score-grid {
+  display: inline-block;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-row {
+  display: flex;
+}
+
+.grid-cell {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #eee;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 0.7rem;
+}
+
+.grid-cell:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.header-cell {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  cursor: default;
+}
+
+.corner-cell {
+  background-color: #1d428a;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.green {
+  background-color: #4caf50;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.white {
+  background-color: white;
+}
+
+.black, .disabled {
+  background-color: #333;
+  cursor: not-allowed;
+}
+
+.score-details {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.score-details h3 {
+  margin-top: 0;
+  color: #1d428a;
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.games-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.game-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+}
+
+.game-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.game-teams {
+  font-size: 1.1rem;
+}
+
+.winner {
+  font-weight: bold;
+  color: #1d428a;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 50px 0;
+}
+
+.about-author {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.author-card {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 25px;
+  gap: 30px;
+  align-items: center;
+}
+
+.author-image-container {
+  flex: 0 0 180px;
+}
+
+.author-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.author-content {
+  flex: 1;
+}
+
+.author-name {
+  color: #1d428a;
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.author-bio {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0077b5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.linkedin-button:hover {
+  background: #006097;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+@media (max-width: 768px) {
+  .author-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .author-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .linkedin-button {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cell {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .control-group {
+    margin: 5px 0;
+  }
+
+  .update-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .error {
+    color: #d32f2f;
+    padding: 20px;
+    background-color: #ffebee;
+    border-radius: 4px;
+    margin: 20px;
+  }
+  
+  .game-card .winner {
+    font-weight: bold;
+    color: #1d428a;
+  }
+.grid-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px 0;
+  background: #f8f8f8;
+}
+
+.grid-wrapper {
+  display: inline-block;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.grid-row {
+  display: flex;
+  line-height: 0;
+}
+
+.grid-corner, 
+.grid-header, 
+.grid-header-empty {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  background: #f5f5f5;
+}
+
+.grid-header-empty {
+  background: transparent;
+}
+
+.grid-cell {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.grid-cell:hover {
+  transform: scale(1.5);
+  z-index: 1;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.green {
+  background: #4CAF50;
+}
+
+.white {
+  background: white;
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.black {
+  background: #222;
+}
+
+.black {
+  width: 8px; 
+  height: 8px;
+}
+
+.disabled {
+  cursor: not-allowed;
+}  
+  @media (max-width: 600px) {
+    .grid-cell {
+      width: 12px;
+      height: 12px;
+    }
+    
+    .header-cell {
+      font-size: 0.6rem;
+    }
   }
 }
