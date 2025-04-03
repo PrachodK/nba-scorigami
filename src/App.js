@@ -30,7 +30,7 @@ function App() {
           });
         });
         
-        setTeams(['All Franchises', ...Array.from(allTeams).sort()]);
+        setTeams(['All teams', ...Array.from(allTeams).sort()]);
         setScorigamiData(data);
         setFilteredData(data);
         setLoading(false);
@@ -92,10 +92,39 @@ function App() {
     }
   };
 
+  // Calculate the shade of green based on score differential
+  const getGreenShade = (winningScore, losingScore) => {
+    // Calculate score differential
+    const differential = winningScore - losingScore;
+    
+    // Map differential to a color intensity (darker for closer games)
+    // Max differential for color scaling (adjust as needed)
+    const maxDiff = 50;
+    
+    // Calculate intensity (0-100) where 0 is closest game and 100 is max differential
+    const intensity = Math.min(100, (differential / maxDiff) * 100);
+    
+    // Reverse for our needs - closer games (lower intensity) get darker green
+    const darknessValue = 100 - intensity;
+    
+    // Create a color between light green and dark green
+    // Dark green: rgb(0, 100, 0)
+    // Light green: rgb(144, 238, 144)
+    
+    // Linear interpolation between dark and light green
+    const r = Math.round(0 + (darknessValue / 100) * (144 - 0));
+    const g = Math.round(100 + (darknessValue / 100) * (238 - 100));
+    const b = Math.round(0 + (darknessValue / 100) * (144 - 0));
+    
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+
   const getCellColor = (score, winningScore, losingScore) => {
     if (disableLowerScores && winningScore <= losingScore) return 'black';
     if (!score.occurred) return 'white';
-    return 'green';
+    
+    // Return the gradient green shade based on score differential
+    return getGreenShade(winningScore, losingScore);
   };
 
   const handleYearChange = (index, value) => {
@@ -144,21 +173,36 @@ function App() {
           s.winning_score === ws && s.losing_score === ls
         );
         
-        const cellColor = score ? 
-          getCellColor(score, ws, ls) : 
-          (disableLowerScores && ws <= ls ? 'black' : 'white');
         const isDisabled = disableLowerScores && ws <= ls;
+        let cellStyle = {};
+        
+        if (score && score.occurred && !isDisabled) {
+          // Use inline style with our gradient color
+          cellStyle = {
+            backgroundColor: getCellColor(score, ws, ls)
+          };
+        } else {
+          // Use class-based style for white or black cells
+          cellStyle = {};
+        }
 
         const tooltip = score && score.occurred ? (
           <div className="cell-tooltip">
             <div>{ws}-{ls}: {score.games.length} game{score.games.length !== 1 ? 's' : ''}</div>
+            <div>Margin: {ws - ls} points</div>
             <span className="tooltip-action">Click to see games</span>
           </div>
         ) : null;
+        
+        const cellClass = score && score.occurred && !isDisabled ? 
+                          'grid-cell' : 
+                          `grid-cell ${isDisabled ? 'black' : 'white'}`;
+        
         rowCells.push(
           <div
             key={`${ws}-${ls}`}
-            className={`grid-cell ${cellColor}`}
+            className={cellClass}
+            style={cellStyle}
             onClick={() => !isDisabled && score && score.occurred && handleScoreClick(score)}
             title=""
           >
@@ -197,6 +241,32 @@ function App() {
     return filteredData.scores.filter(score => score.occurred).length;
   };
 
+  // Render legend for color gradient
+  const renderColorLegend = () => {
+    return (
+      <div className="color-legend" style={{ 
+        marginTop: '20px', 
+        textAlign: 'center',
+        marginBottom: '20px' // Add this line for space after the legend
+      }}>
+        <div style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          gap: '10px',
+          padding: '10px 0' // Optional: adds padding inside the legend container
+        }}>
+          <div style={{ width: '20px', height: '20px', backgroundColor: getGreenShade(100, 99) }}></div>
+          <span>Close Game (1 pt)</span>
+          <div style={{ width: '20px', height: '20px', backgroundColor: getGreenShade(100, 80) }}></div>
+          <span>Medium Margin (20 pts)</span>
+          <div style={{ width: '20px', height: '20px', backgroundColor: getGreenShade(150, 80) }}></div>
+          <span>Blowout (70+ pts)</span>
+        </div>
+      </div>
+    );
+  };
+
   if (loading) return <div className="loading">Loading NBA score data...</div>;
   if (error) return <div className="error">Error: {error}</div>;
 
@@ -212,7 +282,7 @@ function App() {
         <p>
           This grid shows every possible final score combination in NBA history. The winning team's score runs along the top (x-axis), 
           while the losing team's score runs down the side (y-axis). Each square represents a specific score combination - 
-          <span className="green-text"> green squares</span> show scores that have happened, 
+          <span className="green-text"> green squares</span> show scores that have happened (with darker green showing closer games), 
           <span className="white-text"> white squares</span> show possible but unrecorded scores, and 
           {<span className="black-text"> black squares</span>} (when toggled) show impossible combinations where the "winning" 
           score would actually be less than or equal to the "losing" score. 
@@ -224,63 +294,59 @@ function App() {
       </div>
 
       <div className="controls">
-        <div className="control-group">
-          <table style={{ width: '100%', marginBottom: '20px' }}>
-            <tbody>
-              <tr>
-                <td style={{ textAlign: 'right', width: '50%', paddingRight: '10px' }}>Years:</td>
-                <td style={{ textAlign: 'left', width: '50%', paddingLeft: '10px' }}>
-                  <select 
-                    value={yearRange[0]} 
-                    onChange={(e) => handleYearChange(0, e.target.value)}
-                  >
-                    {Array.from({ length: 2025 - 1946 + 1 }, (_, i) => 1946 + i).map(year => (
-                      <option key={year} value={year}>{year}</option>
-                    ))}
-                  </select>
-                  {' - '}
-                  <select 
-                    value={yearRange[1]} 
-                    onChange={(e) => handleYearChange(1, e.target.value)}
-                  >
-                    {Array.from({ length: 2025 - 1946 + 1 }, (_, i) => 1946 + i).map(year => (
-                      <option key={year} value={year}>{year}</option>
-                    ))}
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td style={{ textAlign: 'right', paddingRight: '10px' }}>Team:</td>
-                <td style={{ textAlign: 'left', paddingLeft: '10px' }}>
-                  <select 
-                    value={selectedTeam} 
-                    onChange={(e) => setSelectedTeam(e.target.value)}
-                    style={{ width: '200px' }}
-                  >
-                    {teams.map(team => (
-                      <option key={team} value={team}>{team}</option>
-                    ))}
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td colSpan="2" style={{ textAlign: 'center', padding: '10px 0' }}>
-                  Showing {getUniqueScoresCount()} unique scores from {getMatchesCount()} games
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <label>
-            <input 
-              type="checkbox" 
-              checked={disableLowerScores} 
-              onChange={() => setDisableLowerScores(!disableLowerScores)}
-            />
-            Disable lower scores
-          </label>
-        </div>
-      </div>
+  <div className="control-group" style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+      <label>Years:</label>
+      <select 
+        value={yearRange[0]} 
+        onChange={(e) => handleYearChange(0, e.target.value)}
+      >
+        {Array.from({ length: 2025 - 1946 + 1 }, (_, i) => 1946 + i).map(year => (
+          <option key={year} value={year}>{year}</option>
+        ))}
+      </select>
+      {' - '}
+      <select 
+        value={yearRange[1]} 
+        onChange={(e) => handleYearChange(1, e.target.value)}
+      >
+        {Array.from({ length: 2025 - 1946 + 1 }, (_, i) => 1946 + i).map(year => (
+          <option key={year} value={year}>{year}</option>
+        ))}
+      </select>
+    </div>
+    
+    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+      <label>Team:</label>
+      <select 
+        value={selectedTeam} 
+        onChange={(e) => setSelectedTeam(e.target.value)}
+        style={{ width: '200px' }}
+      >
+        {teams.map(team => (
+          <option key={team} value={team}>{team}</option>
+        ))}
+      </select>
+    </div>
+    
+    <div>
+      <label style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+        <input 
+          type="checkbox" 
+          checked={disableLowerScores} 
+          onChange={() => setDisableLowerScores(!disableLowerScores)}
+        />
+        Disable lower scores
+      </label>
+    </div>
+  </div>
+  
+  <div style={{ textAlign: 'center', padding: '10px 0' }}>
+    Showing {getUniqueScoresCount()} unique scores from {getMatchesCount()} games
+  </div>
+</div>
 
+      {renderColorLegend()}
       {renderScoreGrid()}
       
       {/* Modal Dialog */}
@@ -288,7 +354,7 @@ function App() {
         <div className="modal-overlay" onClick={handleModalBackgroundClick}>
           <div className="modal-content">
             <div className="modal-header">
-              <h2>Games with score: {selectedScore.winning_score}-{selectedScore.losing_score}</h2>
+              <h2>Games with score: {selectedScore.winning_score}-{selectedScore.losing_score} (Margin: {selectedScore.winning_score - selectedScore.losing_score})</h2>
               <button className="modal-close-btn" onClick={closeModal}>×</button>
             </div>
             <div className="modal-body">

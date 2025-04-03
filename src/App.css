@@ -312,7 +312,7 @@
   .grid-scroll-container {
     width: 100%;
     display: flex;
-    justify-content: center; 
+    justify-content: center; /* Centers grid horizontally */
     padding: 10px 0;
     background: #f8f8f8;
   }
@@ -466,6 +466,7 @@
   max-height: calc(80vh - 70px);
 }
 
+/* Style the game cards in the modal */
 .modal-body .games-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

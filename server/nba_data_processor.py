@@ -2,30 +2,33 @@ import pandas as pd
 import json
 from datetime import datetime
 import os
+import sys
 from tqdm import tqdm
 
-def download_kaggle_dataset():
-    """Download only Games.csv from Kaggle"""
-    try:
-        from kaggle.api.kaggle_api_extended import KaggleApi
-        api = KaggleApi()
-        api.authenticate()
-        api.dataset_download_file(
-            'eoinamoore/historical-nba-data-and-player-box-scores',
-            file_name='Games.csv',
-            path='./data'
-        )
-        print("Games.csv downloaded")
-    except Exception as e:
-        print(f"Download failed: {e}")
-        raise
+# Get paths from command line arguments
+if len(sys.argv) > 1:
+    output_path = sys.argv[1]
+    csv_path = sys.argv[2] if len(sys.argv) > 2 else 'server/data/Games.csv'
+else:
+    # Fallback to absolute paths
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_path = os.path.normpath(os.path.join(script_dir, '../../public/nba_scorigami.json'))
+    csv_path = os.path.normpath(os.path.join(script_dir, '../../server/data/Games.csv'))
 
-def process_data():
+# Debugging output
+print(f"Reading CSV from: {csv_path}")
+print(f"Writing JSON to: {output_path}")
+
+# Ensure directories exist
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+os.makedirs(os.path.dirname(csv_path), exist_ok=True)
+
+def process_data(csv_path, output_path):
     """Process Games.csv into Scorigami format"""
     try:
         cols = ['gameDate', 'hometeamName', 'awayteamName', 'homeScore', 'awayScore']
         games = pd.read_csv(
-            './data/Games.csv',
+            csv_path,
             usecols=cols,
             parse_dates=['gameDate'],
             low_memory=False
@@ -110,10 +113,10 @@ def process_data():
         }
         
         os.makedirs('./public', exist_ok=True)
-        with open('../public/nba_scorigami.json', 'w') as f:
+        with open(output_path, 'w') as f:
             json.dump(output, f, indent=2)
             
-        print(f"Success! Saved {len(full_scorigami)} score combinations")
+        print(f"Success! Saved to {output_path}")
         return True
         
     except Exception as e:
@@ -121,5 +124,4 @@ def process_data():
         return False
 
 if __name__ == '__main__':
-    download_kaggle_dataset()
-    process_data()
+    process_data(csv_path, output_path)
