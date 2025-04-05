@@ -7,17 +7,17 @@ from tqdm import tqdm
 
 if len(sys.argv) > 1:
     output_path = sys.argv[1]
-    csv_path = sys.argv[2] if len(sys.argv) > 2 else 'server/data/Games.csv'
+    csv_path = sys.argv[2] if len(sys.argv) > 2 else 'public/Games.csv'
 else:
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_path = os.path.normpath(os.path.join(script_dir, '../../public/nba_scorigami.json'))
-    csv_path = os.path.normpath(os.path.join(script_dir, '../../server/data/Games.csv'))
+    public_dir = os.path.normpath(os.path.join(script_dir, '../../public'))
+    output_path = os.path.join(public_dir, 'nba_scorigami.json')
+    csv_path = os.path.join(public_dir, 'Games.csv')
 
 print(f"Reading CSV from: {csv_path}")
 print(f"Writing JSON to: {output_path}")
 
 os.makedirs(os.path.dirname(output_path), exist_ok=True)
-os.makedirs(os.path.dirname(csv_path), exist_ok=True)
 
 def process_data(csv_path, output_path):
     """Process Games.csv into Scorigami format"""
@@ -108,7 +108,6 @@ def process_data(csv_path, output_path):
             'scores': full_scorigami
         }
         
-        os.makedirs('./public', exist_ok=True)
         with open(output_path, 'w') as f:
             json.dump(output, f, indent=2)
             

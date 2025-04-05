@@ -2,9 +2,8 @@
 cd /d "C:\Users\ltbig\nba-scorigami"
 
 REM === Cleanup previous files ===
-if exist "data\" rmdir /s /q "data"
-if exist "server\data\Games.csv" del "server\data\Games.csv"
 if exist "Games.csv" del "Games.csv"
+if exist "public\Games.csv" del "public\Games.csv"
 
 REM === Download CSV ===
 echo Downloading latest Games.csv...
@@ -14,18 +13,18 @@ if not exist "Games.csv" (
     exit /b 1
 )
 
-REM === Move to correct location ===
-move /y "Games.csv" "server\data\Games.csv" > nul
-if not exist "server\data\Games.csv" (
+REM === Move to public folder ===
+move /y "Games.csv" "public\Games.csv" > nul
+if not exist "public\Games.csv" (
     echo ERROR: Failed to move CSV file
     exit /b 1
 )
 
 REM === Process data ===
 echo Updating nba_scorigami.json...
-python "server\nba_data_processor.py" "C:\Users\ltbig\nba-scorigami\public\nba_scorigami.json" "C:\Users\ltbig\nba-scorigami\server\data\Games.csv"
+python "server\nba_data_processor.py"
 
-REM === Verify success ===
+REM === Verify ===
 if errorlevel 0 (
     if exist "public\nba_scorigami.json" (
         echo Update successful!

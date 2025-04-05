@@ -5,6 +5,7 @@ import basketballIcon from '../images/basketball.png';
 
 const ScorigamiGuesser = ({ scorigamiData }) => {
   const [upcomingGames, setUpcomingGames] = useState([]);
+  const [playedGames, setPlayedGames] = useState([]);
   const [showGuesser, setShowGuesser] = useState(false);
   const [guessScores, setGuessScores] = useState({});
   const [submitted, setSubmitted] = useState({});
@@ -46,6 +47,13 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
         const savedSubmitted = localStorage.getItem('scorigamiSubmitted');
         if (savedSubmitted) setSubmitted(JSON.parse(savedSubmitted));
       });
+
+    fetch('/Games.csv')
+      .then(res => res.text())
+      .then(csv => {
+        const parsed = Papa.parse(csv, { header: true });
+        setPlayedGames(parsed.data);
+      });
   }, []);
 
   const getNextRelevantDate = (games) => {
@@ -82,12 +90,25 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
     localStorage.setItem('scorigamiSubmitted', JSON.stringify({ ...submitted, [id]: true }));
   };
 
-  const isScorigamiPotential = (ws, ls) => {
-    return !scorigamiData?.scores?.some(s => s.winning_score === ws && s.losing_score === ls);
-  };
+  const checkActualResult = (guessId, t1, t2) => {
+    const idParts = guessId.split('_');
+    const visitor = idParts[1];
+    const home = idParts[3];
 
-  const isCorrectGuess = (ws, ls) => {
-    return scorigamiData?.scores?.some(s => s.winning_score === ws && s.losing_score === ls);
+    const result = playedGames.find(game => {
+      return (
+        game.hometeamName === home &&
+        game.awayteamName === visitor
+      );
+    });
+
+    if (!result) return '⏳ Awaiting result';
+
+    const actualHome = parseInt(result.homeScore);
+    const actualAway = parseInt(result.awayScore);
+
+    if (actualHome === t2 && actualAway === t1) return '✅ Correct!';
+    return '❌ Wrong';
   };
 
   return (
@@ -109,7 +130,7 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
                 filteredGames.length === 0 ? <p>No games left today or tomorrow.</p> : (
                   filteredGames.map((game, idx) => {
                     const [t1, t2] = guessScores[game.id] || ['', ''];
-                    const potential = (t1 > t2) && isScorigamiPotential(t1, t2);
+                    const potential = (t1 > t2) && scorigamiData && !scorigamiData.scores.some(s => s.winning_score === t1 && s.losing_score === t2);
                     const showBall = submitted[game.id];
 
                     return (
@@ -129,7 +150,7 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
                         <button className="submit-btn" onClick={() => handleSubmit(game.id)}>
                           Submit
                         </button>
-                        {showBall && <img src={basketballIcon} alt="basketball" className="basketball-icon bounce" />}
+                        {showBall && <img src={basketballIcon} alt="" className="basketball-icon bounce" />}
                         {potential && <div className="scorigami-tag">🔥 Possible Scorigami!</div>}
                       </div>
                     );
@@ -144,7 +165,7 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
                       <div className="game-teams">
                         {id.replace(/\d+_/, '').replaceAll('_at_', ' @ ')} → {ws}-{ls}
                         {submitted[id] && <span className="submitted"> (submitted)</span>}
-                        {isCorrectGuess(ws, ls) && <span className="correct"> ✅ Correct!</span>}
+                        <span className="correct"> {checkActualResult(id, ws, ls)}</span>
                       </div>
                     </div>
                   ))
