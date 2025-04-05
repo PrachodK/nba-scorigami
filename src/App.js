@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import ScorigamiGuesser from './components/ScorigamiGuesser';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [scorigamiData, setScorigamiData] = useState(null);
@@ -391,7 +392,7 @@ function App() {
         </div>
       </div>
       <ScorigamiGuesser scorigamiData={scorigamiData} />
-
+      <Analytics />
     </div>
   );
 }
