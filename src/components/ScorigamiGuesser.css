@@ -1,0 +1,102 @@
+.guesser-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #1d428a;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    z-index: 999;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .guesser-tabs {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    background: #fafafa;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .guesser-tabs button {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .guesser-tabs button.active {
+    border-bottom: 2px solid #1d428a;
+    font-weight: bold;
+    color: #1d428a;
+  }
+  
+  .score-input {
+    width: 60px;
+    padding: 6px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .scorigami-tag {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #d84315;
+    font-weight: bold;
+  }
+  .potential {
+    border-left: 4px solid #d84315;
+    background: #fff3e0;
+  }
+
+  
+.submit-btn {
+    margin-top: 8px;
+    background-color: #1d428a;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #003366;
+  }
+  
+  .basketball-icon {
+    width: 22px;
+    height: 22px;
+    margin-top: 5px;
+  }
+  
+  .bounce {
+    animation: bounce 0.9s ease infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+  }
+  
+  .submitted {
+    color: #1d428a;
+    font-weight: 600;
+    margin-left: 5px;
+  }
+  
+  .correct {
+    color: green;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  

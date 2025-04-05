@@ -5,21 +5,17 @@ import os
 import sys
 from tqdm import tqdm
 
-# Get paths from command line arguments
 if len(sys.argv) > 1:
     output_path = sys.argv[1]
     csv_path = sys.argv[2] if len(sys.argv) > 2 else 'server/data/Games.csv'
 else:
-    # Fallback to absolute paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
     output_path = os.path.normpath(os.path.join(script_dir, '../../public/nba_scorigami.json'))
     csv_path = os.path.normpath(os.path.join(script_dir, '../../server/data/Games.csv'))
 
-# Debugging output
 print(f"Reading CSV from: {csv_path}")
 print(f"Writing JSON to: {output_path}")
 
-# Ensure directories exist
 os.makedirs(os.path.dirname(output_path), exist_ok=True)
 os.makedirs(os.path.dirname(csv_path), exist_ok=True)
 

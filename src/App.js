@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import ScorigamiGuesser from './components/ScorigamiGuesser';
 
 function App() {
   const [scorigamiData, setScorigamiData] = useState(null);
   const [selectedScore, setSelectedScore] = useState(null);
-  const [maxScore, setMaxScore] = useState(180); 
+  const [maxScore] = useState(180); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [disableLowerScores, setDisableLowerScores] = useState(false);
@@ -14,6 +15,7 @@ function App() {
   const [teams, setTeams] = useState([]);
   const [filteredData, setFilteredData] = useState(null);
   const [showModal, setShowModal] = useState(false);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -92,26 +94,11 @@ function App() {
     }
   };
 
-  // Calculate the shade of green based on score differential
   const getGreenShade = (winningScore, losingScore) => {
-    // Calculate score differential
     const differential = winningScore - losingScore;
-    
-    // Map differential to a color intensity (darker for closer games)
-    // Max differential for color scaling (adjust as needed)
     const maxDiff = 50;
-    
-    // Calculate intensity (0-100) where 0 is closest game and 100 is max differential
     const intensity = Math.min(100, (differential / maxDiff) * 100);
-    
-    // Reverse for our needs - closer games (lower intensity) get darker green
     const darknessValue = 100 - intensity;
-    
-    // Create a color between light green and dark green
-    // Dark green: rgb(0, 100, 0)
-    // Light green: rgb(144, 238, 144)
-    
-    // Linear interpolation between dark and light green
     const r = Math.round(0 + (darknessValue / 100) * (144 - 0));
     const g = Math.round(100 + (darknessValue / 100) * (238 - 100));
     const b = Math.round(0 + (darknessValue / 100) * (144 - 0));
@@ -123,7 +110,6 @@ function App() {
     if (disableLowerScores && winningScore <= losingScore) return 'black';
     if (!score.occurred) return 'white';
     
-    // Return the gradient green shade based on score differential
     return getGreenShade(winningScore, losingScore);
   };
 
@@ -177,12 +163,10 @@ function App() {
         let cellStyle = {};
         
         if (score && score.occurred && !isDisabled) {
-          // Use inline style with our gradient color
           cellStyle = {
             backgroundColor: getCellColor(score, ws, ls)
           };
         } else {
-          // Use class-based style for white or black cells
           cellStyle = {};
         }
 
@@ -241,27 +225,26 @@ function App() {
     return filteredData.scores.filter(score => score.occurred).length;
   };
 
-  // Render legend for color gradient
   const renderColorLegend = () => {
     return (
       <div className="color-legend" style={{ 
         marginTop: '20px', 
         textAlign: 'center',
-        marginBottom: '20px' // Add this line for space after the legend
+        marginBottom: '20px' 
       }}>
         <div style={{ 
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: 'center', 
           gap: '10px',
-          padding: '10px 0' // Optional: adds padding inside the legend container
+          padding: '10px 0'
         }}>
           <div style={{ width: '20px', height: '20px', backgroundColor: getGreenShade(100, 99) }}></div>
-          <span>Close Game (1 pt)</span>
+          <span>Close Game</span>
           <div style={{ width: '20px', height: '20px', backgroundColor: getGreenShade(100, 80) }}></div>
-          <span>Medium Margin (20 pts)</span>
+          <span>Medium Margin</span>
           <div style={{ width: '20px', height: '20px', backgroundColor: getGreenShade(150, 80) }}></div>
-          <span>Blowout (70+ pts)</span>
+          <span>Blowout</span>
         </div>
       </div>
     );
@@ -386,7 +369,7 @@ function App() {
           <div className="author-image-container">
             <img 
               src="images/PrachodHeadshot.JPG" 
-              alt="Your Photo" 
+              alt="Prachod's Headshot" 
               className="author-image"
             />
           </div>
@@ -407,6 +390,8 @@ function App() {
           </div>
         </div>
       </div>
+      <ScorigamiGuesser scorigamiData={scorigamiData} />
+
     </div>
   );
 }
