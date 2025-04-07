@@ -2,7 +2,7 @@
 
 NBA Scorigami Guesser is an interactive web app that lets basketball fans predict final score combinations for upcoming NBA games and explore every unique final score ("Scorigami") in league history.
 
-🔮 Features
+## 🔮 Features
 
 🗓 View upcoming NBA games and enter score predictions
 
@@ -14,7 +14,7 @@ NBA Scorigami Guesser is an interactive web app that lets basketball fans predic
 
 🏀 Local history tracking with animations and visual feedback
 
-🚀 Built With
+## 🚀 Built With
 
 React (Create React App)
 
