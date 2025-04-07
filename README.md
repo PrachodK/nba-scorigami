@@ -24,6 +24,6 @@ Python (data preprocessing script)
 
 Vercel (for deployment and analytics)
 
-📦 Getting Started
+## 📦 Getting Started
 
 Clone the repo, install dependencies with npm install, and run the development server using npm start. Data updates and predictions are handled via CSVs that can be updated daily.
