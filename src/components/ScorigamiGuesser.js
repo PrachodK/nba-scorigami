@@ -92,24 +92,27 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
 
   const checkActualResult = (guessId, t1, t2) => {
     const idParts = guessId.split('_');
-    const visitor = idParts[1];
-    const home = idParts[3];
-
+    const visitorTeam = idParts[1]; 
+    const homeTeam = idParts[3];  
+  
     const result = playedGames.find(game => {
+      const homeFull = `${game.hometeamCity} ${game.hometeamName}`.toLowerCase().trim();
+      const awayFull = `${game.awayteamCity} ${game.awayteamName}`.toLowerCase().trim();
       return (
-        game.hometeamName === home &&
-        game.awayteamName === visitor
+        homeFull.includes(homeTeam.toLowerCase().trim()) &&
+        awayFull.includes(visitorTeam.toLowerCase().trim())
       );
     });
-
-    if (!result) return '⏳ Awaiting result';
-
+  
+    if (!result) return `⏳ Awaiting result`;
+  
     const actualHome = parseInt(result.homeScore);
     const actualAway = parseInt(result.awayScore);
-
+  
     if (actualHome === t2 && actualAway === t1) return '✅ Correct!';
     return '❌ Wrong';
   };
+  
 
   return (
     <>
