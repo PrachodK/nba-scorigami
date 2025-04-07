@@ -90,21 +90,47 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
     localStorage.setItem('scorigamiSubmitted', JSON.stringify({ ...submitted, [id]: true }));
   };
 
-  const checkActualResult = (guessId, t1, t2) => {
-    const idParts = guessId.split('_');
-    const visitorTeam = idParts[1]; 
-    const homeTeam = idParts[3];  
+  const checkActualResult = (game, t1, t2) => {
+    if (!game || !game.team1 || !game.team2) {
+      return '⏳ Awaiting result (invalid guess data)';
+    }
   
-    const result = playedGames.find(game => {
-      const homeFull = `${game.hometeamCity} ${game.hometeamName}`.toLowerCase().trim();
-      const awayFull = `${game.awayteamCity} ${game.awayteamName}`.toLowerCase().trim();
-      return (
-        homeFull.includes(homeTeam.toLowerCase().trim()) &&
-        awayFull.includes(visitorTeam.toLowerCase().trim())
-      );
+    const visitorTeam = game.team1;
+    const homeTeam = game.team2;
+    const guessDate = game.date ? new Date(game.date) : null;
+  
+    const result = playedGames.find(g => {
+      const homeCity = g.hometeamCity || '';
+      const homeName = g.hometeamName || '';
+      const awayCity = g.awayteamCity || '';
+      const awayName = g.awayteamName || '';
+  
+      const homeFull = `${homeCity} ${homeName}`.toLowerCase().trim();
+      const awayFull = `${awayCity} ${awayName}`.toLowerCase().trim();
+  
+      const safeHomeTeam = homeTeam.toLowerCase().trim();
+      const safeVisitorTeam = visitorTeam.toLowerCase().trim();
+  
+      const teamMatch =
+        homeFull.includes(safeHomeTeam) && awayFull.includes(safeVisitorTeam);
+  
+      const gameDate = new Date(g.gameDate);
+      const dateMatch = guessDate
+        ? Math.abs(gameDate.getTime() - guessDate.getTime()) < 1000 * 60 * 60 * 12
+        : true;
+  
+      return teamMatch && dateMatch;
     });
   
     if (!result) return `⏳ Awaiting result`;
+  
+    const gameTime = new Date(result.gameDate);
+    const now = new Date();
+    const bufferMs = 3 * 60 * 60 * 1000;
+  
+    if (now < new Date(gameTime.getTime() + bufferMs)) {
+      return `⏳ Awaiting result`;
+    }
   
     const actualHome = parseInt(result.homeScore);
     const actualAway = parseInt(result.awayScore);
@@ -112,6 +138,8 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
     if (actualHome === t2 && actualAway === t1) return '✅ Correct!';
     return '❌ Wrong';
   };
+  
+  
   
 
   return (
@@ -163,15 +191,25 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
                 Object.keys(guessScores).length === 0 ? (
                   <p>No guesses made yet.</p>
                 ) : (
-                  Object.entries(guessScores).map(([id, [ws, ls]]) => (
-                    <div key={id} className="game-card">
-                      <div className="game-teams">
-                        {id.replace(/\d+_/, '').replaceAll('_at_', ' @ ')} → {ws}-{ls}
-                        {submitted[id] && <span className="submitted"> (submitted)</span>}
-                        <span className="correct"> {checkActualResult(id, ws, ls)}</span>
+                  Object.entries(guessScores).map(([id, [ws, ls]]) => {
+                    const game = upcomingGames.find(g => g.id === id) || {
+                      id,
+                      team1: id.split('_')[1],
+                      team2: id.split('_')[3],
+                      date: null,
+                    };
+                  
+                    return (
+                      <div key={id} className="game-card">
+                        <div className="game-teams">
+                          {id.replace(/\d+_/, '').replaceAll('_at_', ' @ ')} → {ws}-{ls}
+                          {submitted[id] && <span className="submitted"> (submitted)</span>}
+                          <span className="correct"> {checkActualResult(game, ws, ls)}</span>
+                        </div>
                       </div>
-                    </div>
-                  ))
+                    );
+                  })
+                  
                 )
               )}
             </div>
