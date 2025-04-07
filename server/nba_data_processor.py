@@ -10,7 +10,7 @@ if len(sys.argv) > 1:
     csv_path = sys.argv[2] if len(sys.argv) > 2 else 'public/Games.csv'
 else:
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    public_dir = os.path.normpath(os.path.join(script_dir, '../../public'))
+    public_dir = os.path.normpath(os.path.join(script_dir, '../public'))
     output_path = os.path.join(public_dir, 'nba_scorigami.json')
     csv_path = os.path.join(public_dir, 'Games.csv')
 

@@ -37,3 +37,18 @@ if errorlevel 0 (
     echo ERROR: Processing failed
     exit /b 1
 )
+
+REM === Git commit and push ===
+echo Committing and pushing changes to GitHub...
+
+git add public/Games.csv public/nba_scorigami.json
+git commit -m "Auto-update: Refreshed data [%date% %time%]"
+git push origin main
+
+if errorlevel 1 (
+    echo ERROR: Git push failed
+    exit /b 1
+) else (
+    echo Git push successful!
+)
+
