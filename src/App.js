@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import ScorigamiGuesser from './components/ScorigamiGuesser';
 import { Analytics } from '@vercel/analytics/react';
+import { Helmet } from 'react-helmet';
 
 function App() {
   const [scorigamiData, setScorigamiData] = useState(null);
@@ -256,6 +257,20 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <title>NBA Scorigami Guesser | Visualize Rare NBA Scores</title>
+        <meta
+          name="description"
+          content="Explore every unique NBA score ever recorded and guess future scorigamis. A fun and interactive way to learn basketball history."
+        />
+        <meta name="keywords" content="NBA, Scorigami, Basketball, Scores, Guesser, NBA history, NBA scores, Game data" />
+        <meta name="author" content="Prachod Kakatur" />
+        <meta property="og:title" content="NBA Scorigami Guesser" />
+        <meta property="og:description" content="Guess NBA scorigamis, track real-time game outcomes, and explore score history." />
+        <meta property="og:image" content="%PUBLIC_URL%/images/social-preview.png" />
+        <meta property="og:url" content="https://nbagami.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <header className="app-header">
         <h1>NBA Scorigami</h1>
         <p className="subtitle">Visualizing every unique score combination in NBA history</p>
