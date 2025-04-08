@@ -4,15 +4,15 @@ NBA Scorigami Guesser is an interactive web app that lets basketball fans predic
 
 ## 🔮 Features
 
-🗓 View upcoming NBA games and enter score predictions
+View upcoming NBA games and enter score predictions
 
-🏆 Track your guesses and see which scores would be Scorigami
+Track your guesses and see which scores would be Scorigami
 
-🧠 Compare your predictions to real game outcomes
+Compare your predictions to real game outcomes
 
-📊 Visualize every unique NBA score with a clean interactive grid
+Visualize every unique NBA score with a clean interactive grid
 
-🏀 Local history tracking with animations and visual feedback
+Local history tracking with animations and visual feedback
 
 ## 🚀 Built With
 
