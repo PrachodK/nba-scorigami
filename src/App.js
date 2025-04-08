@@ -273,7 +273,6 @@ function App() {
           <br /><br />
           Click any green square to see historical games with that final score.
           <br /><br />
-          Last updated: 04/02/2025
         </p>
       </div>
 
