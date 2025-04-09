@@ -26,8 +26,8 @@ const Leaderboard = ({ playedGames }) => {
           const dateMatch = Math.abs(new Date(guess.guessDate) - new Date(game.gameDate)) < 12 * 60 * 60 * 1000;
 
           const isCorrect = 
-            game.homeScore === guess.guess[1] &&
-            game.awayScore === guess.guess[0] &&
+          parseInt(game.homeScore) === parseInt(guess.guess[1]) &&
+          parseInt(game.awayScore) === parseInt(guess.guess[0]) &&
             home.includes(guessedHome) &&
             away.includes(guessedAway) &&
             dateMatch;
