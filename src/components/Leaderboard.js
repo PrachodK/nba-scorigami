@@ -65,7 +65,7 @@ const Leaderboard = ({ playedGames }) => {
               <ul className="guess-list">
                 {guesses.map((g, i) => (
                   <li key={i}>
-                    {g.team1} @ {g.team2} — You guessed: {g.guess[0]}-{g.guess[1]} ✅
+                    {g.team1} @ {g.team2} — User guessed: {g.guess[0]}-{g.guess[1]} ✅
                   </li>
                 ))}
               </ul>
