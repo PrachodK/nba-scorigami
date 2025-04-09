@@ -1,0 +1,88 @@
+.login-signup-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-signup-modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-signup-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .login-signup-modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .auth-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .auth-form button {
+    padding: 10px;
+    background-color: #1d428a;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .auth-form button:hover {
+    background-color: #003366;
+  }
+  
+  .auth-toggle {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    cursor: pointer;
+    color: #1d428a;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .auth-toggle:hover {
+    text-decoration: underline;
+    color: #003366;
+  }
+  
+  .auth-toggle a {
+    color: #1d428a;
+    text-decoration: none;
+  }
+  
+  .auth-toggle:hover a {
+    color: #003366;
+  }
+  

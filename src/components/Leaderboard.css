@@ -1,0 +1,26 @@
+.leaderboard-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .leaderboard-user {
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  .leaderboard-header {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1d428a;
+    margin-bottom: 0.2rem;
+  }
+  
+  .guess-list {
+    margin-left: 1rem;
+    list-style: disc;
+  }
+  

@@ -3,6 +3,10 @@ import './App.css';
 import ScorigamiGuesser from './components/ScorigamiGuesser';
 import { Analytics } from '@vercel/analytics/react';
 import { Helmet } from 'react-helmet';
+import Leaderboard from './components/Leaderboard';
+import Papa from 'papaparse';
+import LoginSignupModal from './components/LoginSignupModal';
+import { useAuth } from './context/AuthContext';
 
 function App() {
   const [scorigamiData, setScorigamiData] = useState(null);
@@ -17,8 +21,11 @@ function App() {
   const [teams, setTeams] = useState([]);
   const [filteredData, setFilteredData] = useState(null);
   const [showModal, setShowModal] = useState(false);
-
-
+  const [showLeaderboard, setShowLeaderboard] = useState(false);
+  const [playedGames, setPlayedGames] = useState([]);
+  const { currentUser, logout } = useAuth();
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -46,6 +53,15 @@ function App() {
     };
 
     fetchData();
+  }, []);
+
+  useEffect(() => {
+    fetch('/Games.csv')
+      .then(res => res.text())
+      .then(csv => {
+        const parsed = Papa.parse(csv, { header: true });
+        setPlayedGames(parsed.data);
+      });
   }, []);
 
   useEffect(() => {
@@ -257,6 +273,19 @@ function App() {
 
   return (
     <div className="App">
+      <div style={{ position: 'absolute', top: '20px', left: '20px' }}>
+  {!currentUser ? (
+    <button onClick={() => setShowAuthModal(true)} className="auth-btn">
+      🔐 Login / Signup
+    </button>
+  ) : (
+    <div>
+      <span style={{ marginRight: '10px' }}>👤 {currentUser.username}</span>
+      <button onClick={logout} className="auth-btn">Logout</button>
+    </div>
+  )}
+</div>
+
       <Helmet>
         <title>NBA Scorigami Guesser | Visualize Rare NBA Scores</title>
         <meta
@@ -406,7 +435,31 @@ function App() {
         </div>
       </div>
       <ScorigamiGuesser scorigamiData={scorigamiData} />
+      <button 
+  className="leaderboard-btn" 
+  onClick={() => setShowLeaderboard(true)}
+>
+  🏆 Leaderboard
+</button>
       <Analytics />
+      {showLeaderboard && (
+  <div className="modal-overlay" onClick={() => setShowLeaderboard(false)}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-header">
+        <h2>🏆 Leaderboard</h2>
+        <button className="modal-close-btn" onClick={() => setShowLeaderboard(false)}>×</button>
+      </div>
+      <div className="modal-body">
+        <Leaderboard playedGames={playedGames} />
+      </div>
+    </div>
+  </div>
+)}
+{showAuthModal && (
+  <LoginSignupModal onClose={() => setShowAuthModal(false)} />
+)}
+
+
     </div>
   );
 }
