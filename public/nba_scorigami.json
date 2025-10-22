@@ -1,8 +1,8 @@
 {
-  "last_updated": "2025-04-11T22:39:12.775391",
+  "last_updated": "2025-10-22T17:07:56.085163",
   "max_score": 186,
-  "total_games": 71759,
-  "unique_scores": 3012,
+  "total_games": 71952,
+  "unique_scores": 3019,
   "scores": [
     {
       "winning_score": 51,
@@ -39725,14 +39725,14 @@
         },
         {
           "date": "2004-10-23",
-          "winning_team": "Raptors",
-          "losing_team": "Bulls",
+          "winning_team": "Mavericks",
+          "losing_team": "Bucks",
           "score": "91-89"
         },
         {
           "date": "2004-10-23",
-          "winning_team": "Mavericks",
-          "losing_team": "Bucks",
+          "winning_team": "Raptors",
+          "losing_team": "Bulls",
           "score": "91-89"
         },
         {
@@ -39982,6 +39982,12 @@
       "losing_score": 90,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-07",
+          "winning_team": "Knicks",
+          "losing_team": "Celtics",
+          "score": "91-90"
+        },
         {
           "date": "2024-12-11",
           "winning_team": "Rockets",
@@ -43794,6 +43800,12 @@
       "losing_score": 87,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-11",
+          "winning_team": "Thunder",
+          "losing_team": "Nuggets",
+          "score": "92-87"
+        },
         {
           "date": "2021-03-31",
           "winning_team": "Heat",
@@ -49254,6 +49266,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-13",
+          "winning_team": "Celtics",
+          "losing_team": "Hornets",
+          "score": "93-86"
+        },
+        {
           "date": "2022-04-17",
           "winning_team": "Bucks",
           "losing_team": "Bulls",
@@ -51449,14 +51467,14 @@
         },
         {
           "date": "1995-11-18",
-          "winning_team": "Heat",
-          "losing_team": "Magic",
+          "winning_team": "Cavaliers",
+          "losing_team": "Pistons",
           "score": "93-90"
         },
         {
           "date": "1995-11-18",
-          "winning_team": "Cavaliers",
-          "losing_team": "Pistons",
+          "winning_team": "Heat",
+          "losing_team": "Magic",
           "score": "93-90"
         },
         {
@@ -55198,6 +55216,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-22",
+          "winning_team": "Lakers",
+          "losing_team": "Timberwolves",
+          "score": "94-85"
+        },
+        {
           "date": "2021-12-29",
           "winning_team": "Knicks",
           "losing_team": "Pistons",
@@ -58102,6 +58126,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-17",
+          "winning_team": "Thunder",
+          "losing_team": "Nuggets",
+          "score": "94-91"
+        },
+        {
           "date": "2021-11-07",
           "winning_team": "Pacers",
           "losing_team": "Kings",
@@ -59273,6 +59303,12 @@
       "losing_score": 93,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-27",
+          "winning_team": "Knicks",
+          "losing_team": "Pistons",
+          "score": "94-93"
+        },
         {
           "date": "2021-03-18",
           "winning_team": "Knicks",
@@ -61973,6 +62009,12 @@
       "losing_score": 85,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-20",
+          "winning_team": "Warriors",
+          "losing_team": "Rockets",
+          "score": "95-85"
+        },
         {
           "date": "2021-10-31",
           "winning_team": "Lakers",
@@ -66350,6 +66392,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-25",
+          "winning_team": "Magic",
+          "losing_team": "Celtics",
+          "score": "95-93"
+        },
+        {
           "date": "2022-10-31",
           "winning_team": "Clippers",
           "losing_team": "Rockets",
@@ -68661,14 +68709,14 @@
         },
         {
           "date": "2001-12-14",
-          "winning_team": "Bucks",
-          "losing_team": "76ers",
+          "winning_team": "Wizards",
+          "losing_team": "Knicks",
           "score": "96-80"
         },
         {
           "date": "2001-12-14",
-          "winning_team": "Wizards",
-          "losing_team": "Knicks",
+          "winning_team": "Bucks",
+          "losing_team": "76ers",
           "score": "96-80"
         },
         {
@@ -71825,14 +71873,14 @@
         },
         {
           "date": "1996-01-15",
-          "winning_team": "Hawks",
-          "losing_team": "Pistons",
+          "winning_team": "Lakers",
+          "losing_team": "Heat",
           "score": "96-88"
         },
         {
           "date": "1996-01-15",
-          "winning_team": "Lakers",
-          "losing_team": "Heat",
+          "winning_team": "Hawks",
+          "losing_team": "Pistons",
           "score": "96-88"
         },
         {
@@ -75437,14 +75485,14 @@
         },
         {
           "date": "1989-11-14",
-          "winning_team": "Bulls",
-          "losing_team": "Kings",
+          "winning_team": "Celtics",
+          "losing_team": "76ers",
           "score": "96-94"
         },
         {
           "date": "1989-11-14",
-          "winning_team": "Celtics",
-          "losing_team": "76ers",
+          "winning_team": "Bulls",
+          "losing_team": "Kings",
           "score": "96-94"
         },
         {
@@ -78260,14 +78308,14 @@
         },
         {
           "date": "1994-02-02",
-          "winning_team": "Warriors",
-          "losing_team": "Nuggets",
+          "winning_team": "SuperSonics",
+          "losing_team": "Celtics",
           "score": "97-84"
         },
         {
           "date": "1994-02-02",
-          "winning_team": "SuperSonics",
-          "losing_team": "Celtics",
+          "winning_team": "Warriors",
+          "losing_team": "Nuggets",
           "score": "97-84"
         },
         {
@@ -84109,14 +84157,14 @@
         },
         {
           "date": "2003-03-05",
-          "winning_team": "Celtics",
-          "losing_team": "Knicks",
+          "winning_team": "Rockets",
+          "losing_team": "Raptors",
           "score": "97-95"
         },
         {
           "date": "2003-03-05",
-          "winning_team": "Rockets",
-          "losing_team": "Raptors",
+          "winning_team": "Celtics",
+          "losing_team": "Knicks",
           "score": "97-95"
         },
         {
@@ -90095,14 +90143,14 @@
         },
         {
           "date": "1996-04-09",
-          "winning_team": "Trail Blazers",
-          "losing_team": "Suns",
+          "winning_team": "Nuggets",
+          "losing_team": "Lakers",
           "score": "98-91"
         },
         {
           "date": "1996-04-09",
-          "winning_team": "Nuggets",
-          "losing_team": "Lakers",
+          "winning_team": "Trail Blazers",
+          "losing_team": "Suns",
           "score": "98-91"
         },
         {
@@ -94211,14 +94259,14 @@
         },
         {
           "date": "1993-11-13",
-          "winning_team": "Celtics",
-          "losing_team": "Bulls",
+          "winning_team": "76ers",
+          "losing_team": "Nets",
           "score": "98-97"
         },
         {
           "date": "1993-11-13",
-          "winning_team": "76ers",
-          "losing_team": "Nets",
+          "winning_team": "Celtics",
+          "losing_team": "Bulls",
           "score": "98-97"
         },
         {
@@ -94229,14 +94277,14 @@
         },
         {
           "date": "1993-01-02",
-          "winning_team": "Clippers",
-          "losing_team": "Knicks",
+          "winning_team": "Pistons",
+          "losing_team": "Magic",
           "score": "98-97"
         },
         {
           "date": "1993-01-02",
-          "winning_team": "Pistons",
-          "losing_team": "Magic",
+          "winning_team": "Clippers",
+          "losing_team": "Knicks",
           "score": "98-97"
         },
         {
@@ -96130,6 +96178,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-02",
+          "winning_team": "Knicks",
+          "losing_team": "76ers",
+          "score": "99-84"
+        },
+        {
           "date": "2020-01-02",
           "winning_team": "Timberwolves",
           "losing_team": "Warriors",
@@ -97603,6 +97657,12 @@
       "losing_score": 88,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-06",
+          "winning_team": "Warriors",
+          "losing_team": "Timberwolves",
+          "score": "99-88"
+        },
         {
           "date": "2022-12-14",
           "winning_team": "Clippers",
@@ -110068,14 +110128,14 @@
         },
         {
           "date": "2012-01-02",
-          "winning_team": "Celtics",
-          "losing_team": "Wizards",
+          "winning_team": "Hawks",
+          "losing_team": "Heat",
           "score": "100-92"
         },
         {
           "date": "2012-01-02",
-          "winning_team": "Hawks",
-          "losing_team": "Heat",
+          "winning_team": "Celtics",
+          "losing_team": "Wizards",
           "score": "100-92"
         },
         {
@@ -111527,6 +111587,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-21",
+          "winning_team": "Pistons",
+          "losing_team": "Knicks",
+          "score": "100-94"
+        },
+        {
           "date": "2022-04-09",
           "winning_team": "Warriors",
           "losing_team": "Spurs",
@@ -112307,6 +112373,12 @@
       "losing_score": 95,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-09",
+          "winning_team": "Knicks",
+          "losing_team": "Timberwolves",
+          "score": "100-95"
+        },
         {
           "date": "2023-10-26",
           "winning_team": "Lakers",
@@ -113486,14 +113558,14 @@
         },
         {
           "date": "1990-02-16",
-          "winning_team": "76ers",
-          "losing_team": "SuperSonics",
+          "winning_team": "Spurs",
+          "losing_team": "Jazz",
           "score": "100-96"
         },
         {
           "date": "1990-02-16",
-          "winning_team": "Spurs",
-          "losing_team": "Jazz",
+          "winning_team": "76ers",
+          "losing_team": "SuperSonics",
           "score": "100-96"
         },
         {
@@ -121191,14 +121263,14 @@
         },
         {
           "date": "1991-11-27",
-          "winning_team": "Celtics",
-          "losing_team": "Magic",
+          "winning_team": "Timberwolves",
+          "losing_team": "Nuggets",
           "score": "101-92"
         },
         {
           "date": "1991-11-27",
-          "winning_team": "Timberwolves",
-          "losing_team": "Nuggets",
+          "winning_team": "Celtics",
+          "losing_team": "Magic",
           "score": "101-92"
         },
         {
@@ -124069,14 +124141,14 @@
         },
         {
           "date": "1980-03-23",
-          "winning_team": "Lakers",
-          "losing_team": "Jazz",
+          "winning_team": "Nets",
+          "losing_team": "Celtics",
           "score": "101-96"
         },
         {
           "date": "1980-03-23",
-          "winning_team": "Nets",
-          "losing_team": "Celtics",
+          "winning_team": "Lakers",
+          "losing_team": "Jazz",
           "score": "101-96"
         },
         {
@@ -125709,6 +125781,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-26",
+          "winning_team": "Nuggets",
+          "losing_team": "Clippers",
+          "score": "101-99"
+        },
+        {
           "date": "2024-11-10",
           "winning_team": "Rockets",
           "losing_team": "Pistons",
@@ -126597,6 +126675,12 @@
       "losing_score": 100,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-11",
+          "winning_team": "Clippers",
+          "losing_team": "Kings",
+          "score": "101-100"
+        },
         {
           "date": "2024-11-18",
           "winning_team": "Bucks",
@@ -132818,6 +132902,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-12",
+          "winning_team": "Nuggets",
+          "losing_team": "Clippers",
+          "score": "102-94"
+        },
+        {
           "date": "2024-12-06",
           "winning_team": "76ers",
           "losing_team": "Magic",
@@ -135328,6 +135418,12 @@
       "losing_score": 97,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-10",
+          "winning_team": "Timberwolves",
+          "losing_team": "Warriors",
+          "score": "102-97"
+        },
         {
           "date": "2025-01-24",
           "winning_team": "Trail Blazers",
@@ -140202,6 +140298,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-03",
+          "winning_team": "Suns",
+          "losing_team": "Lakers",
+          "score": "103-81"
+        },
+        {
           "date": "2023-04-09",
           "winning_team": "Bulls",
           "losing_team": "Pistons",
@@ -141125,6 +141227,18 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-20",
+          "winning_team": "Celtics",
+          "losing_team": "Magic",
+          "score": "103-86"
+        },
+        {
+          "date": "2025-04-11",
+          "winning_team": "Warriors",
+          "losing_team": "Trail Blazers",
+          "score": "103-86"
+        },
+        {
           "date": "2016-12-13",
           "winning_team": "Cavaliers",
           "losing_team": "Grizzlies",
@@ -142003,6 +142117,12 @@
       "losing_score": 89,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-04",
+          "winning_team": "Warriors",
+          "losing_team": "Rockets",
+          "score": "103-89"
+        },
         {
           "date": "2022-01-03",
           "winning_team": "Mavericks",
@@ -142959,6 +143079,12 @@
       "losing_score": 91,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-06-22",
+          "winning_team": "Thunder",
+          "losing_team": "Pacers",
+          "score": "103-91"
+        },
         {
           "date": "2025-03-14",
           "winning_team": "Celtics",
@@ -144185,6 +144311,12 @@
       "losing_score": 93,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-06",
+          "winning_team": "Bucks",
+          "losing_team": "Heat",
+          "score": "103-93"
+        },
         {
           "date": "2023-04-19",
           "winning_team": "Grizzlies",
@@ -146288,6 +146420,12 @@
       "losing_score": 96,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-30",
+          "winning_team": "Timberwolves",
+          "losing_team": "Lakers",
+          "score": "103-96"
+        },
         {
           "date": "2025-02-27",
           "winning_team": "Mavericks",
@@ -155869,6 +156007,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-26",
+          "winning_team": "Warriors",
+          "losing_team": "Rockets",
+          "score": "104-93"
+        },
+        {
           "date": "2025-03-18",
           "winning_team": "Warriors",
           "losing_team": "Bucks",
@@ -159643,14 +159787,14 @@
         },
         {
           "date": "2017-12-15",
-          "winning_team": "Heat",
-          "losing_team": "Hornets",
+          "winning_team": "Pistons",
+          "losing_team": "Pacers",
           "score": "104-98"
         },
         {
           "date": "2017-12-15",
-          "winning_team": "Pistons",
-          "losing_team": "Pacers",
+          "winning_team": "Heat",
+          "losing_team": "Hornets",
           "score": "104-98"
         },
         {
@@ -162514,14 +162658,14 @@
         },
         {
           "date": "2010-10-29",
-          "winning_team": "Pacers",
-          "losing_team": "Bobcats",
+          "winning_team": "Hawks",
+          "losing_team": "76ers",
           "score": "104-101"
         },
         {
           "date": "2010-10-29",
-          "winning_team": "Hawks",
-          "losing_team": "76ers",
+          "winning_team": "Pacers",
+          "losing_team": "Bobcats",
           "score": "104-101"
         },
         {
@@ -162592,14 +162736,14 @@
         },
         {
           "date": "2006-03-08",
-          "winning_team": "Celtics",
-          "losing_team": "76ers",
+          "winning_team": "Bobcats",
+          "losing_team": "Warriors",
           "score": "104-101"
         },
         {
           "date": "2006-03-08",
-          "winning_team": "Bobcats",
-          "losing_team": "Warriors",
+          "winning_team": "Celtics",
+          "losing_team": "76ers",
           "score": "104-101"
         },
         {
@@ -170658,14 +170802,14 @@
         },
         {
           "date": "2007-11-07",
-          "winning_team": "Magic",
-          "losing_team": "Raptors",
+          "winning_team": "Hawks",
+          "losing_team": "Suns",
           "score": "105-96"
         },
         {
           "date": "2007-11-07",
-          "winning_team": "Hawks",
-          "losing_team": "Suns",
+          "winning_team": "Magic",
+          "losing_team": "Raptors",
           "score": "105-96"
         },
         {
@@ -173673,14 +173817,14 @@
         },
         {
           "date": "1978-03-22",
-          "winning_team": "Nets",
-          "losing_team": "Bulls",
+          "winning_team": "Celtics",
+          "losing_team": "Cavaliers",
           "score": "105-99"
         },
         {
           "date": "1978-03-22",
-          "winning_team": "Celtics",
-          "losing_team": "Cavaliers",
+          "winning_team": "Nets",
+          "losing_team": "Bulls",
           "score": "105-99"
         },
         {
@@ -175540,6 +175684,12 @@
       "losing_score": 102,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-21",
+          "winning_team": "Clippers",
+          "losing_team": "Nuggets",
+          "score": "105-102"
+        },
         {
           "date": "2025-03-16",
           "winning_team": "Trail Blazers",
@@ -177638,14 +177788,14 @@
         },
         {
           "date": "1974-10-26",
-          "winning_team": "Warriors",
-          "losing_team": "Pistons",
+          "winning_team": "Braves",
+          "losing_team": "Bulls",
           "score": "105-104"
         },
         {
           "date": "1974-10-26",
-          "winning_team": "Braves",
-          "losing_team": "Bulls",
+          "winning_team": "Warriors",
+          "losing_team": "Pistons",
           "score": "105-104"
         },
         {
@@ -179667,6 +179817,12 @@
       "losing_score": 89,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-06",
+          "winning_team": "Mavericks",
+          "losing_team": "Thunder",
+          "score": "106-89"
+        },
         {
           "date": "2024-11-18",
           "winning_team": "Heat",
@@ -184400,14 +184556,14 @@
         },
         {
           "date": "2015-11-11",
-          "winning_team": "Hawks",
-          "losing_team": "Pelicans",
+          "winning_team": "Nets",
+          "losing_team": "Rockets",
           "score": "106-98"
         },
         {
           "date": "2015-11-11",
-          "winning_team": "Nets",
-          "losing_team": "Rockets",
+          "winning_team": "Hawks",
+          "losing_team": "Pelicans",
           "score": "106-98"
         },
         {
@@ -184748,14 +184904,14 @@
         },
         {
           "date": "1994-01-05",
-          "winning_team": "SuperSonics",
-          "losing_team": "Clippers",
+          "winning_team": "Kings",
+          "losing_team": "Lakers",
           "score": "106-98"
         },
         {
           "date": "1994-01-05",
-          "winning_team": "Kings",
-          "losing_team": "Lakers",
+          "winning_team": "SuperSonics",
+          "losing_team": "Clippers",
           "score": "106-98"
         },
         {
@@ -184994,14 +185150,14 @@
         },
         {
           "date": "1981-01-23",
-          "winning_team": "Cavaliers",
-          "losing_team": "Hawks",
+          "winning_team": "Bulls",
+          "losing_team": "Mavericks",
           "score": "106-98"
         },
         {
           "date": "1981-01-23",
-          "winning_team": "Bulls",
-          "losing_team": "Mavericks",
+          "winning_team": "Cavaliers",
+          "losing_team": "Hawks",
           "score": "106-98"
         },
         {
@@ -185853,14 +186009,14 @@
         },
         {
           "date": "1972-12-29",
-          "winning_team": "Bulls",
-          "losing_team": "Celtics",
+          "winning_team": "Suns",
+          "losing_team": "Trail Blazers",
           "score": "106-99"
         },
         {
           "date": "1972-12-29",
-          "winning_team": "Suns",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Bulls",
+          "losing_team": "Celtics",
           "score": "106-99"
         },
         {
@@ -185948,6 +186104,12 @@
       "losing_score": 100,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-25",
+          "winning_team": "Knicks",
+          "losing_team": "Pacers",
+          "score": "106-100"
+        },
         {
           "date": "2023-11-17",
           "winning_team": "Clippers",
@@ -187974,14 +188136,14 @@
         },
         {
           "date": "2006-01-25",
-          "winning_team": "Kings",
-          "losing_team": "Knicks",
+          "winning_team": "Pistons",
+          "losing_team": "Bucks",
           "score": "106-102"
         },
         {
           "date": "2006-01-25",
-          "winning_team": "Pistons",
-          "losing_team": "Bucks",
+          "winning_team": "Kings",
+          "losing_team": "Knicks",
           "score": "106-102"
         },
         {
@@ -188130,14 +188292,14 @@
         },
         {
           "date": "1994-02-23",
-          "winning_team": "Jazz",
-          "losing_team": "Spurs",
+          "winning_team": "Nets",
+          "losing_team": "76ers",
           "score": "106-102"
         },
         {
           "date": "1994-02-23",
-          "winning_team": "Nets",
-          "losing_team": "76ers",
+          "winning_team": "Jazz",
+          "losing_team": "Spurs",
           "score": "106-102"
         },
         {
@@ -188525,6 +188687,18 @@
       "losing_score": 103,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-17",
+          "winning_team": "Clippers",
+          "losing_team": "Warriors",
+          "score": "106-103"
+        },
+        {
+          "date": "2025-04-29",
+          "winning_team": "Pistons",
+          "losing_team": "Knicks",
+          "score": "106-103"
+        },
         {
           "date": "2025-02-11",
           "winning_team": "Raptors",
@@ -190238,14 +190412,14 @@
         },
         {
           "date": "1971-11-12",
-          "winning_team": "Cavaliers",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Hawks",
+          "losing_team": "Warriors",
           "score": "106-104"
         },
         {
           "date": "1971-11-12",
-          "winning_team": "Hawks",
-          "losing_team": "Warriors",
+          "winning_team": "Cavaliers",
+          "losing_team": "Trail Blazers",
           "score": "106-104"
         },
         {
@@ -196173,6 +196347,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-03",
+          "winning_team": "Pelicans",
+          "losing_team": "United",
+          "score": "107-97"
+        },
+        {
           "date": "2024-10-09",
           "winning_team": "Spurs",
           "losing_team": "Magic",
@@ -196899,6 +197079,12 @@
       "losing_score": 98,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-27",
+          "winning_team": "Celtics",
+          "losing_team": "Magic",
+          "score": "107-98"
+        },
         {
           "date": "2024-12-08",
           "winning_team": "Lakers",
@@ -202691,6 +202877,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-10",
+          "winning_team": "Raptors",
+          "losing_team": "Celtics",
+          "score": "107-105"
+        },
+        {
           "date": "2024-11-24",
           "winning_team": "Celtics",
           "losing_team": "Timberwolves",
@@ -206255,6 +206447,12 @@
       "losing_score": 91,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-06-19",
+          "winning_team": "Pacers",
+          "losing_team": "Thunder",
+          "score": "108-91"
+        },
         {
           "date": "2023-03-26",
           "winning_team": "Cavaliers",
@@ -212789,6 +212987,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-11",
+          "winning_team": "Cavaliers",
+          "losing_team": "Knicks",
+          "score": "108-102"
+        },
+        {
           "date": "2025-03-02",
           "winning_team": "Lakers",
           "losing_team": "Clippers",
@@ -215258,14 +215462,14 @@
         },
         {
           "date": "1977-03-22",
-          "winning_team": "Celtics",
-          "losing_team": "Spurs",
+          "winning_team": "Cavaliers",
+          "losing_team": "SuperSonics",
           "score": "108-104"
         },
         {
           "date": "1977-03-22",
-          "winning_team": "Cavaliers",
-          "losing_team": "SuperSonics",
+          "winning_team": "Celtics",
+          "losing_team": "Spurs",
           "score": "108-104"
         },
         {
@@ -215407,6 +215611,12 @@
       "losing_score": 105,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-05",
+          "winning_team": "Knicks",
+          "losing_team": "Celtics",
+          "score": "108-105"
+        },
         {
           "date": "2024-05-22",
           "winning_team": "Mavericks",
@@ -217900,6 +218110,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-13",
+          "winning_team": "Trail Blazers",
+          "losing_team": "Lakers",
+          "score": "109-81"
+        },
+        {
           "date": "2022-05-15",
           "winning_team": "Celtics",
           "losing_team": "Bucks",
@@ -219133,6 +219349,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-16",
+          "winning_team": "Heat",
+          "losing_team": "Bulls",
+          "score": "109-90"
+        },
+        {
           "date": "2024-03-29",
           "winning_team": "Pacers",
           "losing_team": "Lakers",
@@ -219379,6 +219601,12 @@
       "losing_score": 91,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-15",
+          "winning_team": "Clippers",
+          "losing_team": "Kings",
+          "score": "109-91"
+        },
         {
           "date": "2024-10-11",
           "winning_team": "Pistons",
@@ -220510,6 +220738,12 @@
       "losing_score": 94,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-23",
+          "winning_team": "Rockets",
+          "losing_team": "Warriors",
+          "score": "109-94"
+        },
         {
           "date": "2024-04-21",
           "winning_team": "Bucks",
@@ -222477,6 +222711,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-13",
+          "winning_team": "Kings",
+          "losing_team": "Suns",
+          "score": "109-98"
+        },
+        {
           "date": "2025-01-13",
           "winning_team": "Clippers",
           "losing_team": "Heat",
@@ -223967,6 +224207,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-23",
+          "winning_team": "Celtics",
+          "losing_team": "Magic",
+          "score": "109-100"
+        },
+        {
           "date": "2022-10-12",
           "winning_team": "Pacers",
           "losing_team": "Knicks",
@@ -224430,14 +224676,14 @@
         },
         {
           "date": "1990-12-29",
-          "winning_team": "Hornets",
-          "losing_team": "Magic",
+          "winning_team": "Bucks",
+          "losing_team": "Knicks",
           "score": "109-100"
         },
         {
           "date": "1990-12-29",
-          "winning_team": "Bucks",
-          "losing_team": "Knicks",
+          "winning_team": "Hornets",
+          "losing_team": "Magic",
           "score": "109-100"
         },
         {
@@ -228736,6 +228982,12 @@
       "losing_score": 106,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-28",
+          "winning_team": "Warriors",
+          "losing_team": "Rockets",
+          "score": "109-106"
+        },
         {
           "date": "2025-01-10",
           "winning_team": "Bucks",
@@ -242536,6 +242788,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-15",
+          "winning_team": "Celtics",
+          "losing_team": "Raptors",
+          "score": "110-108"
+        },
+        {
           "date": "2025-04-03",
           "winning_team": "Grizzlies",
           "losing_team": "Heat",
@@ -246423,6 +246681,12 @@
       "losing_score": 94,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-29",
+          "winning_team": "Knicks",
+          "losing_team": "Pacers",
+          "score": "111-94"
+        },
         {
           "date": "2021-11-20",
           "winning_team": "Pacers",
@@ -251011,6 +251275,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-05",
+          "winning_team": "Warriors",
+          "losing_team": "Lakers",
+          "score": "111-103"
+        },
+        {
           "date": "2025-02-21",
           "winning_team": "Mavericks",
           "losing_team": "Pelicans",
@@ -251791,6 +252061,12 @@
       "losing_score": 104,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-06-13",
+          "winning_team": "Thunder",
+          "losing_team": "Pacers",
+          "score": "111-104"
+        },
         {
           "date": "2025-03-25",
           "winning_team": "Magic",
@@ -252632,6 +252908,12 @@
       "losing_score": 105,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-01",
+          "winning_team": "Clippers",
+          "losing_team": "Nuggets",
+          "score": "111-105"
+        },
         {
           "date": "2024-12-26",
           "winning_team": "Nets",
@@ -255841,6 +256123,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-12",
+          "winning_team": "Nets",
+          "losing_team": "Suns",
+          "score": "111-109"
+        },
+        {
           "date": "2025-03-31",
           "winning_team": "Pacers",
           "losing_team": "Kings",
@@ -256549,6 +256837,12 @@
       "losing_score": 110,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-06-05",
+          "winning_team": "Pacers",
+          "losing_team": "Thunder",
+          "score": "111-110"
+        },
         {
           "date": "2025-03-09",
           "winning_team": "Clippers",
@@ -262811,14 +263105,14 @@
         },
         {
           "date": "1994-03-26",
-          "winning_team": "Nuggets",
-          "losing_team": "Mavericks",
+          "winning_team": "Spurs",
+          "losing_team": "Warriors",
           "score": "112-101"
         },
         {
           "date": "1994-03-26",
-          "winning_team": "Spurs",
-          "losing_team": "Warriors",
+          "winning_team": "Nuggets",
+          "losing_team": "Mavericks",
           "score": "112-101"
         },
         {
@@ -265214,6 +265508,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-13",
+          "winning_team": "Thunder",
+          "losing_team": "Nuggets",
+          "score": "112-105"
+        },
+        {
           "date": "2025-02-04",
           "winning_team": "Celtics",
           "losing_team": "Cavaliers",
@@ -265797,14 +266097,14 @@
         },
         {
           "date": "1973-03-25",
-          "winning_team": "Bullets",
-          "losing_team": "Hawks",
+          "winning_team": "Cavaliers",
+          "losing_team": "Bulls",
           "score": "112-105"
         },
         {
           "date": "1973-03-25",
-          "winning_team": "Cavaliers",
-          "losing_team": "Bulls",
+          "winning_team": "Bullets",
+          "losing_team": "Hawks",
           "score": "112-105"
         },
         {
@@ -266134,14 +266434,14 @@
         },
         {
           "date": "2013-11-30",
-          "winning_team": "Timberwolves",
-          "losing_team": "Mavericks",
+          "winning_team": "Rockets",
+          "losing_team": "Spurs",
           "score": "112-106"
         },
         {
           "date": "2013-11-30",
-          "winning_team": "Rockets",
-          "losing_team": "Spurs",
+          "winning_team": "Timberwolves",
+          "losing_team": "Mavericks",
           "score": "112-106"
         },
         {
@@ -266727,6 +267027,12 @@
       "losing_score": 107,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-08",
+          "winning_team": "Spurs",
+          "losing_team": "Heat",
+          "score": "112-107"
+        },
         {
           "date": "2025-03-05",
           "winning_team": "Cavaliers",
@@ -267466,6 +267772,12 @@
       "losing_score": 108,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-06",
+          "winning_team": "Nuggets",
+          "losing_team": "Raptors",
+          "score": "112-108"
+        },
         {
           "date": "2024-11-22",
           "winning_team": "Warriors",
@@ -268938,6 +269250,12 @@
       "losing_score": 110,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-19",
+          "winning_team": "Nuggets",
+          "losing_team": "Clippers",
+          "score": "112-110"
+        },
         {
           "date": "2024-12-29",
           "winning_team": "Timberwolves",
@@ -272666,14 +272984,14 @@
         },
         {
           "date": "1996-04-16",
-          "winning_team": "Magic",
-          "losing_team": "Bullets",
+          "winning_team": "Lakers",
+          "losing_team": "Mavericks",
           "score": "113-95"
         },
         {
           "date": "1996-04-16",
-          "winning_team": "Lakers",
-          "losing_team": "Mavericks",
+          "winning_team": "Magic",
+          "losing_team": "Bullets",
           "score": "113-95"
         },
         {
@@ -276790,6 +277108,24 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-14",
+          "winning_team": "Suns",
+          "losing_team": "Lakers",
+          "score": "113-104"
+        },
+        {
+          "date": "2025-10-04",
+          "winning_team": "Knicks",
+          "losing_team": "76ers",
+          "score": "113-104"
+        },
+        {
+          "date": "2025-05-09",
+          "winning_team": "Nuggets",
+          "losing_team": "Thunder",
+          "score": "113-104"
+        },
+        {
           "date": "2025-01-27",
           "winning_team": "Raptors",
           "losing_team": "Pelicans",
@@ -277468,6 +277804,12 @@
       "losing_score": 105,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-13",
+          "winning_team": "Knicks",
+          "losing_team": "Nets",
+          "score": "113-105"
+        },
         {
           "date": "2024-12-31",
           "winning_team": "Thunder",
@@ -278719,14 +279061,14 @@
         },
         {
           "date": "1986-02-22",
-          "winning_team": "Nuggets",
-          "losing_team": "Mavericks",
+          "winning_team": "Pistons",
+          "losing_team": "Trail Blazers",
           "score": "113-106"
         },
         {
           "date": "1986-02-22",
-          "winning_team": "Pistons",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Nuggets",
+          "losing_team": "Mavericks",
           "score": "113-106"
         },
         {
@@ -278917,14 +279259,14 @@
         },
         {
           "date": "1969-02-12",
-          "winning_team": "Celtics",
-          "losing_team": "Pistons",
+          "winning_team": "Hawks",
+          "losing_team": "Bucks",
           "score": "113-106"
         },
         {
           "date": "1969-02-12",
-          "winning_team": "Hawks",
-          "losing_team": "Bucks",
+          "winning_team": "Celtics",
+          "losing_team": "Pistons",
           "score": "113-106"
         },
         {
@@ -279080,14 +279422,14 @@
         },
         {
           "date": "2020-12-23",
-          "winning_team": "Magic",
-          "losing_team": "Heat",
+          "winning_team": "76ers",
+          "losing_team": "Wizards",
           "score": "113-107"
         },
         {
           "date": "2020-12-23",
-          "winning_team": "76ers",
-          "losing_team": "Wizards",
+          "winning_team": "Magic",
+          "losing_team": "Heat",
           "score": "113-107"
         },
         {
@@ -279829,6 +280171,12 @@
       "losing_score": 108,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-17",
+          "winning_team": "Knicks",
+          "losing_team": "Hornets",
+          "score": "113-108"
+        },
         {
           "date": "2024-12-09",
           "winning_team": "Knicks",
@@ -282462,6 +282810,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-12",
+          "winning_team": "Raptors",
+          "losing_team": "Wizards",
+          "score": "113-112"
+        },
+        {
           "date": "2024-12-27",
           "winning_team": "Timberwolves",
           "losing_team": "Rockets",
@@ -283825,6 +284179,12 @@
       "losing_score": 88,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-20",
+          "winning_team": "Thunder",
+          "losing_team": "Timberwolves",
+          "score": "114-88"
+        },
         {
           "date": "2016-12-31",
           "winning_team": "Thunder",
@@ -285527,14 +285887,14 @@
         },
         {
           "date": "1985-11-27",
-          "winning_team": "Bucks",
-          "losing_team": "Hawks",
+          "winning_team": "Jazz",
+          "losing_team": "Bulls",
           "score": "114-96"
         },
         {
           "date": "1985-11-27",
-          "winning_team": "Jazz",
-          "losing_team": "Bulls",
+          "winning_team": "Bucks",
+          "losing_team": "Hawks",
           "score": "114-96"
         },
         {
@@ -287073,6 +287433,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-13",
+          "winning_team": "Mavericks",
+          "losing_team": "Jazz",
+          "score": "114-101"
+        },
+        {
           "date": "2024-12-23",
           "winning_team": "Rockets",
           "losing_team": "Hornets",
@@ -288462,14 +288828,14 @@
         },
         {
           "date": "1990-11-08",
-          "winning_team": "Nets",
-          "losing_team": "Heat",
+          "winning_team": "Knicks",
+          "losing_team": "Bullets",
           "score": "114-103"
         },
         {
           "date": "1990-11-08",
-          "winning_team": "Knicks",
-          "losing_team": "Bullets",
+          "winning_team": "Nets",
+          "losing_team": "Heat",
           "score": "114-103"
         },
         {
@@ -289218,6 +289584,12 @@
       "losing_score": 105,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-13",
+          "winning_team": "Pacers",
+          "losing_team": "Cavaliers",
+          "score": "114-105"
+        },
         {
           "date": "2025-03-17",
           "winning_team": "Nuggets",
@@ -291418,6 +291790,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-24",
+          "winning_team": "Thunder",
+          "losing_team": "Grizzlies",
+          "score": "114-108"
+        },
+        {
           "date": "2025-03-22",
           "winning_team": "Bucks",
           "losing_team": "Kings",
@@ -292108,6 +292486,12 @@
       "losing_score": 109,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-23",
+          "winning_team": "Pacers",
+          "losing_team": "Knicks",
+          "score": "114-109"
+        },
         {
           "date": "2025-04-05",
           "winning_team": "Timberwolves",
@@ -296790,6 +297174,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-10",
+          "winning_team": "Celtics",
+          "losing_team": "Knicks",
+          "score": "115-93"
+        },
+        {
           "date": "2023-03-08",
           "winning_team": "Celtics",
           "losing_team": "Trail Blazers",
@@ -298692,6 +299082,12 @@
       "losing_score": 100,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-13",
+          "winning_team": "Thunder",
+          "losing_team": "Pelicans",
+          "score": "115-100"
+        },
         {
           "date": "2023-04-09",
           "winning_team": "Thunder",
@@ -302342,6 +302738,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-02",
+          "winning_team": "Rockets",
+          "losing_team": "Warriors",
+          "score": "115-107"
+        },
+        {
           "date": "2024-10-25",
           "winning_team": "Raptors",
           "losing_team": "76ers",
@@ -303851,14 +304253,14 @@
         },
         {
           "date": "2022-01-05",
-          "winning_team": "Jazz",
-          "losing_team": "Nuggets",
+          "winning_team": "Heat",
+          "losing_team": "Trail Blazers",
           "score": "115-109"
         },
         {
           "date": "2022-01-05",
-          "winning_team": "Heat",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Jazz",
+          "losing_team": "Nuggets",
           "score": "115-109"
         },
         {
@@ -304325,14 +304727,14 @@
         },
         {
           "date": "1979-03-20",
-          "winning_team": "Hawks",
-          "losing_team": "Cavaliers",
+          "winning_team": "Trail Blazers",
+          "losing_team": "Clippers",
           "score": "115-109"
         },
         {
           "date": "1979-03-20",
-          "winning_team": "Trail Blazers",
-          "losing_team": "Clippers",
+          "winning_team": "Hawks",
+          "losing_team": "Cavaliers",
           "score": "115-109"
         },
         {
@@ -310671,6 +311073,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-11",
+          "winning_team": "Pacers",
+          "losing_team": "Thunder",
+          "score": "116-101"
+        },
+        {
           "date": "2025-02-13",
           "winning_team": "Timberwolves",
           "losing_team": "Thunder",
@@ -311886,6 +312294,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-25",
+          "winning_team": "Timberwolves",
+          "losing_team": "Lakers",
+          "score": "116-104"
+        },
+        {
           "date": "2024-03-31",
           "winning_team": "Lakers",
           "losing_team": "Nets",
@@ -312396,6 +312810,12 @@
       "losing_score": 105,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-13",
+          "winning_team": "Timberwolves",
+          "losing_team": "Jazz",
+          "score": "116-105"
+        },
         {
           "date": "2025-02-08",
           "winning_team": "Mavericks",
@@ -313431,6 +313851,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-06-11",
+          "winning_team": "Pacers",
+          "losing_team": "Thunder",
+          "score": "116-107"
+        },
+        {
           "date": "2025-03-28",
           "winning_team": "Knicks",
           "losing_team": "Bucks",
@@ -313780,14 +314206,14 @@
         },
         {
           "date": "1989-01-21",
-          "winning_team": "Suns",
-          "losing_team": "Bulls",
+          "winning_team": "Bucks",
+          "losing_team": "Nuggets",
           "score": "116-107"
         },
         {
           "date": "1989-01-21",
-          "winning_team": "Bucks",
-          "losing_team": "Nuggets",
+          "winning_team": "Suns",
+          "losing_team": "Bulls",
           "score": "116-107"
         },
         {
@@ -316652,6 +317078,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-14",
+          "winning_team": "Thunder",
+          "losing_team": "Bucks",
+          "score": "116-112"
+        },
+        {
           "date": "2025-03-02",
           "winning_team": "Knicks",
           "losing_team": "Heat",
@@ -317234,6 +317666,18 @@
       "losing_score": 113,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-01",
+          "winning_team": "Knicks",
+          "losing_team": "Pistons",
+          "score": "116-113"
+        },
+        {
+          "date": "2025-04-27",
+          "winning_team": "Timberwolves",
+          "losing_team": "Lakers",
+          "score": "116-113"
+        },
         {
           "date": "2025-03-19",
           "winning_team": "Pistons",
@@ -318949,6 +319393,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-24",
+          "winning_team": "Clippers",
+          "losing_team": "Nuggets",
+          "score": "117-83"
+        },
+        {
           "date": "2017-10-08",
           "winning_team": "Nets",
           "losing_team": "Knicks",
@@ -319521,6 +319971,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-11",
+          "winning_team": "Timberwolves",
+          "losing_team": "Nets",
+          "score": "117-91"
+        },
+        {
           "date": "2021-10-31",
           "winning_team": "Nets",
           "losing_team": "Pistons",
@@ -319858,6 +320314,12 @@
       "losing_score": 93,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-08",
+          "winning_team": "Timberwolves",
+          "losing_team": "Warriors",
+          "score": "117-93"
+        },
         {
           "date": "2021-04-10",
           "winning_team": "76ers",
@@ -320238,6 +320700,12 @@
       "losing_score": 95,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-19",
+          "winning_team": "Timberwolves",
+          "losing_team": "Lakers",
+          "score": "117-95"
+        },
         {
           "date": "2024-10-16",
           "winning_team": "76ers",
@@ -320877,6 +321345,18 @@
       "losing_score": 98,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-19",
+          "winning_team": "Pacers",
+          "losing_team": "Bucks",
+          "score": "117-98"
+        },
+        {
+          "date": "2025-04-11",
+          "winning_team": "Suns",
+          "losing_team": "Spurs",
+          "score": "117-98"
+        },
         {
           "date": "2024-01-17",
           "winning_team": "Celtics",
@@ -321732,6 +322212,12 @@
       "losing_score": 101,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-25",
+          "winning_team": "Bucks",
+          "losing_team": "Pacers",
+          "score": "117-101"
+        },
         {
           "date": "2024-11-29",
           "winning_team": "Hawks",
@@ -323285,6 +323771,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-13",
+          "winning_team": "Hawks",
+          "losing_team": "Magic",
+          "score": "117-105"
+        },
+        {
           "date": "2025-04-07",
           "winning_team": "Heat",
           "losing_team": "76ers",
@@ -324362,14 +324854,14 @@
         },
         {
           "date": "2017-03-24",
-          "winning_team": "76ers",
-          "losing_team": "Bulls",
+          "winning_team": "Rockets",
+          "losing_team": "Pelicans",
           "score": "117-107"
         },
         {
           "date": "2017-03-24",
-          "winning_team": "Rockets",
-          "losing_team": "Pelicans",
+          "winning_team": "76ers",
+          "losing_team": "Bulls",
           "score": "117-107"
         },
         {
@@ -325329,6 +325821,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-11",
+          "winning_team": "Nuggets",
+          "losing_team": "Grizzlies",
+          "score": "117-109"
+        },
+        {
           "date": "2024-01-14",
           "winning_team": "Nuggets",
           "losing_team": "Pacers",
@@ -325929,6 +326427,12 @@
       "losing_score": 110,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-12",
+          "winning_team": "Timberwolves",
+          "losing_team": "Warriors",
+          "score": "117-110"
+        },
         {
           "date": "2024-01-31",
           "winning_team": "Bulls",
@@ -326536,6 +327040,12 @@
       "losing_score": 111,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-09",
+          "winning_team": "Bucks",
+          "losing_team": "Pistons",
+          "score": "117-111"
+        },
         {
           "date": "2025-01-09",
           "winning_team": "Mavericks",
@@ -328773,6 +329283,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-26",
+          "winning_team": "Thunder",
+          "losing_team": "Grizzlies",
+          "score": "117-115"
+        },
+        {
           "date": "2024-10-24",
           "winning_team": "Timberwolves",
           "losing_team": "Kings",
@@ -329313,6 +329829,12 @@
       "losing_score": 116,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-17",
+          "winning_team": "Kings",
+          "losing_team": "Lakers",
+          "score": "117-116"
+        },
         {
           "date": "2025-02-28",
           "winning_team": "Jazz",
@@ -331916,6 +332438,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-22",
+          "winning_team": "Thunder",
+          "losing_team": "Grizzlies",
+          "score": "118-99"
+        },
+        {
           "date": "2025-01-14",
           "winning_team": "Nuggets",
           "losing_team": "Mavericks",
@@ -332114,6 +332642,12 @@
       "losing_score": 100,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-14",
+          "winning_team": "Cavaliers",
+          "losing_team": "Pistons",
+          "score": "118-100"
+        },
         {
           "date": "2024-11-04",
           "winning_team": "Trail Blazers",
@@ -333173,6 +333707,12 @@
       "losing_score": 103,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-22",
+          "winning_team": "Thunder",
+          "losing_team": "Timberwolves",
+          "score": "118-103"
+        },
         {
           "date": "2024-04-14",
           "winning_team": "Heat",
@@ -335526,14 +336066,14 @@
         },
         {
           "date": "1988-03-23",
-          "winning_team": "Nuggets",
-          "losing_team": "Clippers",
+          "winning_team": "SuperSonics",
+          "losing_team": "Trail Blazers",
           "score": "118-108"
         },
         {
           "date": "1988-03-23",
-          "winning_team": "SuperSonics",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Nuggets",
+          "losing_team": "Clippers",
           "score": "118-108"
         },
         {
@@ -336884,6 +337424,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-14",
+          "winning_team": "Warriors",
+          "losing_team": "Trail Blazers",
+          "score": "118-111"
+        },
+        {
           "date": "2025-03-14",
           "winning_team": "Timberwolves",
           "losing_team": "Magic",
@@ -337455,14 +338001,14 @@
         },
         {
           "date": "1969-12-21",
-          "winning_team": "Hawks",
-          "losing_team": "Bulls",
+          "winning_team": "Bucks",
+          "losing_team": "Suns",
           "score": "118-111"
         },
         {
           "date": "1969-12-21",
-          "winning_team": "Bucks",
-          "losing_team": "Suns",
+          "winning_team": "Hawks",
+          "losing_team": "Bulls",
           "score": "118-111"
         },
         {
@@ -338916,14 +339462,14 @@
         },
         {
           "date": "1979-12-04",
-          "winning_team": "Knicks",
-          "losing_team": "Suns",
+          "winning_team": "Celtics",
+          "losing_team": "Pistons",
           "score": "118-114"
         },
         {
           "date": "1979-12-04",
-          "winning_team": "Celtics",
-          "losing_team": "Pistons",
+          "winning_team": "Knicks",
+          "losing_team": "Suns",
           "score": "118-114"
         },
         {
@@ -339463,6 +340009,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-24",
+          "winning_team": "Knicks",
+          "losing_team": "Pistons",
+          "score": "118-116"
+        },
+        {
           "date": "2025-02-04",
           "winning_team": "76ers",
           "losing_team": "Mavericks",
@@ -339877,6 +340429,12 @@
       "losing_score": 117,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-07",
+          "winning_team": "Bulls",
+          "losing_team": "Cavaliers",
+          "score": "118-117"
+        },
         {
           "date": "2025-03-08",
           "winning_team": "Wizards",
@@ -340477,8 +341035,15 @@
     {
       "winning_score": 119,
       "losing_score": 81,
-      "occurred": false,
-      "games": []
+      "occurred": true,
+      "games": [
+        {
+          "date": "2025-05-16",
+          "winning_team": "Knicks",
+          "losing_team": "Celtics",
+          "score": "119-81"
+        }
+      ]
     },
     {
       "winning_score": 119,
@@ -340744,6 +341309,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-06",
+          "winning_team": "Spurs",
+          "losing_team": "Loong-Lions",
+          "score": "119-88"
+        },
+        {
           "date": "1972-02-22",
           "winning_team": "Bulls",
           "losing_team": "76ers",
@@ -340762,6 +341333,12 @@
       "losing_score": 89,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-11",
+          "winning_team": "Bulls",
+          "losing_team": "Wizards",
+          "score": "119-89"
+        },
         {
           "date": "2014-12-05",
           "winning_team": "Wizards",
@@ -341809,6 +342386,12 @@
       "losing_score": 98,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-16",
+          "winning_team": "Pistons",
+          "losing_team": "Wizards",
+          "score": "119-98"
+        },
         {
           "date": "2025-01-11",
           "winning_team": "Heat",
@@ -344507,6 +345090,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-15",
+          "winning_team": "Nuggets",
+          "losing_team": "Thunder",
+          "score": "119-107"
+        },
+        {
           "date": "2024-03-31",
           "winning_team": "Heat",
           "losing_team": "Wizards",
@@ -344772,14 +345361,14 @@
         },
         {
           "date": "1988-12-23",
-          "winning_team": "Suns",
-          "losing_team": "Nuggets",
+          "winning_team": "Cavaliers",
+          "losing_team": "SuperSonics",
           "score": "119-107"
         },
         {
           "date": "1988-12-23",
-          "winning_team": "Cavaliers",
-          "losing_team": "SuperSonics",
+          "winning_team": "Suns",
+          "losing_team": "Nuggets",
           "score": "119-107"
         },
         {
@@ -345462,6 +346051,12 @@
       "losing_score": 109,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-21",
+          "winning_team": "Warriors",
+          "losing_team": "Lakers",
+          "score": "119-109"
+        },
         {
           "date": "2025-01-25",
           "winning_team": "Suns",
@@ -346942,6 +347537,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-09",
+          "winning_team": "Bulls",
+          "losing_team": "Cavaliers",
+          "score": "119-112"
+        },
+        {
           "date": "2025-04-08",
           "winning_team": "Magic",
           "losing_team": "Hawks",
@@ -348024,6 +348625,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-17",
+          "winning_team": "Raptors",
+          "losing_team": "Nets",
+          "score": "119-114"
+        },
+        {
           "date": "2025-04-08",
           "winning_team": "Nets",
           "losing_team": "Pelicans",
@@ -348950,14 +349557,14 @@
         },
         {
           "date": "1982-11-06",
-          "winning_team": "Bullets",
-          "losing_team": "Pacers",
+          "winning_team": "76ers",
+          "losing_team": "Celtics",
           "score": "119-115"
         },
         {
           "date": "1982-11-06",
-          "winning_team": "76ers",
-          "losing_team": "Celtics",
+          "winning_team": "Bullets",
+          "losing_team": "Pacers",
           "score": "119-115"
         },
         {
@@ -349978,6 +350585,24 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-13",
+          "winning_team": "Hawks",
+          "losing_team": "Heat",
+          "score": "119-118"
+        },
+        {
+          "date": "2025-04-29",
+          "winning_team": "Pacers",
+          "losing_team": "Bucks",
+          "score": "119-118"
+        },
+        {
+          "date": "2025-04-13",
+          "winning_team": "Wizards",
+          "losing_team": "Heat",
+          "score": "119-118"
+        },
+        {
           "date": "2024-11-21",
           "winning_team": "Magic",
           "losing_team": "Lakers",
@@ -350831,6 +351456,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-29",
+          "winning_team": "Celtics",
+          "losing_team": "Magic",
+          "score": "120-89"
+        },
+        {
           "date": "2016-12-07",
           "winning_team": "Kings",
           "losing_team": "Mavericks",
@@ -351346,6 +351977,12 @@
       "losing_score": 95,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-15",
+          "winning_team": "Magic",
+          "losing_team": "Hawks",
+          "score": "120-95"
+        },
         {
           "date": "2024-05-07",
           "winning_team": "Celtics",
@@ -352529,6 +353166,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-03",
+          "winning_team": "Nuggets",
+          "losing_team": "Clippers",
+          "score": "120-101"
+        },
+        {
           "date": "2025-03-24",
           "winning_team": "Mavericks",
           "losing_team": "Nets",
@@ -353047,6 +353690,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-13",
+          "winning_team": "Wizards",
+          "losing_team": "Knicks",
+          "score": "120-103"
+        },
+        {
           "date": "2025-03-05",
           "winning_team": "Thunder",
           "losing_team": "Grizzlies",
@@ -353180,14 +353829,14 @@
         },
         {
           "date": "1995-12-08",
-          "winning_team": "Lakers",
-          "losing_team": "Raptors",
+          "winning_team": "SuperSonics",
+          "losing_team": "Kings",
           "score": "120-103"
         },
         {
           "date": "1995-12-08",
-          "winning_team": "SuperSonics",
-          "losing_team": "Kings",
+          "winning_team": "Lakers",
+          "losing_team": "Raptors",
           "score": "120-103"
         },
         {
@@ -353359,6 +354008,12 @@
       "losing_score": 104,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-12",
+          "winning_team": "Magic",
+          "losing_team": "Heat",
+          "score": "120-104"
+        },
         {
           "date": "2024-01-28",
           "winning_team": "Pistons",
@@ -354027,6 +354682,18 @@
       "losing_score": 106,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-18",
+          "winning_team": "Grizzlies",
+          "losing_team": "Mavericks",
+          "score": "120-106"
+        },
+        {
+          "date": "2025-04-16",
+          "winning_team": "Mavericks",
+          "losing_team": "Kings",
+          "score": "120-106"
+        },
         {
           "date": "2025-01-13",
           "winning_team": "Timberwolves",
@@ -355152,6 +355819,12 @@
       "losing_score": 109,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-06-16",
+          "winning_team": "Thunder",
+          "losing_team": "Pacers",
+          "score": "120-109"
+        },
         {
           "date": "2025-04-06",
           "winning_team": "Trail Blazers",
@@ -357264,14 +357937,14 @@
         },
         {
           "date": "1980-03-05",
-          "winning_team": "76ers",
-          "losing_team": "Pacers",
+          "winning_team": "Pistons",
+          "losing_team": "Knicks",
           "score": "120-113"
         },
         {
           "date": "1980-03-05",
-          "winning_team": "Pistons",
-          "losing_team": "Knicks",
+          "winning_team": "76ers",
+          "losing_team": "Pacers",
           "score": "120-113"
         },
         {
@@ -357835,14 +358508,14 @@
         },
         {
           "date": "1970-03-01",
-          "winning_team": "Bucks",
-          "losing_team": "Royals",
+          "winning_team": "Lakers",
+          "losing_team": "Celtics",
           "score": "120-114"
         },
         {
           "date": "1970-03-01",
-          "winning_team": "Lakers",
-          "losing_team": "Celtics",
+          "winning_team": "Bucks",
+          "losing_team": "Royals",
           "score": "120-114"
         },
         {
@@ -358345,6 +359018,12 @@
       "losing_score": 116,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-11",
+          "winning_team": "Hornets",
+          "losing_team": "Mavericks",
+          "score": "120-116"
+        },
         {
           "date": "2025-02-13",
           "winning_team": "Clippers",
@@ -359573,6 +360252,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-06",
+          "winning_team": "Pacers",
+          "losing_team": "Cavaliers",
+          "score": "120-119"
+        },
+        {
           "date": "2025-03-29",
           "winning_team": "Mavericks",
           "losing_team": "Bulls",
@@ -360709,6 +361394,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-15",
+          "winning_team": "Mavericks",
+          "losing_team": "Lakers",
+          "score": "121-94"
+        },
+        {
           "date": "2025-01-17",
           "winning_team": "Celtics",
           "losing_team": "Magic",
@@ -361645,6 +362336,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-20",
+          "winning_team": "Cavaliers",
+          "losing_team": "Heat",
+          "score": "121-100"
+        },
+        {
           "date": "2024-03-16",
           "winning_team": "Pacers",
           "losing_team": "Nets",
@@ -362337,6 +363034,12 @@
       "losing_score": 103,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-08",
+          "winning_team": "Celtics",
+          "losing_team": "Grizzlies",
+          "score": "121-103"
+        },
         {
           "date": "2025-03-10",
           "winning_team": "Bulls",
@@ -364427,6 +365130,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-14",
+          "winning_team": "Timberwolves",
+          "losing_team": "Warriors",
+          "score": "121-110"
+        },
+        {
           "date": "2025-03-27",
           "winning_team": "Rockets",
           "losing_team": "Jazz",
@@ -365257,6 +365966,18 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-04",
+          "winning_team": "Pacers",
+          "losing_team": "Cavaliers",
+          "score": "121-112"
+        },
+        {
+          "date": "2025-04-23",
+          "winning_team": "Cavaliers",
+          "losing_team": "Heat",
+          "score": "121-112"
+        },
+        {
           "date": "2025-02-27",
           "winning_team": "Bucks",
           "losing_team": "Nuggets",
@@ -365552,14 +366273,14 @@
         },
         {
           "date": "1978-12-20",
-          "winning_team": "Nuggets",
-          "losing_team": "Jazz",
+          "winning_team": "Hawks",
+          "losing_team": "Knicks",
           "score": "121-112"
         },
         {
           "date": "1978-12-20",
-          "winning_team": "Hawks",
-          "losing_team": "Knicks",
+          "winning_team": "Nuggets",
+          "losing_team": "Jazz",
           "score": "121-112"
         },
         {
@@ -365695,6 +366416,12 @@
       "losing_score": 113,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-12",
+          "winning_team": "Knicks",
+          "losing_team": "Celtics",
+          "score": "121-113"
+        },
         {
           "date": "2025-01-29",
           "winning_team": "Timberwolves",
@@ -367073,6 +367800,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-15",
+          "winning_team": "Warriors",
+          "losing_team": "Grizzlies",
+          "score": "121-116"
+        },
+        {
           "date": "2024-12-08",
           "winning_team": "Spurs",
           "losing_team": "Pelicans",
@@ -368167,6 +368900,12 @@
       "losing_score": 119,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-05",
+          "winning_team": "Nuggets",
+          "losing_team": "Thunder",
+          "score": "121-119"
+        },
         {
           "date": "2025-03-06",
           "winning_team": "Warriors",
@@ -370768,6 +371507,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-13",
+          "winning_team": "Bulls",
+          "losing_team": "76ers",
+          "score": "122-102"
+        },
+        {
           "date": "2024-10-24",
           "winning_team": "Celtics",
           "losing_team": "Wizards",
@@ -371985,14 +372730,14 @@
         },
         {
           "date": "1972-02-26",
-          "winning_team": "SuperSonics",
-          "losing_team": "Royals",
+          "winning_team": "Rockets",
+          "losing_team": "Pistons",
           "score": "122-106"
         },
         {
           "date": "1972-02-26",
-          "winning_team": "Rockets",
-          "losing_team": "Pistons",
+          "winning_team": "SuperSonics",
+          "losing_team": "Royals",
           "score": "122-106"
         },
         {
@@ -374121,6 +374866,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-06",
+          "winning_team": "Rockets",
+          "losing_team": "Hawks",
+          "score": "122-113"
+        },
+        {
           "date": "2024-12-08",
           "winning_team": "Heat",
           "losing_team": "Cavaliers",
@@ -375485,6 +376236,18 @@
       "losing_score": 116,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-11",
+          "winning_team": "Hawks",
+          "losing_team": "Grizzlies",
+          "score": "122-116"
+        },
+        {
+          "date": "2025-10-09",
+          "winning_team": "Thunder",
+          "losing_team": "Hornets",
+          "score": "122-116"
+        },
         {
           "date": "2024-04-28",
           "winning_team": "Timberwolves",
@@ -377896,6 +378659,12 @@
       "losing_score": 88,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-04",
+          "winning_team": "Nets",
+          "losing_team": "Jerusalem B.C.",
+          "score": "123-88"
+        },
         {
           "date": "2021-11-26",
           "winning_team": "Bulls",
@@ -380340,6 +381109,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-06-08",
+          "winning_team": "Thunder",
+          "losing_team": "Pacers",
+          "score": "123-107"
+        },
+        {
           "date": "2024-03-12",
           "winning_team": "Celtics",
           "losing_team": "Jazz",
@@ -381983,6 +382758,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-19",
+          "winning_team": "Knicks",
+          "losing_team": "Pistons",
+          "score": "123-112"
+        },
+        {
           "date": "2025-03-21",
           "winning_team": "Suns",
           "losing_team": "Cavaliers",
@@ -382681,6 +383462,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-18",
+          "winning_team": "Heat",
+          "losing_team": "Hawks",
+          "score": "123-114"
+        },
+        {
           "date": "2025-01-22",
           "winning_team": "Thunder",
           "losing_team": "Jazz",
@@ -383023,6 +383810,12 @@
       "losing_score": 115,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-22",
+          "winning_team": "Pacers",
+          "losing_team": "Bucks",
+          "score": "123-115"
+        },
         {
           "date": "2025-03-05",
           "winning_team": "Clippers",
@@ -386008,6 +386801,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-26",
+          "winning_team": "Cavaliers",
+          "losing_team": "Heat",
+          "score": "124-87"
+        },
+        {
           "date": "2021-04-11",
           "winning_team": "Bucks",
           "losing_team": "Magic",
@@ -386368,6 +387167,12 @@
       "losing_score": 94,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-28",
+          "winning_team": "Thunder",
+          "losing_team": "Timberwolves",
+          "score": "124-94"
+        },
         {
           "date": "2024-10-15",
           "winning_team": "Thunder",
@@ -387168,6 +387973,12 @@
       "losing_score": 102,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-11",
+          "winning_team": "Mavericks",
+          "losing_team": "Raptors",
+          "score": "124-102"
+        },
         {
           "date": "2021-12-04",
           "winning_team": "Bucks",
@@ -388375,6 +389186,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-13",
+          "winning_team": "Spurs",
+          "losing_team": "Pacers",
+          "score": "124-108"
+        },
+        {
           "date": "2025-04-04",
           "winning_team": "Lakers",
           "losing_team": "Pelicans",
@@ -388598,14 +389415,14 @@
         },
         {
           "date": "1968-02-16",
-          "winning_team": "Celtics",
-          "losing_team": "Bulls",
+          "winning_team": "76ers",
+          "losing_team": "Rockets",
           "score": "124-108"
         },
         {
           "date": "1968-02-16",
-          "winning_team": "76ers",
-          "losing_team": "Rockets",
+          "winning_team": "Celtics",
+          "losing_team": "Bulls",
           "score": "124-108"
         },
         {
@@ -388898,6 +389715,12 @@
       "losing_score": 110,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-11",
+          "winning_team": "Hawks",
+          "losing_team": "76ers",
+          "score": "124-110"
+        },
         {
           "date": "2023-01-13",
           "winning_team": "Thunder",
@@ -390880,6 +391703,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-14",
+          "winning_team": "Nuggets",
+          "losing_team": "Bulls",
+          "score": "124-117"
+        },
+        {
           "date": "2025-02-08",
           "winning_team": "Lakers",
           "losing_team": "Pacers",
@@ -391553,6 +392382,12 @@
       "losing_score": 119,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-13",
+          "winning_team": "Clippers",
+          "losing_team": "Warriors",
+          "score": "124-119"
+        },
         {
           "date": "2025-01-13",
           "winning_team": "Pistons",
@@ -392698,6 +393533,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-10",
+          "winning_team": "Trail Blazers",
+          "losing_team": "Kings",
+          "score": "124-123"
+        },
+        {
           "date": "2024-11-13",
           "winning_team": "Bulls",
           "losing_team": "Knicks",
@@ -393377,6 +394218,12 @@
       "losing_score": 93,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-18",
+          "winning_team": "Thunder",
+          "losing_team": "Nuggets",
+          "score": "125-93"
+        },
         {
           "date": "2022-02-25",
           "winning_team": "Hornets",
@@ -395240,6 +396087,12 @@
       "losing_score": 108,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-31",
+          "winning_team": "Pacers",
+          "losing_team": "Knicks",
+          "score": "125-108"
+        },
         {
           "date": "2025-02-28",
           "winning_team": "Suns",
@@ -397813,6 +398666,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-13",
+          "winning_team": "Spurs",
+          "losing_team": "Raptors",
+          "score": "125-118"
+        },
+        {
           "date": "2024-12-07",
           "winning_team": "Mavericks",
           "losing_team": "Raptors",
@@ -398143,6 +399002,12 @@
       "losing_score": 119,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-11",
+          "winning_team": "Bucks",
+          "losing_team": "Pistons",
+          "score": "125-119"
+        },
         {
           "date": "2025-01-27",
           "winning_team": "Heat",
@@ -399384,6 +400249,12 @@
       "losing_score": 124,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-21",
+          "winning_team": "Thunder",
+          "losing_team": "Rockets",
+          "score": "125-124"
+        },
         {
           "date": "2024-12-16",
           "winning_team": "Pistons",
@@ -401047,6 +401918,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-09",
+          "winning_team": "Cavaliers",
+          "losing_team": "Pacers",
+          "score": "126-104"
+        },
+        {
           "date": "2023-10-28",
           "winning_team": "Suns",
           "losing_team": "Jazz",
@@ -402019,6 +402896,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-17",
+          "winning_team": "76ers",
+          "losing_team": "Timberwolves",
+          "score": "126-110"
+        },
+        {
           "date": "2024-05-23",
           "winning_team": "Celtics",
           "losing_team": "Pacers",
@@ -402205,6 +403088,12 @@
       "losing_score": 111,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-13",
+          "winning_team": "Nuggets",
+          "losing_team": "Rockets",
+          "score": "126-111"
+        },
         {
           "date": "2024-11-03",
           "winning_team": "Hawks",
@@ -403345,6 +404234,18 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-12",
+          "winning_team": "Lakers",
+          "losing_team": "Warriors",
+          "score": "126-116"
+        },
+        {
+          "date": "2025-10-04",
+          "winning_team": "Timberwolves",
+          "losing_team": "Nuggets",
+          "score": "126-116"
+        },
+        {
           "date": "2025-03-12",
           "winning_team": "Spurs",
           "losing_team": "Mavericks",
@@ -403743,14 +404644,14 @@
         },
         {
           "date": "1978-10-20",
-          "winning_team": "76ers",
-          "losing_team": "Pistons",
+          "winning_team": "Nuggets",
+          "losing_team": "Nets",
           "score": "126-117"
         },
         {
           "date": "1978-10-20",
-          "winning_team": "Nuggets",
-          "losing_team": "Nets",
+          "winning_team": "76ers",
+          "losing_team": "Pistons",
           "score": "126-117"
         },
         {
@@ -403862,6 +404763,18 @@
       "losing_score": 118,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-04",
+          "winning_team": "Magic",
+          "losing_team": "Heat",
+          "score": "126-118"
+        },
+        {
+          "date": "2025-04-13",
+          "winning_team": "Pacers",
+          "losing_team": "Cavaliers",
+          "score": "126-118"
+        },
         {
           "date": "2025-03-14",
           "winning_team": "Raptors",
@@ -404422,6 +405335,12 @@
       "losing_score": 120,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-16",
+          "winning_team": "Bulls",
+          "losing_team": "Timberwolves",
+          "score": "126-120"
+        },
         {
           "date": "2024-10-12",
           "winning_team": "Spurs",
@@ -406163,6 +407082,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-04",
+          "winning_team": "Pelicans",
+          "losing_team": "Phoenix",
+          "score": "127-92"
+        },
+        {
           "date": "2024-03-11",
           "winning_team": "Mavericks",
           "losing_team": "Bulls",
@@ -406826,6 +407751,12 @@
       "losing_score": 102,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-14",
+          "winning_team": "Celtics",
+          "losing_team": "Knicks",
+          "score": "127-102"
+        },
         {
           "date": "2024-11-23",
           "winning_team": "Nuggets",
@@ -410254,6 +411185,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-12",
+          "winning_team": "Bucks",
+          "losing_team": "Bulls",
+          "score": "127-121"
+        },
+        {
           "date": "2025-03-19",
           "winning_team": "Suns",
           "losing_team": "Bulls",
@@ -410718,14 +411655,14 @@
         },
         {
           "date": "1968-02-23",
-          "winning_team": "SuperSonics",
-          "losing_team": "Rockets",
+          "winning_team": "Warriors",
+          "losing_team": "Celtics",
           "score": "127-122"
         },
         {
           "date": "1968-02-23",
-          "winning_team": "Warriors",
-          "losing_team": "Celtics",
+          "winning_team": "SuperSonics",
+          "losing_team": "Rockets",
           "score": "127-122"
         },
         {
@@ -412118,6 +413055,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-10",
+          "winning_team": "Magic",
+          "losing_team": "76ers",
+          "score": "128-98"
+        },
+        {
           "date": "2024-11-01",
           "winning_team": "Knicks",
           "losing_team": "Pistons",
@@ -412931,14 +413874,14 @@
         },
         {
           "date": "2020-12-17",
-          "winning_team": "Rockets",
-          "losing_team": "Spurs",
+          "winning_team": "Grizzlies",
+          "losing_team": "Hawks",
           "score": "128-106"
         },
         {
           "date": "2020-12-17",
-          "winning_team": "Grizzlies",
-          "losing_team": "Hawks",
+          "winning_team": "Rockets",
+          "losing_team": "Spurs",
           "score": "128-106"
         },
         {
@@ -413979,6 +414922,12 @@
       "losing_score": 112,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-06",
+          "winning_team": "Pistons",
+          "losing_team": "Grizzlies",
+          "score": "128-112"
+        },
         {
           "date": "2025-02-01",
           "winning_team": "Lakers",
@@ -415862,14 +416811,14 @@
         },
         {
           "date": "1962-02-17",
-          "winning_team": "Lakers",
-          "losing_team": "Knicks",
+          "winning_team": "Hawks",
+          "losing_team": "Warriors",
           "score": "128-121"
         },
         {
           "date": "1962-02-17",
-          "winning_team": "Hawks",
-          "losing_team": "Warriors",
+          "winning_team": "Lakers",
+          "losing_team": "Knicks",
           "score": "128-121"
         }
       ]
@@ -416134,14 +417083,14 @@
         },
         {
           "date": "2022-03-18",
-          "winning_team": "Nets",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Lakers",
+          "losing_team": "Raptors",
           "score": "128-123"
         },
         {
           "date": "2022-03-18",
-          "winning_team": "Lakers",
-          "losing_team": "Raptors",
+          "winning_team": "Nets",
+          "losing_team": "Trail Blazers",
           "score": "128-123"
         },
         {
@@ -416687,6 +417636,12 @@
       "losing_score": 126,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-26",
+          "winning_team": "Thunder",
+          "losing_team": "Timberwolves",
+          "score": "128-126"
+        },
         {
           "date": "2023-04-26",
           "winning_team": "Heat",
@@ -417676,14 +418631,14 @@
         },
         {
           "date": "1991-02-26",
-          "winning_team": "Bulls",
-          "losing_team": "Celtics",
+          "winning_team": "Rockets",
+          "losing_team": "Nuggets",
           "score": "129-99"
         },
         {
           "date": "1991-02-26",
-          "winning_team": "Rockets",
-          "losing_team": "Nuggets",
+          "winning_team": "Bulls",
+          "losing_team": "Celtics",
           "score": "129-99"
         },
         {
@@ -417954,6 +418909,12 @@
       "losing_score": 103,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-27",
+          "winning_team": "Pacers",
+          "losing_team": "Bucks",
+          "score": "129-103"
+        },
         {
           "date": "2024-11-02",
           "winning_team": "Nuggets",
@@ -418614,6 +419575,12 @@
       "losing_score": 109,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-11",
+          "winning_team": "Pacers",
+          "losing_team": "Cavaliers",
+          "score": "129-109"
+        },
         {
           "date": "2023-12-31",
           "winning_team": "Pelicans",
@@ -419604,6 +420571,12 @@
       "losing_score": 115,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-11",
+          "winning_team": "Magic",
+          "losing_team": "Pacers",
+          "score": "129-115"
+        },
         {
           "date": "2025-02-20",
           "winning_team": "Nuggets",
@@ -421173,6 +422146,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-08",
+          "winning_team": "Warriors",
+          "losing_team": "Trail Blazers",
+          "score": "129-123"
+        },
+        {
           "date": "2025-02-23",
           "winning_team": "Cavaliers",
           "losing_team": "Grizzlies",
@@ -421457,14 +422436,14 @@
         },
         {
           "date": "1989-03-17",
-          "winning_team": "Bulls",
-          "losing_team": "Knicks",
+          "winning_team": "Suns",
+          "losing_team": "Trail Blazers",
           "score": "129-124"
         },
         {
           "date": "1989-03-17",
-          "winning_team": "Suns",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Bulls",
+          "losing_team": "Knicks",
           "score": "129-124"
         },
         {
@@ -422631,6 +423610,12 @@
       "losing_score": 94,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-11",
+          "winning_team": "Celtics",
+          "losing_team": "Hornets",
+          "score": "130-94"
+        },
         {
           "date": "2023-03-22",
           "winning_team": "Bucks",
@@ -425485,6 +426470,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-27",
+          "winning_team": "Pacers",
+          "losing_team": "Knicks",
+          "score": "130-121"
+        },
+        {
           "date": "2024-05-08",
           "winning_team": "Knicks",
           "losing_team": "Pacers",
@@ -425641,6 +426632,12 @@
       "losing_score": 122,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-08",
+          "winning_team": "Raptors",
+          "losing_team": "Kings",
+          "score": "130-122"
+        },
         {
           "date": "2024-04-07",
           "winning_team": "Raptors",
@@ -426458,6 +427455,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-14",
+          "winning_team": "Rockets",
+          "losing_team": "Pelicans",
+          "score": "130-128"
+        },
+        {
           "date": "2025-03-01",
           "winning_team": "Spurs",
           "losing_team": "Grizzlies",
@@ -426841,8 +427844,15 @@
     {
       "winning_score": 131,
       "losing_score": 80,
-      "occurred": false,
-      "games": []
+      "occurred": true,
+      "games": [
+        {
+          "date": "2025-04-20",
+          "winning_team": "Thunder",
+          "losing_team": "Grizzlies",
+          "score": "131-80"
+        }
+      ]
     },
     {
       "winning_score": 131,
@@ -428556,6 +429566,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-29",
+          "winning_team": "Nuggets",
+          "losing_team": "Clippers",
+          "score": "131-115"
+        },
+        {
           "date": "2022-03-15",
           "winning_team": "Suns",
           "losing_team": "Pelicans",
@@ -428688,6 +429704,12 @@
       "losing_score": 116,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-30",
+          "winning_team": "Rockets",
+          "losing_team": "Warriors",
+          "score": "131-116"
+        },
         {
           "date": "2024-04-17",
           "winning_team": "Bulls",
@@ -430984,6 +432006,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-13",
+          "winning_team": "Grizzlies",
+          "losing_team": "Mavericks",
+          "score": "132-97"
+        },
+        {
           "date": "2022-04-28",
           "winning_team": "76ers",
           "losing_team": "Raptors",
@@ -432578,14 +433606,14 @@
         },
         {
           "date": "1989-04-06",
-          "winning_team": "Warriors",
-          "losing_team": "Celtics",
+          "winning_team": "Nuggets",
+          "losing_team": "Pacers",
           "score": "132-118"
         },
         {
           "date": "1989-04-06",
-          "winning_team": "Nuggets",
-          "losing_team": "Pacers",
+          "winning_team": "Warriors",
+          "losing_team": "Celtics",
           "score": "132-118"
         },
         {
@@ -433352,6 +434380,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-16",
+          "winning_team": "Magic",
+          "losing_team": "Pelicans",
+          "score": "132-125"
+        },
+        {
           "date": "2024-01-13",
           "winning_team": "Jazz",
           "losing_team": "Lakers",
@@ -433606,6 +434640,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-10",
+          "winning_team": "Suns",
+          "losing_team": "Nets",
+          "score": "132-127"
+        },
+        {
           "date": "2025-02-01",
           "winning_team": "Pacers",
           "losing_team": "Hawks",
@@ -433829,6 +434869,12 @@
       "losing_score": 129,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-16",
+          "winning_team": "Jazz",
+          "losing_team": "Trail Blazers",
+          "score": "132-129"
+        },
         {
           "date": "2025-01-24",
           "winning_team": "76ers",
@@ -434934,6 +435980,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-17",
+          "winning_team": "Spurs",
+          "losing_team": "Pacers",
+          "score": "133-104"
+        },
+        {
           "date": "2025-03-10",
           "winning_team": "Knicks",
           "losing_team": "Kings",
@@ -435742,6 +436794,12 @@
       "losing_score": 115,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-16",
+          "winning_team": "Rockets",
+          "losing_team": "Hawks",
+          "score": "133-115"
+        },
         {
           "date": "2023-11-15",
           "winning_team": "Suns",
@@ -437630,8 +438688,15 @@
     {
       "winning_score": 134,
       "losing_score": 74,
-      "occurred": false,
-      "games": []
+      "occurred": true,
+      "games": [
+        {
+          "date": "2025-10-13",
+          "winning_team": "Timberwolves",
+          "losing_team": "Loong-Lions",
+          "score": "134-74"
+        }
+      ]
     },
     {
       "winning_score": 134,
@@ -439978,6 +441043,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-10",
+          "winning_team": "Spurs",
+          "losing_team": "Jazz",
+          "score": "134-130"
+        },
+        {
           "date": "2025-02-12",
           "winning_team": "Pacers",
           "losing_team": "Wizards",
@@ -441389,6 +442460,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-05",
+          "winning_team": "Thunder",
+          "losing_team": "Hornets",
+          "score": "135-114"
+        },
+        {
           "date": "2017-11-11",
           "winning_team": "Warriors",
           "losing_team": "76ers",
@@ -442764,6 +443841,12 @@
       "losing_score": 134,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-07",
+          "winning_team": "Pacers",
+          "losing_team": "Timberwolves",
+          "score": "135-134"
+        },
         {
           "date": "2021-10-22",
           "winning_team": "Wizards",
@@ -447282,8 +448365,15 @@
     {
       "winning_score": 138,
       "losing_score": 83,
-      "occurred": false,
-      "games": []
+      "occurred": true,
+      "games": [
+        {
+          "date": "2025-04-28",
+          "winning_team": "Cavaliers",
+          "losing_team": "Heat",
+          "score": "138-83"
+        }
+      ]
     },
     {
       "winning_score": 138,
@@ -447629,6 +448719,12 @@
       "losing_score": 107,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-12",
+          "winning_team": "Celtics",
+          "losing_team": "Cavaliers",
+          "score": "138-107"
+        },
         {
           "date": "2025-02-05",
           "winning_team": "Grizzlies",
@@ -448731,6 +449827,12 @@
       "losing_score": 135,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-21",
+          "winning_team": "Pacers",
+          "losing_team": "Knicks",
+          "score": "138-135"
+        },
         {
           "date": "2024-01-03",
           "winning_team": "Kings",
@@ -451011,6 +452113,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-04-11",
+          "winning_team": "Lakers",
+          "losing_team": "Rockets",
+          "score": "140-109"
+        },
+        {
           "date": "2025-02-05",
           "winning_team": "Thunder",
           "losing_team": "Suns",
@@ -451671,6 +452779,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-08",
+          "winning_team": "Rockets",
+          "losing_team": "Jazz",
+          "score": "140-127"
+        },
+        {
           "date": "2025-03-10",
           "winning_team": "Nuggets",
           "losing_team": "Thunder",
@@ -451916,6 +453030,12 @@
       "losing_score": 133,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-04-13",
+          "winning_team": "Bucks",
+          "losing_team": "Pistons",
+          "score": "140-133"
+        },
         {
           "date": "2025-02-13",
           "winning_team": "Pelicans",
@@ -453158,6 +454278,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-10-17",
+          "winning_team": "Grizzlies",
+          "losing_team": "Heat",
+          "score": "141-125"
+        },
+        {
           "date": "2025-04-10",
           "winning_team": "Timberwolves",
           "losing_team": "Grizzlies",
@@ -453959,8 +455085,15 @@
     {
       "winning_score": 142,
       "losing_score": 95,
-      "occurred": false,
-      "games": []
+      "occurred": true,
+      "games": [
+        {
+          "date": "2025-10-09",
+          "winning_team": "Clippers",
+          "losing_team": "Loong-Lions",
+          "score": "142-95"
+        }
+      ]
     },
     {
       "winning_score": 142,
@@ -455374,6 +456507,12 @@
       "losing_score": 101,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-05-24",
+          "winning_team": "Timberwolves",
+          "losing_team": "Thunder",
+          "score": "143-101"
+        },
         {
           "date": "2019-11-22",
           "winning_team": "Mavericks",
@@ -457845,8 +458984,15 @@
     {
       "winning_score": 145,
       "losing_score": 111,
-      "occurred": false,
-      "games": []
+      "occurred": true,
+      "games": [
+        {
+          "date": "2025-04-11",
+          "winning_team": "Thunder",
+          "losing_team": "Jazz",
+          "score": "145-111"
+        }
+      ]
     },
     {
       "winning_score": 145,
@@ -457903,6 +459049,12 @@
       "losing_score": 116,
       "occurred": true,
       "games": [
+        {
+          "date": "2025-10-15",
+          "winning_team": "Hornets",
+          "losing_team": "Grizzlies",
+          "score": "145-116"
+        },
         {
           "date": "1977-04-09",
           "winning_team": "Trail Blazers",
@@ -461497,6 +462649,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2025-05-07",
+          "winning_team": "Thunder",
+          "losing_team": "Nuggets",
+          "score": "149-106"
+        },
+        {
           "date": "2016-11-23",
           "winning_team": "Warriors",
           "losing_team": "Lakers",
@@ -464666,8 +465824,15 @@
     {
       "winning_score": 153,
       "losing_score": 104,
-      "occurred": false,
-      "games": []
+      "occurred": true,
+      "games": [
+        {
+          "date": "2025-04-11",
+          "winning_team": "Heat",
+          "losing_team": "Pelicans",
+          "score": "153-104"
+        }
+      ]
     },
     {
       "winning_score": 153,

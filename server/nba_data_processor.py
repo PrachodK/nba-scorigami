@@ -26,10 +26,12 @@ def process_data(csv_path, output_path):
         games = pd.read_csv(
             csv_path,
             usecols=cols,
-            parse_dates=['gameDate'],
             low_memory=False
         )
-        
+
+        # Convert gameDate to datetime (handle mixed formats)
+        games['gameDate'] = pd.to_datetime(games['gameDate'], format='mixed')
+
         games = games.dropna(subset=['homeScore', 'awayScore'])
         games['homeScore'] = games['homeScore'].astype(int)
         games['awayScore'] = games['awayScore'].astype(int)
