@@ -25,23 +25,17 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        // Fetch today's and upcoming games
+        // Only fetch today's games to avoid rate limiting
         const today = new Date();
-        const allGames = [];
+        const todayGames = await fetchScoreboard(today);
 
-        // Fetch games sequentially to avoid rate limiting (not in parallel)
-        for (let i = 0; i < 3; i++) { // Only fetch 3 days instead of 7
-          const date = new Date(today);
-          date.setDate(date.getDate() + i);
+        // Optionally fetch tomorrow's games after a delay
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const tomorrowGames = await fetchScoreboard(tomorrow);
 
-          const dayGames = await fetchScoreboard(date);
-          allGames.push(...dayGames);
-
-          // Add delay between requests to avoid rate limiting
-          if (i < 2) {
-            await new Promise(resolve => setTimeout(resolve, 1000));
-          }
-        }
+        const allGames = [...todayGames, ...tomorrowGames];
 
         // Transform to match existing format
         const transformedGames = allGames.map(game => ({

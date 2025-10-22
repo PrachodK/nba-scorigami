@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(cat .env)",
-      "Bash(git commit -m \"Fix API rate limiting by reducing parallel requests\n\n- Changed from parallel to sequential API calls\n- Reduced from 7 days to 3 days of data\n- Added 1 second delay between requests\n- This prevents 429 Too Many Requests errors\")"
+      "Bash(git commit -m \"Fix API rate limiting by reducing parallel requests\n\n- Changed from parallel to sequential API calls\n- Reduced from 7 days to 3 days of data\n- Added 1 second delay between requests\n- This prevents 429 Too Many Requests errors\")",
+      "Bash(git commit -m \"Further reduce API calls to only today and tomorrow\n\n- ScorigamiGuesser now only fetches today + tomorrow (2 calls)\n- App.js only fetches yesterday (1 call)\n- Total of 3 API calls instead of 6\n- Added 2 second delay between calls\")"
     ],
     "deny": [],
     "ask": []

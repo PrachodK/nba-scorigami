@@ -55,26 +55,18 @@ function App() {
     fetchData();
   }, []);
 
-  // Fetch played games from NBA API (last 3 days)
+  // Fetch played games from NBA API (yesterday and today only)
   useEffect(() => {
     const fetchRecentGames = async () => {
       try {
         const today = new Date();
-        const allGames = [];
 
-        // Fetch games sequentially from the last 3 days to avoid rate limiting
-        for (let i = 0; i < 3; i++) {
-          const date = new Date(today);
-          date.setDate(date.getDate() - i);
+        // Only fetch yesterday's games to avoid rate limiting
+        const yesterday = new Date(today);
+        yesterday.setDate(yesterday.getDate() - 1);
 
-          const dayGames = await fetchScoreboard(date);
-          allGames.push(...dayGames);
-
-          // Add delay between requests to avoid rate limiting
-          if (i < 2) {
-            await new Promise(resolve => setTimeout(resolve, 1000));
-          }
-        }
+        const yesterdayGames = await fetchScoreboard(yesterday);
+        const allGames = [...yesterdayGames];
 
         // Filter for completed games only
         const completedGames = allGames.filter(g => g.gameStatus === 3);
