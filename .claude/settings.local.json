@@ -8,7 +8,8 @@
       "Bash(kaggle datasets files eoinamoore/historical-nba-data-and-player-box-scores)",
       "Bash(kaggle datasets download -d eoinamoore/historical-nba-data-and-player-box-scores -f LeagueSchedule25_26.csv -p public --force)",
       "Bash(git commit -m \"Update to use 2025-26 NBA season schedule\n\n- Downloaded LeagueSchedule25_26.csv from Kaggle\n- Updated ScorigamiGuesser to parse new CSV format\n- Updated update script to download schedule file\n- New format uses gameDateTimeEst and separate city/name fields\n- Script now downloads both Games.csv and LeagueSchedule25_26.csv\")",
-      "Bash(git commit -m \"Fix: Show today''s games even if they''ve already started\n\n- Changed logic to compare dates instead of exact times\n- Now shows all games on today''s date, regardless of start time\n- Fixes issue where games wouldn''t show after they started\")"
+      "Bash(git commit -m \"Fix: Show today''s games even if they''ve already started\n\n- Changed logic to compare dates instead of exact times\n- Now shows all games on today''s date, regardless of start time\n- Fixes issue where games wouldn''t show after they started\")",
+      "Bash(git commit -m \"Revert: Only show games that haven''t started yet\n\n- Filter out past games when loading CSV\n- Only show upcoming games (future timestamps)\n- Games disappear once they start\n- Fixes showing old preseason games from October 2-3\")"
     ],
     "deny": [],
     "ask": []

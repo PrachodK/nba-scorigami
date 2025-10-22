@@ -31,11 +31,16 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
           trimHeaders: true,
         });
 
+        const now = new Date();
+
         const games = parsed.data.map((row, i) => {
           if (!row["gameDateTimeEst"] || !row["homeTeamName"]) return null;
 
           const dateObj = new Date(row["gameDateTimeEst"]);
           if (isNaN(dateObj)) return null;
+
+          // Skip games that are in the past
+          if (dateObj <= now) return null;
 
           // Combine city and team name
           const awayTeam = `${row["awayTeamCity"]} ${row["awayTeamName"]}`;
@@ -77,19 +82,10 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
 
   const getNextRelevantDate = () => {
     const now = new Date();
-    const today = new Date(now);
-    today.setHours(0, 0, 0, 0);
-
-    // Filter games to today or future dates (not just future times)
-    const todayOrLater = upcomingGames.filter(g => {
-      const gameDay = new Date(g.date);
-      gameDay.setHours(0, 0, 0, 0);
-      return gameDay >= today;
-    }).map(g => g.date).sort((a, b) => a - b);
-
-    if (todayOrLater.length === 0) return null;
-
-    const nextGameDate = new Date(todayOrLater[0]);
+    // Only show games that haven't started yet
+    const upcoming = upcomingGames.map(g => g.date).filter(d => d > now).sort((a, b) => a - b);
+    if (upcoming.length === 0) return null;
+    const nextGameDate = new Date(upcoming[0]);
     nextGameDate.setHours(0, 0, 0, 0);
     return nextGameDate;
   };
