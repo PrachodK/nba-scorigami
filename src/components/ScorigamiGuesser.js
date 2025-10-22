@@ -77,9 +77,19 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
 
   const getNextRelevantDate = () => {
     const now = new Date();
-    const upcoming = upcomingGames.map(g => g.date).filter(d => d > now).sort((a, b) => a - b);
-    if (upcoming.length === 0) return null;
-    const nextGameDate = new Date(upcoming[0]);
+    const today = new Date(now);
+    today.setHours(0, 0, 0, 0);
+
+    // Filter games to today or future dates (not just future times)
+    const todayOrLater = upcomingGames.filter(g => {
+      const gameDay = new Date(g.date);
+      gameDay.setHours(0, 0, 0, 0);
+      return gameDay >= today;
+    }).map(g => g.date).sort((a, b) => a - b);
+
+    if (todayOrLater.length === 0) return null;
+
+    const nextGameDate = new Date(todayOrLater[0]);
     nextGameDate.setHours(0, 0, 0, 0);
     return nextGameDate;
   };
