@@ -1,20 +1,9 @@
 /**
  * NBA Stats API Service
- * Uses official NBA.com stats endpoints for live data
- * No authentication required, but includes proper headers to avoid blocking
+ * Uses balldontlie.io API - free, no CORS issues, no auth required
  */
 
-const NBA_STATS_BASE = 'https://stats.nba.com/stats';
-const NBA_CDN_BASE = 'https://cdn.nba.com/static/json/liveData';
-
-// Required headers to avoid being blocked
-const NBA_HEADERS = {
-  'Accept': 'application/json, text/plain, */*',
-  'Accept-Language': 'en-US,en;q=0.9',
-  'Referer': 'https://www.nba.com/',
-  'Origin': 'https://www.nba.com',
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-};
+const BALL_DONT_LIE_BASE = 'https://api.balldontlie.io/v1';
 
 /**
  * Fetch current season schedule
@@ -22,31 +11,29 @@ const NBA_HEADERS = {
  */
 export const fetchSchedule = async () => {
   try {
-    // Using NBA's scoreboard endpoint which includes upcoming games
-    // Note: We could expand this to fetch multiple days if needed
-
-    // For now, let's use a simpler approach - fetch today's scoreboard
-    const response = await fetch(`${NBA_CDN_BASE}/scoreboard/todaysScoreboard_00.json`);
+    // Fetch today's games from balldontlie.io
+    const today = new Date().toISOString().split('T')[0];
+    const response = await fetch(`${BALL_DONT_LIE_BASE}/games?dates[]=${today}`);
     const data = await response.json();
 
-    if (!data.scoreboard?.games) {
+    if (!data.data) {
       return [];
     }
 
-    return data.scoreboard.games.map(game => ({
-      id: game.gameId,
-      date: new Date(game.gameTimeUTC),
-      gameStatus: game.gameStatus,
-      gameStatusText: game.gameStatusText,
-      team1: game.awayTeam.teamName,
-      team1City: game.awayTeam.teamCity,
-      team1TriCode: game.awayTeam.teamTricode,
-      team2: game.homeTeam.teamName,
-      team2City: game.homeTeam.teamCity,
-      team2TriCode: game.homeTeam.teamTricode,
-      arena: game.arenaName,
-      awayScore: game.awayTeam.score,
-      homeScore: game.homeTeam.score,
+    return data.data.map(game => ({
+      id: game.id,
+      date: new Date(game.date),
+      gameStatus: game.status,
+      gameStatusText: game.status,
+      team1: game.visitor_team.full_name,
+      team1City: game.visitor_team.city,
+      team1TriCode: game.visitor_team.abbreviation,
+      team2: game.home_team.full_name,
+      team2City: game.home_team.city,
+      team2TriCode: game.home_team.abbreviation,
+      arena: '',
+      awayScore: game.visitor_team_score,
+      homeScore: game.home_team_score,
     }));
   } catch (error) {
     console.error('Error fetching NBA schedule:', error);
@@ -61,51 +48,44 @@ export const fetchSchedule = async () => {
  */
 export const fetchSeasonGames = async (season = '2024-25') => {
   try {
+    // balldon lie.io uses seasons as integers (2024 for 2024-25 season)
+    const seasonYear = parseInt(season.split('-')[0]);
 
-    // NBA's leaguegamelog endpoint gets all games for a season
-    const url = `${NBA_STATS_BASE}/leaguegamelog`;
-    const params = new URLSearchParams({
-      Season: season,
-      SeasonType: 'Regular Season',
-      LeagueID: '00',
-      Direction: 'DESC',
-      Sorter: 'DATE'
-    });
+    const allGames = [];
+    let page = 0;
+    let hasMore = true;
 
-    const response = await fetch(`${url}?${params}`, {
-      headers: NBA_HEADERS
-    });
+    // Fetch all pages
+    while (hasMore && page < 10) { // Limit to 10 pages for safety
+      const response = await fetch(
+        `${BALL_DONT_LIE_BASE}/games?seasons[]=${seasonYear}&per_page=100&page=${page}`
+      );
+      const data = await response.json();
 
-    if (!response.ok) {
-      throw new Error(`API request failed: ${response.status}`);
+      if (!data.data || data.data.length === 0) {
+        hasMore = false;
+        break;
+      }
+
+      allGames.push(...data.data);
+
+      // Check if there are more pages
+      hasMore = data.meta && data.meta.next_page !== null;
+      page++;
+
+      // Add delay to avoid rate limiting
+      await new Promise(resolve => setTimeout(resolve, 500));
     }
 
-    const data = await response.json();
-
-    if (!data.resultSets || !data.resultSets[0]) {
-      return [];
-    }
-
-    const headers = data.resultSets[0].headers;
-    const rows = data.resultSets[0].rowSet;
-
-    // Map the data to our format
-    return rows.map(row => {
-      const game = {};
-      headers.forEach((header, index) => {
-        game[header] = row[index];
-      });
-
-      return {
-        gameId: game.GAME_ID,
-        gameDate: new Date(game.GAME_DATE),
-        teamName: game.TEAM_NAME,
-        teamAbbreviation: game.TEAM_ABBREVIATION,
-        matchup: game.MATCHUP,
-        wl: game.WL,
-        points: game.PTS,
-      };
-    });
+    return allGames.map(game => ({
+      gameId: game.id,
+      gameDate: new Date(game.date),
+      teamName: game.home_team.full_name,
+      teamAbbreviation: game.home_team.abbreviation,
+      matchup: `${game.visitor_team.abbreviation} @ ${game.home_team.abbreviation}`,
+      wl: game.home_team_score > game.visitor_team_score ? 'W' : 'L',
+      points: game.home_team_score,
+    }));
   } catch (error) {
     console.error('Error fetching season games:', error);
     return [];
@@ -119,39 +99,46 @@ export const fetchSeasonGames = async (season = '2024-25') => {
  */
 export const fetchScoreboard = async (date = new Date()) => {
   try {
-    // Try CDN endpoint first (faster, cached)
-    // Note: Date parameter could be used for historical lookups in the future
-    const cdnUrl = `${NBA_CDN_BASE}/scoreboard/todaysScoreboard_00.json`;
+    // Format date as YYYY-MM-DD
+    const dateStr = date.toISOString().split('T')[0];
 
-    const response = await fetch(cdnUrl);
+    const response = await fetch(`${BALL_DONT_LIE_BASE}/games?dates[]=${dateStr}&per_page=100`);
     const data = await response.json();
 
-    if (!data.scoreboard?.games) {
+    if (!data.data) {
       return [];
     }
 
-    return data.scoreboard.games.map(game => ({
-      gameId: game.gameId,
-      gameDate: new Date(game.gameTimeUTC),
-      gameStatus: game.gameStatus, // 1 = scheduled, 2 = live, 3 = final
-      gameStatusText: game.gameStatusText,
-      period: game.period,
-      gameClock: game.gameClock,
+    return data.data.map(game => {
+      // Map status text to numeric codes for compatibility
+      // "" = scheduled (1), "In Progress" = live (2), "Final" = final (3)
+      let gameStatus = 1;
+      if (game.status === 'Final') gameStatus = 3;
+      else if (game.status.includes('Progress') || game.status.includes('Quarter') || game.status.includes('Half')) gameStatus = 2;
 
-      // Away team
-      awayTeam: game.awayTeam.teamName,
-      awayTeamCity: game.awayTeam.teamCity,
-      awayTeamTricode: game.awayTeam.teamTricode,
-      awayScore: game.awayTeam.score,
+      return {
+        gameId: game.id,
+        gameDate: new Date(game.date),
+        gameStatus: gameStatus,
+        gameStatusText: game.status,
+        period: game.period || 0,
+        gameClock: game.time || '',
 
-      // Home team
-      homeTeam: game.homeTeam.teamName,
-      homeTeamCity: game.homeTeam.teamCity,
-      homeTeamTricode: game.homeTeam.teamTricode,
-      homeScore: game.homeTeam.score,
+        // Away team
+        awayTeam: game.visitor_team.name,
+        awayTeamCity: game.visitor_team.city,
+        awayTeamTricode: game.visitor_team.abbreviation,
+        awayScore: game.visitor_team_score || 0,
 
-      arena: game.arenaName,
-    }));
+        // Home team
+        homeTeam: game.home_team.name,
+        homeTeamCity: game.home_team.city,
+        homeTeamTricode: game.home_team.abbreviation,
+        homeScore: game.home_team_score || 0,
+
+        arena: '',
+      };
+    });
   } catch (error) {
     console.error('Error fetching scoreboard:', error);
     return [];
@@ -164,27 +151,15 @@ export const fetchScoreboard = async (date = new Date()) => {
  */
 export const fetchHistoricalGames = async () => {
   try {
-    // We'll fetch game data from stats.nba.com for multiple seasons
-    const seasons = [];
-    const currentYear = 2025;
-
-    // Generate season strings from 1946 to current (NBA history)
-    for (let year = 1946; year <= currentYear; year++) {
-      const nextYear = String(year + 1).slice(-2);
-      seasons.push(`${year}-${nextYear}`);
-    }
-
-    console.log(`Fetching historical data for ${seasons.length} seasons...`);
-
-    // For now, let's just fetch recent seasons to avoid too many API calls
-    // You can expand this later
-    const recentSeasons = seasons.slice(-5); // Last 5 seasons
+    // For now, just fetch the last 2 seasons to avoid too many API calls
+    const currentYear = new Date().getFullYear();
+    const seasons = [currentYear - 1, currentYear];
 
     const allGames = [];
 
-    for (const season of recentSeasons) {
+    for (const season of seasons) {
       try {
-        const games = await fetchSeasonGames(season);
+        const games = await fetchSeasonGames(`${season}-${String(season + 1).slice(-2)}`);
         allGames.push(...games);
 
         // Add delay to avoid rate limiting
