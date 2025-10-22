@@ -4,7 +4,10 @@
       "Bash(cat .env)",
       "Bash(git commit -m \"Fix API rate limiting by reducing parallel requests\n\n- Changed from parallel to sequential API calls\n- Reduced from 7 days to 3 days of data\n- Added 1 second delay between requests\n- This prevents 429 Too Many Requests errors\")",
       "Bash(git commit -m \"Further reduce API calls to only today and tomorrow\n\n- ScorigamiGuesser now only fetches today + tomorrow (2 calls)\n- App.js only fetches yesterday (1 call)\n- Total of 3 API calls instead of 6\n- Added 2 second delay between calls\")",
-      "Bash(git commit -m \"Revert to CSV-based data loading from Kaggle\n\n- Removed all live API calls from ScorigamiGuesser and App\n- Restored original CSV file reading with PapaParse\n- Back to using LeagueSchedule24_25_Updated.csv and Games.csv\n- More reliable, no rate limiting issues\n- Data updated daily via Kaggle update script\")"
+      "Bash(git commit -m \"Revert to CSV-based data loading from Kaggle\n\n- Removed all live API calls from ScorigamiGuesser and App\n- Restored original CSV file reading with PapaParse\n- Back to using LeagueSchedule24_25_Updated.csv and Games.csv\n- More reliable, no rate limiting issues\n- Data updated daily via Kaggle update script\")",
+      "Bash(kaggle datasets files eoinamoore/historical-nba-data-and-player-box-scores)",
+      "Bash(kaggle datasets download -d eoinamoore/historical-nba-data-and-player-box-scores -f LeagueSchedule25_26.csv -p public --force)",
+      "Bash(git commit -m \"Update to use 2025-26 NBA season schedule\n\n- Downloaded LeagueSchedule25_26.csv from Kaggle\n- Updated ScorigamiGuesser to parse new CSV format\n- Updated update script to download schedule file\n- New format uses gameDateTimeEst and separate city/name fields\n- Script now downloads both Games.csv and LeagueSchedule25_26.csv\")"
     ],
     "deny": [],
     "ask": []

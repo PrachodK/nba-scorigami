@@ -22,7 +22,7 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
   const [popupMessage, setPopupMessage] = useState('');
 
   useEffect(() => {
-    fetch('/LeagueSchedule24_25_Updated.csv')
+    fetch('/LeagueSchedule25_26.csv')
       .then(res => res.text())
       .then(csvText => {
         const parsed = Papa.parse(csvText, {
@@ -32,20 +32,22 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
         });
 
         const games = parsed.data.map((row, i) => {
-          if (!row["Game Date"] || !row["Start (ET)"]) return null;
-          const dateStr = row["Game Date"].replace(/"/g, '').trim();
-          const timeStr = row["Start (ET)"].trim().toLowerCase().replace('a', ' AM').replace('p', ' PM');
-          const fullDateTimeStr = `${dateStr} ${timeStr} GMT-0500`;
-          const dateObj = new Date(fullDateTimeStr);
+          if (!row["gameDateTimeEst"] || !row["homeTeamName"]) return null;
+
+          const dateObj = new Date(row["gameDateTimeEst"]);
           if (isNaN(dateObj)) return null;
 
+          // Combine city and team name
+          const awayTeam = `${row["awayTeamCity"]} ${row["awayTeamName"]}`;
+          const homeTeam = `${row["homeTeamCity"]} ${row["homeTeamName"]}`;
+
           return {
-            id: `${i}_${row["Visitor/Neutral"]}_at_${row["Home/Neutral"]}`,
+            id: `${row["gameId"]}_${awayTeam}_at_${homeTeam}`,
             date: dateObj,
-            team1: row["Visitor/Neutral"],
-            team2: row["Home/Neutral"],
-            arena: row["Arena"],
-            city: row["Notes"] || '',
+            team1: awayTeam,
+            team2: homeTeam,
+            arena: row["arenaName"] || '',
+            city: row["arenaCity"] || '',
           };
         }).filter(Boolean);
 
