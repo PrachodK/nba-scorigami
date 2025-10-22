@@ -1,9 +1,16 @@
 /**
  * NBA Stats API Service
- * Uses balldontlie.io API - free, no CORS issues, no auth required
+ * Uses balldontlie.io API - free, no CORS issues
  */
 
 const BALL_DONT_LIE_BASE = 'https://api.balldontlie.io/v1';
+const API_KEY = process.env.REACT_APP_NBA_API_KEY;
+
+// Helper function to create headers with API key
+const getHeaders = () => ({
+  'Authorization': API_KEY,
+  'Content-Type': 'application/json',
+});
 
 /**
  * Fetch current season schedule
@@ -13,7 +20,9 @@ export const fetchSchedule = async () => {
   try {
     // Fetch today's games from balldontlie.io
     const today = new Date().toISOString().split('T')[0];
-    const response = await fetch(`${BALL_DONT_LIE_BASE}/games?dates[]=${today}`);
+    const response = await fetch(`${BALL_DONT_LIE_BASE}/games?dates[]=${today}`, {
+      headers: getHeaders()
+    });
     const data = await response.json();
 
     if (!data.data) {
@@ -58,7 +67,8 @@ export const fetchSeasonGames = async (season = '2024-25') => {
     // Fetch all pages
     while (hasMore && page < 10) { // Limit to 10 pages for safety
       const response = await fetch(
-        `${BALL_DONT_LIE_BASE}/games?seasons[]=${seasonYear}&per_page=100&page=${page}`
+        `${BALL_DONT_LIE_BASE}/games?seasons[]=${seasonYear}&per_page=100&page=${page}`,
+        { headers: getHeaders() }
       );
       const data = await response.json();
 
@@ -102,7 +112,9 @@ export const fetchScoreboard = async (date = new Date()) => {
     // Format date as YYYY-MM-DD
     const dateStr = date.toISOString().split('T')[0];
 
-    const response = await fetch(`${BALL_DONT_LIE_BASE}/games?dates[]=${dateStr}&per_page=100`);
+    const response = await fetch(`${BALL_DONT_LIE_BASE}/games?dates[]=${dateStr}&per_page=100`, {
+      headers: getHeaders()
+    });
     const data = await response.json();
 
     if (!data.data) {
