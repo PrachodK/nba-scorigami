@@ -4,9 +4,9 @@ import ScorigamiGuesser from './components/ScorigamiGuesser';
 import { Analytics } from '@vercel/analytics/react';
 import { Helmet } from 'react-helmet';
 import Leaderboard from './components/Leaderboard';
+import Papa from 'papaparse';
 import LoginSignupModal from './components/LoginSignupModal';
 import { useAuth } from './context/AuthContext';
-import { fetchScoreboard } from './services/nbaApi';
 
 function App() {
   const [scorigamiData, setScorigamiData] = useState(null);
@@ -55,44 +55,13 @@ function App() {
     fetchData();
   }, []);
 
-  // Fetch played games from NBA API (yesterday and today only)
   useEffect(() => {
-    const fetchRecentGames = async () => {
-      try {
-        const today = new Date();
-
-        // Only fetch yesterday's games to avoid rate limiting
-        const yesterday = new Date(today);
-        yesterday.setDate(yesterday.getDate() - 1);
-
-        const yesterdayGames = await fetchScoreboard(yesterday);
-        const allGames = [...yesterdayGames];
-
-        // Filter for completed games only
-        const completedGames = allGames.filter(g => g.gameStatus === 3);
-
-        // Transform to match old CSV format for leaderboard
-        const formattedGames = completedGames.map(game => ({
-          gameDate: game.gameDate.toISOString(),
-          hometeamCity: game.homeTeamCity,
-          hometeamName: game.homeTeam,
-          awayteamCity: game.awayTeamCity,
-          awayteamName: game.awayTeam,
-          homeScore: game.homeScore,
-          awayScore: game.awayScore,
-        }));
-
-        setPlayedGames(formattedGames);
-      } catch (error) {
-        console.error('Error fetching recent games:', error);
-      }
-    };
-
-    fetchRecentGames();
-
-    // Auto-refresh every 10 minutes
-    const interval = setInterval(fetchRecentGames, 10 * 60 * 1000);
-    return () => clearInterval(interval);
+    fetch('/Games.csv')
+      .then(res => res.text())
+      .then(csv => {
+        const parsed = Papa.parse(csv, { header: true });
+        setPlayedGames(parsed.data);
+      });
   }, []);
 
   useEffect(() => {

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import Papa from 'papaparse';
 import './ScorigamiGuesser.css';
 import basketballIcon from '../images/basketball.png';
 import { db } from '../firebase';
 import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
 import PopupMessage from './PopupMessage';
 import { useAuth } from '../context/AuthContext';
-import { fetchScoreboard } from '../services/nbaApi';
 
 
 
@@ -21,62 +21,43 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
   const [justSubmitted, setJustSubmitted] = useState({});
   const [popupMessage, setPopupMessage] = useState('');
 
-  // Fetch upcoming games and scores from NBA API
   useEffect(() => {
-    const fetchGames = async () => {
-      try {
-        // Only fetch today's games to avoid rate limiting
-        const today = new Date();
-        const todayGames = await fetchScoreboard(today);
+    fetch('/LeagueSchedule24_25_Updated.csv')
+      .then(res => res.text())
+      .then(csvText => {
+        const parsed = Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          trimHeaders: true,
+        });
 
-        // Optionally fetch tomorrow's games after a delay
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        const tomorrow = new Date(today);
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        const tomorrowGames = await fetchScoreboard(tomorrow);
+        const games = parsed.data.map((row, i) => {
+          if (!row["Game Date"] || !row["Start (ET)"]) return null;
+          const dateStr = row["Game Date"].replace(/"/g, '').trim();
+          const timeStr = row["Start (ET)"].trim().toLowerCase().replace('a', ' AM').replace('p', ' PM');
+          const fullDateTimeStr = `${dateStr} ${timeStr} GMT-0500`;
+          const dateObj = new Date(fullDateTimeStr);
+          if (isNaN(dateObj)) return null;
 
-        const allGames = [...todayGames, ...tomorrowGames];
+          return {
+            id: `${i}_${row["Visitor/Neutral"]}_at_${row["Home/Neutral"]}`,
+            date: dateObj,
+            team1: row["Visitor/Neutral"],
+            team2: row["Home/Neutral"],
+            arena: row["Arena"],
+            city: row["Notes"] || '',
+          };
+        }).filter(Boolean);
 
-        // Transform to match existing format
-        const transformedGames = allGames.map(game => ({
-          id: game.gameId,
-          date: game.gameDate,
-          team1: `${game.awayTeamCity} ${game.awayTeam}`,
-          team2: `${game.homeTeamCity} ${game.homeTeam}`,
-          arena: game.arena,
-          gameStatus: game.gameStatus,
-          awayScore: game.awayScore,
-          homeScore: game.homeScore,
-        }));
+        setUpcomingGames(games);
+      });
 
-        // Separate upcoming and played games
-        const upcoming = transformedGames.filter(g => g.gameStatus === 1); // Scheduled
-        const played = transformedGames.filter(g => g.gameStatus === 3); // Final
-
-        setUpcomingGames(upcoming);
-
-        // For played games, transform to match old CSV format
-        const playedFormatted = played.map(g => ({
-          gameDate: g.date.toISOString(),
-          hometeamCity: g.team2.split(' ')[0],
-          hometeamName: g.team2.split(' ').slice(1).join(' '),
-          awayteamCity: g.team1.split(' ')[0],
-          awayteamName: g.team1.split(' ').slice(1).join(' '),
-          homeScore: g.homeScore,
-          awayScore: g.awayScore,
-        }));
-
-        setPlayedGames(playedFormatted);
-      } catch (error) {
-        console.error('Error fetching NBA games:', error);
-      }
-    };
-
-    fetchGames();
-
-    // Set up auto-refresh every 5 minutes for live updates
-    const interval = setInterval(fetchGames, 5 * 60 * 1000);
-    return () => clearInterval(interval);
+    fetch('/Games.csv')
+      .then(res => res.text())
+      .then(csv => {
+        const parsed = Papa.parse(csv, { header: true });
+        setPlayedGames(parsed.data);
+      });
   }, []);
 
 
