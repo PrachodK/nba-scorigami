@@ -1,13 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebSearch",
-      "WebFetch(domain:github.com)",
-      "Bash(mkdir -p src/services)",
-      "Bash(npm run build)",
-      "Bash(git add -A)",
-      "Bash(git commit -m \"Replace CSV files with live NBA Stats API integration\n\n- Created nbaApi.js service module for real-time data fetching\n- Updated ScorigamiGuesser to use live API for upcoming games\n- Updated App.js to fetch recent completed games from API\n- Removed dependency on static CSV files for schedule and scores\n- Added auto-refresh intervals for live updates (5-10 minutes)\n- Games now update automatically without manual script execution\")",
-      "Bash(git push origin main)"
+      "Bash(cat .env)",
+      "Bash(git commit -m \"Fix API rate limiting by reducing parallel requests\n\n- Changed from parallel to sequential API calls\n- Reduced from 7 days to 3 days of data\n- Added 1 second delay between requests\n- This prevents 429 Too Many Requests errors\")"
     ],
     "deny": [],
     "ask": []

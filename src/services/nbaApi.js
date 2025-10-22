@@ -6,6 +6,13 @@
 const BALL_DONT_LIE_BASE = 'https://api.balldontlie.io/v1';
 const API_KEY = process.env.REACT_APP_NBA_API_KEY;
 
+// Debug: log if API key is loaded
+if (!API_KEY) {
+  console.error('❌ NBA API KEY is missing! Make sure REACT_APP_NBA_API_KEY is set in .env');
+} else {
+  console.log('✅ NBA API KEY loaded:', API_KEY.substring(0, 8) + '...');
+}
+
 // Helper function to create headers with API key
 const getHeaders = () => ({
   'Authorization': API_KEY,

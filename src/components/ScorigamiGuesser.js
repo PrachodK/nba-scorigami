@@ -27,17 +27,21 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
       try {
         // Fetch today's and upcoming games
         const today = new Date();
-        const gamesPromises = [];
+        const allGames = [];
 
-        // Fetch games for next 7 days
-        for (let i = 0; i < 7; i++) {
+        // Fetch games sequentially to avoid rate limiting (not in parallel)
+        for (let i = 0; i < 3; i++) { // Only fetch 3 days instead of 7
           const date = new Date(today);
           date.setDate(date.getDate() + i);
-          gamesPromises.push(fetchScoreboard(date));
-        }
 
-        const allGamesArrays = await Promise.all(gamesPromises);
-        const allGames = allGamesArrays.flat();
+          const dayGames = await fetchScoreboard(date);
+          allGames.push(...dayGames);
+
+          // Add delay between requests to avoid rate limiting
+          if (i < 2) {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+          }
+        }
 
         // Transform to match existing format
         const transformedGames = allGames.map(game => ({
