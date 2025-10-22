@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\Users\ltbig\nba-scorigami"
+cd /d "%~dp0"
 
 REM === Cleanup previous files ===
 if exist "Games.csv" del "Games.csv"
