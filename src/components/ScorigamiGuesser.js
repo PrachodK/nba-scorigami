@@ -176,7 +176,10 @@ const ScorigamiGuesser = ({ scorigamiData }) => {
 
     if (!result) return { status: 'pending', text: 'Awaiting result' };
     const correct = parseInt(result.homeScore) === t2 && parseInt(result.awayScore) === t1;
-    return correct ? { status: 'correct', text: 'Correct!' } : { status: 'wrong', text: 'Wrong' };
+    const actualScore = `${result.awayScore}-${result.homeScore}`;
+    return correct 
+      ? { status: 'correct', text: 'Correct!' } 
+      : { status: 'wrong', text: `Wrong (${actualScore})` };
   };
 
   const getTimeUntil = (date) => {
