@@ -245,46 +245,45 @@ function App() {
 
   const renderColorLegend = () => {
     return (
-      <div className="color-legend" style={{ 
-        marginTop: '20px', 
-        textAlign: 'center',
-        marginBottom: '20px' 
-      }}>
-        <div style={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center', 
-          gap: '10px',
-          padding: '10px 0'
-        }}>
-          <div style={{ width: '20px', height: '20px', backgroundColor: getGreenShade(100, 99) }}></div>
+      <div className="color-legend">
+        <div className="legend-item">
+          <div className="legend-color" style={{ backgroundColor: getGreenShade(100, 99) }}></div>
           <span>Close Game</span>
-          <div style={{ width: '20px', height: '20px', backgroundColor: getGreenShade(100, 80) }}></div>
+        </div>
+        <div className="legend-item">
+          <div className="legend-color" style={{ backgroundColor: getGreenShade(100, 80) }}></div>
           <span>Medium Margin</span>
-          <div style={{ width: '20px', height: '20px', backgroundColor: getGreenShade(150, 80) }}></div>
+        </div>
+        <div className="legend-item">
+          <div className="legend-color" style={{ backgroundColor: getGreenShade(150, 80) }}></div>
           <span>Blowout</span>
         </div>
       </div>
     );
   };
 
-  if (loading) return <div className="loading">Loading NBA score data...</div>;
+  if (loading) return (
+    <div className="loading">
+      <div className="loading-spinner"></div>
+      <span className="loading-text">Loading NBA score data...</span>
+    </div>
+  );
   if (error) return <div className="error">Error: {error}</div>;
 
   return (
     <div className="App">
-      <div style={{ position: 'absolute', top: '20px', left: '20px' }}>
-  {!currentUser ? (
-    <button onClick={() => setShowAuthModal(true)} className="auth-btn">
-      🔐 Login / Signup
-    </button>
-  ) : (
-    <div>
-      <span style={{ marginRight: '10px' }}>👤 {currentUser.username}</span>
-      <button onClick={logout} className="auth-btn">Logout</button>
-    </div>
-  )}
-</div>
+      <div className="user-info">
+        {!currentUser ? (
+          <button onClick={() => setShowAuthModal(true)} className="auth-btn">
+            Login / Signup
+          </button>
+        ) : (
+          <>
+            <span>{currentUser.username}</span>
+            <button onClick={logout} className="auth-btn">Logout</button>
+          </>
+        )}
+      </div>
 
       <Helmet>
         <title>NBA Scorigami Guesser | Visualize Rare NBA Scores</title>
@@ -321,57 +320,53 @@ function App() {
       </div>
 
       <div className="controls">
-  <div className="control-group" style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
-    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-      <label>Years:</label>
-      <select 
-        value={yearRange[0]} 
-        onChange={(e) => handleYearChange(0, e.target.value)}
-      >
-        {Array.from({ length: 2025 - 1946 + 1 }, (_, i) => 1946 + i).map(year => (
-          <option key={year} value={year}>{year}</option>
-        ))}
-      </select>
-      {' - '}
-      <select 
-        value={yearRange[1]} 
-        onChange={(e) => handleYearChange(1, e.target.value)}
-      >
-        {Array.from({ length: 2025 - 1946 + 1 }, (_, i) => 1946 + i).map(year => (
-          <option key={year} value={year}>{year}</option>
-        ))}
-      </select>
-    </div>
-    
-    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-      <label>Team:</label>
-      <select 
-        value={selectedTeam} 
-        onChange={(e) => setSelectedTeam(e.target.value)}
-        style={{ width: '200px' }}
-      >
-        {teams.map(team => (
-          <option key={team} value={team}>{team}</option>
-        ))}
-      </select>
-    </div>
-    
-    <div>
-      <label style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-        <input 
-          type="checkbox" 
-          checked={disableLowerScores} 
-          onChange={() => setDisableLowerScores(!disableLowerScores)}
-        />
-        Disable lower scores
-      </label>
-    </div>
-  </div>
-  
-  <div style={{ textAlign: 'center', padding: '10px 0' }}>
-    Showing {getUniqueScoresCount()} unique scores from {getMatchesCount()} games
-  </div>
-</div>
+        <div className="control-group">
+          <label>Years:</label>
+          <select 
+            value={yearRange[0]} 
+            onChange={(e) => handleYearChange(0, e.target.value)}
+          >
+            {Array.from({ length: 2025 - 1946 + 1 }, (_, i) => 1946 + i).map(year => (
+              <option key={year} value={year}>{year}</option>
+            ))}
+          </select>
+          <span style={{ color: 'var(--text-secondary)' }}>—</span>
+          <select 
+            value={yearRange[1]} 
+            onChange={(e) => handleYearChange(1, e.target.value)}
+          >
+            {Array.from({ length: 2025 - 1946 + 1 }, (_, i) => 1946 + i).map(year => (
+              <option key={year} value={year}>{year}</option>
+            ))}
+          </select>
+        </div>
+        
+        <div className="control-group">
+          <label>Team:</label>
+          <select 
+            value={selectedTeam} 
+            onChange={(e) => setSelectedTeam(e.target.value)}
+          >
+            {teams.map(team => (
+              <option key={team} value={team}>{team}</option>
+            ))}
+          </select>
+        </div>
+        
+        <div className="checkbox-wrapper">
+          <input 
+            type="checkbox" 
+            id="disableLower"
+            checked={disableLowerScores} 
+            onChange={() => setDisableLowerScores(!disableLowerScores)}
+          />
+          <label htmlFor="disableLower">Hide impossible scores</label>
+        </div>
+        
+        <div className="stats-display">
+          <strong>{getUniqueScoresCount()}</strong> unique scores from <strong>{getMatchesCount()}</strong> games
+        </div>
+      </div>
 
       {renderColorLegend()}
       {renderScoreGrid()}
@@ -436,25 +431,25 @@ function App() {
       </div>
       <ScorigamiGuesser scorigamiData={scorigamiData} />
       <button 
-  className="leaderboard-btn" 
-  onClick={() => setShowLeaderboard(true)}
->
-  🏆 Leaderboard
-</button>
+        className="leaderboard-btn" 
+        onClick={() => setShowLeaderboard(true)}
+      >
+        Leaderboard
+      </button>
       <Analytics />
       {showLeaderboard && (
-  <div className="modal-overlay" onClick={() => setShowLeaderboard(false)}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      <div className="modal-header">
-        <h2>🏆 Leaderboard</h2>
-        <button className="modal-close-btn" onClick={() => setShowLeaderboard(false)}>×</button>
-      </div>
-      <div className="modal-body">
-        <Leaderboard playedGames={playedGames} />
-      </div>
-    </div>
-  </div>
-)}
+        <div className="modal-overlay" onClick={() => setShowLeaderboard(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h2>Leaderboard</h2>
+              <button className="modal-close-btn" onClick={() => setShowLeaderboard(false)}>×</button>
+            </div>
+            <div className="modal-body">
+              <Leaderboard playedGames={playedGames} />
+            </div>
+          </div>
+        </div>
+      )}
 {showAuthModal && (
   <LoginSignupModal onClose={() => setShowAuthModal(false)} />
 )}

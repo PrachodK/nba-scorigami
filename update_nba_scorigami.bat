@@ -1,70 +1,35 @@
 @echo off
 cd /d "%~dp0"
 
-REM === Cleanup previous files ===
-if exist "Games.csv" del "Games.csv"
-if exist "public\Games.csv" del "public\Games.csv"
-if exist "LeagueSchedule25_26.csv" del "LeagueSchedule25_26.csv"
-if exist "public\LeagueSchedule25_26.csv" del "public\LeagueSchedule25_26.csv"
+echo === NBA Scorigami Data Update ===
+echo.
 
-REM === Download Games.csv ===
-echo Downloading latest Games.csv...
-kaggle datasets download -d eoinamoore/historical-nba-data-and-player-box-scores -f Games.csv -p . --force
-if not exist "Games.csv" (
+echo [1/3] Cleaning up old files...
+if exist "public\Games.csv" del "public\Games.csv"
+
+echo [2/3] Downloading latest Games.csv...
+kaggle datasets download -d eoinamoore/historical-nba-data-and-player-box-scores -f Games.csv -p public --force
+if exist "public\Games.csv.zip" (
+    powershell -Command "Expand-Archive -Path 'public\Games.csv.zip' -DestinationPath 'public' -Force"
+    del "public\Games.csv.zip"
+)
+if not exist "public\Games.csv" (
     echo ERROR: Games.csv download failed
     exit /b 1
 )
 
-REM === Download LeagueSchedule25_26.csv ===
-echo Downloading latest LeagueSchedule25_26.csv...
-kaggle datasets download -d eoinamoore/historical-nba-data-and-player-box-scores -f LeagueSchedule25_26.csv -p . --force
-if not exist "LeagueSchedule25_26.csv" (
-    echo ERROR: LeagueSchedule25_26.csv download failed
-    exit /b 1
-)
-
-REM === Move to public folder ===
-move /y "Games.csv" "public\Games.csv" > nul
-if not exist "public\Games.csv" (
-    echo ERROR: Failed to move Games.csv
-    exit /b 1
-)
-
-move /y "LeagueSchedule25_26.csv" "public\LeagueSchedule25_26.csv" > nul
-if not exist "public\LeagueSchedule25_26.csv" (
-    echo ERROR: Failed to move LeagueSchedule25_26.csv
-    exit /b 1
-)
-
-REM === Process data ===
-echo Updating nba_scorigami.json...
+echo [3/3] Processing data and generating nba_scorigami.json...
 python "server\nba_data_processor.py"
-
-REM === Verify ===
-if errorlevel 0 (
-    if exist "public\nba_scorigami.json" (
-        echo Update successful!
-        dir "public\nba_scorigami.json"
-    ) else (
-        echo ERROR: JSON file not created
-        exit /b 1
-    )
-) else (
-    echo ERROR: Processing failed
+if not exist "public\nba_scorigami.json" (
+    echo ERROR: JSON file not created
     exit /b 1
 )
 
-REM === Git commit and push ===
-echo Committing and pushing changes to GitHub...
-
-git add public/Games.csv public/LeagueSchedule25_26.csv public/nba_scorigami.json
-git commit -m "Auto-update: Refreshed data [%date% %time%]"
+echo.
+echo Committing and pushing to GitHub...
+git add public/Games.csv public/nba_scorigami.json
+git commit -m "Auto-update: Refreshed data %date% %time%"
 git push origin main
 
-if errorlevel 1 (
-    echo ERROR: Git push failed
-    exit /b 1
-) else (
-    echo Git push successful!
-)
-
+echo.
+echo === Update complete! ===

@@ -22,14 +22,14 @@ os.makedirs(os.path.dirname(output_path), exist_ok=True)
 def process_data(csv_path, output_path):
     """Process Games.csv into Scorigami format"""
     try:
-        cols = ['gameDate', 'hometeamName', 'awayteamName', 'homeScore', 'awayScore']
+        cols = ['gameDateTimeEst', 'hometeamName', 'awayteamName', 'homeScore', 'awayScore']
         games = pd.read_csv(
             csv_path,
             usecols=cols,
             low_memory=False
         )
 
-        # Convert gameDate to datetime (handle mixed formats)
+        games = games.rename(columns={'gameDateTimeEst': 'gameDate'})
         games['gameDate'] = pd.to_datetime(games['gameDate'], format='mixed')
 
         games = games.dropna(subset=['homeScore', 'awayScore'])

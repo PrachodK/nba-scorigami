@@ -10,89 +10,181 @@ const LoginSignupModal = ({ onClose }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    
+    if (!username.trim() || !password.trim()) {
+      setError('Please fill in all fields');
+      return;
+    }
+
+    if (password.length < 4) {
+      setError('Password must be at least 4 characters');
+      return;
+    }
+
+    if (!db) {
+      setError('Database not connected. Check Firebase configuration.');
+      return;
+    }
+
+    setIsLoading(true);
+
+    const timeoutId = setTimeout(() => {
+      setIsLoading(false);
+      setError('Request timed out. Check your internet connection.');
+    }, 10000);
 
     try {
       const usersRef = collection(db, 'users');
-      const q = query(usersRef, where('username', '==', username));
+      const q = query(usersRef, where('username', '==', username.trim().toLowerCase()));
       const snap = await getDocs(q);
+
+      clearTimeout(timeoutId);
 
       if (mode === 'login') {
         if (snap.empty) {
           setError('User not found');
+          setIsLoading(false);
           return;
         }
 
         const user = snap.docs[0].data();
-        const isPasswordCorrect = bcrypt.compareSync(password, user.password); // Compare the hashed password
+        const isPasswordCorrect = bcrypt.compareSync(password, user.password);
 
         if (!isPasswordCorrect) {
           setError('Incorrect password');
+          setIsLoading(false);
           return;
         }
 
-        login({ username });
+        login({ username: user.username });
         onClose();
 
       } else if (mode === 'signup') {
         if (!snap.empty) {
           setError('Username already taken');
+          setIsLoading(false);
           return;
         }
 
-        const hashedPassword = bcrypt.hashSync(password, 10); 
+        const hashedPassword = bcrypt.hashSync(password, 10);
 
-        await addDoc(usersRef, { username, password: hashedPassword }); 
-        login({ username });
+        await addDoc(usersRef, { 
+          username: username.trim().toLowerCase(), 
+          password: hashedPassword,
+          createdAt: new Date().toISOString()
+        });
+        login({ username: username.trim().toLowerCase() });
         onClose();
       }
     } catch (err) {
-      setError('Something went wrong. Try again.');
-      console.error(err);
+      clearTimeout(timeoutId);
+      console.error('Auth error:', err);
+      if (err.code === 'permission-denied') {
+        setError('Permission denied. Check Firestore security rules.');
+      } else if (err.code === 'unavailable') {
+        setError('Firebase unavailable. Check your connection.');
+      } else {
+        setError('Something went wrong. Please try again.');
+      }
+    } finally {
+      setIsLoading(false);
     }
   };
 
+  const switchMode = () => {
+    setMode(mode === 'login' ? 'signup' : 'login');
+    setError('');
+  };
+
   return (
-    <div className="login-signup-modal-overlay" onClick={onClose}>
-      <div className="login-signup-modal-content" onClick={e => e.stopPropagation()}>
-        <div className="modal-header">
-          <h2>{mode === 'login' ? 'Login' : 'Sign Up'}</h2>
-          <button className="modal-close-btn" onClick={onClose}>×</button>
+    <div className="auth-modal-overlay" onClick={onClose}>
+      <div className="auth-modal-content" onClick={e => e.stopPropagation()}>
+        <button className="auth-modal-close" onClick={onClose}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+        
+        <div className="auth-modal-header">
+          <div className="auth-icon">
+            {mode === 'login' ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/>
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="8.5" cy="7" r="4"/>
+                <line x1="20" y1="8" x2="20" y2="14"/>
+                <line x1="23" y1="11" x2="17" y2="11"/>
+              </svg>
+            )}
+          </div>
+          <h2>{mode === 'login' ? 'Welcome Back' : 'Create Account'}</h2>
+          <p>{mode === 'login' ? 'Sign in to track your guesses' : 'Join to start guessing scores'}</p>
         </div>
 
         <form onSubmit={handleSubmit} className="auth-form">
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={e => setUsername(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit">
-            {mode === 'login' ? 'Login' : 'Sign Up'}
+          <div className="input-group">
+            <label htmlFor="username">Username</label>
+            <input
+              id="username"
+              type="text"
+              placeholder="Enter your username"
+              value={username}
+              onChange={e => setUsername(e.target.value)}
+              disabled={isLoading}
+              autoComplete="username"
+            />
+          </div>
+          
+          <div className="input-group">
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              disabled={isLoading}
+              autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
+            />
+          </div>
+
+          {error && (
+            <div className="auth-error">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              {error}
+            </div>
+          )}
+
+          <button type="submit" className="auth-submit-btn" disabled={isLoading}>
+            {isLoading ? (
+              <span className="btn-loading">
+                <span className="spinner"></span>
+                Processing...
+              </span>
+            ) : (
+              mode === 'login' ? 'Sign In' : 'Create Account'
+            )}
           </button>
         </form>
 
-        {error && <div style={{ color: 'red', marginTop: 10 }}>{error}</div>}
-
-        <div
-          className="auth-toggle"
-          onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}
-        >
-          {mode === 'login'
-            ? 'No account? Sign up here'
-            : 'Already have an account? Login'}
+        <div className="auth-footer">
+          <span>{mode === 'login' ? "Don't have an account?" : 'Already have an account?'}</span>
+          <button type="button" className="auth-switch-btn" onClick={switchMode}>
+            {mode === 'login' ? 'Sign Up' : 'Sign In'}
+          </button>
         </div>
       </div>
     </div>
