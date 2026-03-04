@@ -6,14 +6,12 @@ import LoginSignupModal from './components/LoginSignupModal';
 import Home from './pages/Home';
 import Guesser from './pages/Guesser';
 import Contact from './pages/Contact';
-import { useAuth } from './context/AuthContext';
 import './App.css';
 
 function App() {
   const [scorigamiData, setScorigamiData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [showAuthModal, setShowAuthModal] = useState(false);
-  const { } = useAuth();
 
   useEffect(() => {
     const fetchData = async () => {
