@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './LoginSignupModal.css';
 import { useAuth } from '../context/AuthContext';
 import { collection, getDocs, addDoc, query, where } from 'firebase/firestore';
@@ -12,6 +12,17 @@ const LoginSignupModal = ({ onClose }) => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        onClose();
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [onClose]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -103,75 +114,73 @@ const LoginSignupModal = ({ onClose }) => {
   };
 
   return (
-    <div className="auth-modal-overlay" onClick={onClose}>
-      <div className="auth-modal-content" onClick={e => e.stopPropagation()}>
-        <button className="auth-modal-close" onClick={onClose}>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
+    <div className="auth-dropdown" ref={dropdownRef}>
+      <button className="auth-dropdown-close" onClick={onClose}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+      
+      <div className="auth-dropdown-header">
+        <h2>{mode === 'login' ? 'Welcome Back' : 'Create Account'}</h2>
+        <p>{mode === 'login' ? 'Sign in to track your guesses' : 'Join to start guessing scores'}</p>
+      </div>
+
+      <form onSubmit={handleSubmit} className="auth-form">
+        <div className="input-group">
+          <label htmlFor="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            placeholder="Enter your username"
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+            disabled={isLoading}
+            autoComplete="username"
+          />
+        </div>
         
-        <div className="auth-modal-header">
-          <h2>{mode === 'login' ? 'Welcome Back' : 'Create Account'}</h2>
-          <p>{mode === 'login' ? 'Sign in to track your guesses' : 'Join to start guessing scores'}</p>
+        <div className="input-group">
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            disabled={isLoading}
+            autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
+          />
         </div>
 
-        <form onSubmit={handleSubmit} className="auth-form">
-          <div className="input-group">
-            <label htmlFor="username">Username</label>
-            <input
-              id="username"
-              type="text"
-              placeholder="Enter your username"
-              value={username}
-              onChange={e => setUsername(e.target.value)}
-              disabled={isLoading}
-              autoComplete="username"
-            />
+        {error && (
+          <div className="auth-error">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            {error}
           </div>
-          
-          <div className="input-group">
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              disabled={isLoading}
-              autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
-            />
-          </div>
+        )}
 
-          {error && (
-            <div className="auth-error">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="12" y1="8" x2="12" y2="12"/>
-                <line x1="12" y1="16" x2="12.01" y2="16"/>
-              </svg>
-              {error}
-            </div>
+        <button type="submit" className="auth-submit-btn" disabled={isLoading}>
+          {isLoading ? (
+            <span className="btn-loading">
+              <span className="spinner"></span>
+              Processing...
+            </span>
+          ) : (
+            mode === 'login' ? 'Sign In' : 'Create Account'
           )}
+        </button>
+      </form>
 
-          <button type="submit" className="auth-submit-btn" disabled={isLoading}>
-            {isLoading ? (
-              <span className="btn-loading">
-                <span className="spinner"></span>
-                Processing...
-              </span>
-            ) : (
-              mode === 'login' ? 'Sign In' : 'Create Account'
-            )}
-          </button>
-        </form>
-
-        <div className="auth-footer">
-          <span>{mode === 'login' ? "Don't have an account?" : 'Already have an account?'}</span>
-          <button type="button" className="auth-switch-btn" onClick={switchMode}>
-            {mode === 'login' ? 'Sign Up' : 'Sign In'}
-          </button>
-        </div>
+      <div className="auth-footer">
+        <span>{mode === 'login' ? "Don't have an account?" : 'Already have an account?'}</span>
+        <button type="button" className="auth-switch-btn" onClick={switchMode}>
+          {mode === 'login' ? 'Sign Up' : 'Sign In'}
+        </button>
       </div>
     </div>
   );
