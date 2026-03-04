@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1100;
+  z-index: 3000;
   padding: 20px;
   animation: fadeIn 0.2s ease;
 }
@@ -88,6 +88,13 @@
 }
 
 @media (max-width: 480px) {
+  .popup-overlay {
+    backdrop-filter: none;
+    background: rgba(0, 0, 0, 0.95);
+    align-items: flex-start;
+    padding-top: 80px;
+  }
+
   .popup-box {
     padding: 1.5rem;
   }

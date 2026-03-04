@@ -411,7 +411,7 @@ select option {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2000;
+  z-index: 3000;
   pointer-events: none;
   visibility: hidden;
 }

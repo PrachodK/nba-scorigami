@@ -24,6 +24,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setCurrentUser(null);
     localStorage.removeItem('nbaScorigamiUser');
+    window.location.reload();
   };
 
   return (
