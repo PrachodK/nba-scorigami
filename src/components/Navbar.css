@@ -209,12 +209,15 @@
     justify-content: center;
     gap: 1.5rem;
     background: rgba(10, 10, 20, 0.98);
-    transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
   }
 
   .navbar-menu.open {
-    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-link {
@@ -232,6 +235,6 @@
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1001;
+    z-index: 999;
   }
 }

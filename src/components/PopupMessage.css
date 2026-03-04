@@ -1,12 +1,14 @@
 .popup-overlay {
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4px);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3000;
+  z-index: 9999;
   padding: 20px;
   animation: fadeIn 0.2s ease;
 }
@@ -89,14 +91,14 @@
 
 @media (max-width: 480px) {
   .popup-overlay {
-    backdrop-filter: none;
+    align-items: center;
+    padding: 20px;
     background: rgba(0, 0, 0, 0.95);
-    align-items: flex-start;
-    padding-top: 80px;
   }
 
   .popup-box {
     padding: 1.5rem;
+    margin-top: 60px;
   }
   
   .popup-icon {
