@@ -1,9 +1,8 @@
 .auth-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,6 +218,12 @@
 }
 
 @media (max-width: 480px) {
+  .auth-modal-overlay {
+    align-items: flex-start;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.95);
+  }
+
   .auth-modal-content {
     padding: 1.5rem;
   }
