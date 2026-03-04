@@ -53,21 +53,6 @@ const Navbar = ({ onAuthClick }) => {
           </Link>
         </div>
 
-        <div className="navbar-auth">
-          {currentUser ? (
-            <div className="user-section">
-              <span className="username-display">{currentUser.username}</span>
-              <button className="logout-btn" onClick={logout}>
-                <span>Logout</span>
-              </button>
-            </div>
-          ) : (
-            <button className="auth-btn" onClick={onAuthClick}>
-              <span>Sign In</span>
-            </button>
-          )}
-        </div>
-
         <button 
           className={`hamburger ${menuOpen ? 'open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -76,6 +61,21 @@ const Navbar = ({ onAuthClick }) => {
           <span></span>
           <span></span>
         </button>
+
+        <div className={`navbar-auth ${menuOpen ? 'mobile-visible' : ''}`}>
+          {currentUser ? (
+            <div className="user-section">
+              <span className="username-display">{currentUser.username}</span>
+              <button className="logout-btn" onClick={logout}>
+                <span>Logout</span>
+              </button>
+            </div>
+          ) : (
+            <button className="auth-btn" onClick={() => { setMenuOpen(false); onAuthClick(); }}>
+              <span>Sign In</span>
+            </button>
+          )}
+        </div>
       </div>
     </nav>
   );

@@ -277,15 +277,19 @@ select option {
 }
 
 .grid-section {
-  padding: 0.5rem 1rem 1rem;
-  max-width: 1200px;
+  padding: 0.5rem 0 1rem;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .grid-scroll-container {
   display: inline-block;
   text-align: left;
+  min-width: 100%;
+  padding: 0 1rem;
 }
 
 .grid-container {
@@ -528,17 +532,25 @@ select option {
     gap: 0.75rem;
   }
 
+  .grid-section {
+    padding: 0.5rem 0 1rem;
+  }
+
+  .grid-scroll-container {
+    padding: 0 0.5rem;
+  }
+
   .grid-cell {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
   }
 
   .grid-cell.header-cell,
   .grid-cell.corner-cell {
-    width: 14px;
+    width: 12px;
   }
 
   .grid-cell.header-cell {
-    font-size: 0.35rem;
+    font-size: 0.3rem;
   }
 }
