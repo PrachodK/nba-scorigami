@@ -1,0 +1,234 @@
+.contact-page {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.contact-hero {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #ff6b35, #f7c531);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info > p {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-method:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(5px);
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+.method-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.method-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.method-icon.email {
+  background: linear-gradient(135deg, #ff6b35, #f7c531);
+}
+
+.method-icon.email svg {
+  color: #0a0a14;
+}
+
+.method-icon.linkedin {
+  background: #0077b5;
+}
+
+.method-icon.linkedin svg {
+  color: white;
+}
+
+.method-icon.github {
+  background: #333;
+}
+
+.method-icon.github svg {
+  color: white;
+}
+
+.contact-method:hover .method-icon {
+  transform: scale(1.05);
+}
+
+.method-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.method-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.method-value {
+  font-size: 0.85rem;
+  color: white;
+  font-weight: 500;
+}
+
+.about-section {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-section h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-section {
+  margin-top: 3rem;
+  padding: 2rem 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo .logo-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b35, #f7c531);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-title {
+    font-size: 1.75rem;
+  }
+
+  .about-section {
+    padding: 1rem;
+  }
+
+  .contact-method {
+    padding: 0.75rem;
+  }
+}
