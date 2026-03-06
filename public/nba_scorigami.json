@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-04T20:53:32.499650",
+  "last_updated": "2026-03-06T00:34:23.846585",
   "max_score": 186,
-  "total_games": 72878,
+  "total_games": 72884,
   "unique_scores": 3035,
   "scores": [
     {
@@ -48785,14 +48785,14 @@
         },
         {
           "date": "1986-11-22",
-          "winning_team": "Pistons",
-          "losing_team": "Cavaliers",
+          "winning_team": "Bulls",
+          "losing_team": "Bullets",
           "score": "93-84"
         },
         {
           "date": "1986-11-22",
-          "winning_team": "Bulls",
-          "losing_team": "Bullets",
+          "winning_team": "Pistons",
+          "losing_team": "Cavaliers",
           "score": "93-84"
         },
         {
@@ -59707,14 +59707,14 @@
         },
         {
           "date": "1983-01-06",
-          "winning_team": "Warriors",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Nets",
+          "losing_team": "Suns",
           "score": "94-93"
         },
         {
           "date": "1983-01-06",
-          "winning_team": "Nets",
-          "losing_team": "Suns",
+          "winning_team": "Warriors",
+          "losing_team": "Trail Blazers",
           "score": "94-93"
         },
         {
@@ -81164,14 +81164,14 @@
         },
         {
           "date": "1983-11-08",
-          "winning_team": "Bucks",
-          "losing_team": "Knicks",
+          "winning_team": "Warriors",
+          "losing_team": "Hawks",
           "score": "97-90"
         },
         {
           "date": "1983-11-08",
-          "winning_team": "Warriors",
-          "losing_team": "Hawks",
+          "winning_team": "Bucks",
+          "losing_team": "Knicks",
           "score": "97-90"
         },
         {
@@ -92456,14 +92456,14 @@
         },
         {
           "date": "1974-01-18",
-          "winning_team": "Celtics",
-          "losing_team": "Hawks",
+          "winning_team": "Braves",
+          "losing_team": "Bullets",
           "score": "98-94"
         },
         {
           "date": "1974-01-18",
-          "winning_team": "Braves",
-          "losing_team": "Bullets",
+          "winning_team": "Celtics",
+          "losing_team": "Hawks",
           "score": "98-94"
         },
         {
@@ -94331,14 +94331,14 @@
         },
         {
           "date": "1993-11-13",
-          "winning_team": "Celtics",
-          "losing_team": "Bulls",
+          "winning_team": "76ers",
+          "losing_team": "Nets",
           "score": "98-97"
         },
         {
           "date": "1993-11-13",
-          "winning_team": "76ers",
-          "losing_team": "Nets",
+          "winning_team": "Celtics",
+          "losing_team": "Bulls",
           "score": "98-97"
         },
         {
@@ -94349,14 +94349,14 @@
         },
         {
           "date": "1993-01-02",
-          "winning_team": "Clippers",
-          "losing_team": "Knicks",
+          "winning_team": "Pistons",
+          "losing_team": "Magic",
           "score": "98-97"
         },
         {
           "date": "1993-01-02",
-          "winning_team": "Pistons",
-          "losing_team": "Magic",
+          "winning_team": "Clippers",
+          "losing_team": "Knicks",
           "score": "98-97"
         },
         {
@@ -113666,14 +113666,14 @@
         },
         {
           "date": "1990-02-16",
-          "winning_team": "Spurs",
-          "losing_team": "Jazz",
+          "winning_team": "76ers",
+          "losing_team": "SuperSonics",
           "score": "100-96"
         },
         {
           "date": "1990-02-16",
-          "winning_team": "76ers",
-          "losing_team": "SuperSonics",
+          "winning_team": "Spurs",
+          "losing_team": "Jazz",
           "score": "100-96"
         },
         {
@@ -124267,14 +124267,14 @@
         },
         {
           "date": "1980-03-23",
-          "winning_team": "Nets",
-          "losing_team": "Celtics",
+          "winning_team": "Lakers",
+          "losing_team": "Jazz",
           "score": "101-96"
         },
         {
           "date": "1980-03-23",
-          "winning_team": "Lakers",
-          "losing_team": "Jazz",
+          "winning_team": "Nets",
+          "losing_team": "Celtics",
           "score": "101-96"
         },
         {
@@ -132896,14 +132896,14 @@
         },
         {
           "date": "1983-04-10",
-          "winning_team": "Warriors",
-          "losing_team": "Clippers",
+          "winning_team": "SuperSonics",
+          "losing_team": "Trail Blazers",
           "score": "102-93"
         },
         {
           "date": "1983-04-10",
-          "winning_team": "SuperSonics",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Warriors",
+          "losing_team": "Clippers",
           "score": "102-93"
         },
         {
@@ -137528,14 +137528,14 @@
         },
         {
           "date": "2005-03-30",
-          "winning_team": "Bulls",
-          "losing_team": "Bobcats",
+          "winning_team": "Wizards",
+          "losing_team": "Hawks",
           "score": "102-99"
         },
         {
           "date": "2005-03-30",
-          "winning_team": "Wizards",
-          "losing_team": "Hawks",
+          "winning_team": "Bulls",
+          "losing_team": "Bobcats",
           "score": "102-99"
         },
         {
@@ -149821,6 +149821,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2026-03-04",
+          "winning_team": "Thunder",
+          "losing_team": "Knicks",
+          "score": "103-100"
+        },
+        {
           "date": "2025-12-21",
           "winning_team": "Timberwolves",
           "losing_team": "Bucks",
@@ -150530,14 +150536,14 @@
         },
         {
           "date": "1978-11-24",
-          "winning_team": "Nuggets",
-          "losing_team": "SuperSonics",
+          "winning_team": "Nets",
+          "losing_team": "Jazz",
           "score": "103-100"
         },
         {
           "date": "1978-11-24",
-          "winning_team": "Nets",
-          "losing_team": "Jazz",
+          "winning_team": "Nuggets",
+          "losing_team": "SuperSonics",
           "score": "103-100"
         },
         {
@@ -160105,14 +160111,14 @@
         },
         {
           "date": "2016-03-02",
-          "winning_team": "Wizards",
-          "losing_team": "Timberwolves",
+          "winning_team": "Grizzlies",
+          "losing_team": "Kings",
           "score": "104-98"
         },
         {
           "date": "2016-03-02",
-          "winning_team": "Grizzlies",
-          "losing_team": "Kings",
+          "winning_team": "Wizards",
+          "losing_team": "Timberwolves",
           "score": "104-98"
         },
         {
@@ -163006,14 +163012,14 @@
         },
         {
           "date": "2006-03-08",
-          "winning_team": "Celtics",
-          "losing_team": "76ers",
+          "winning_team": "Bobcats",
+          "losing_team": "Warriors",
           "score": "104-101"
         },
         {
           "date": "2006-03-08",
-          "winning_team": "Bobcats",
-          "losing_team": "Warriors",
+          "winning_team": "Celtics",
+          "losing_team": "76ers",
           "score": "104-101"
         },
         {
@@ -169347,14 +169353,14 @@
         },
         {
           "date": "1984-11-03",
-          "winning_team": "Rockets",
-          "losing_team": "Knicks",
+          "winning_team": "Suns",
+          "losing_team": "Mavericks",
           "score": "105-93"
         },
         {
           "date": "1984-11-03",
-          "winning_team": "Suns",
-          "losing_team": "Mavericks",
+          "winning_team": "Rockets",
+          "losing_team": "Knicks",
           "score": "105-93"
         },
         {
@@ -171102,14 +171108,14 @@
         },
         {
           "date": "2007-11-07",
-          "winning_team": "Magic",
-          "losing_team": "Raptors",
+          "winning_team": "Hawks",
+          "losing_team": "Suns",
           "score": "105-96"
         },
         {
           "date": "2007-11-07",
-          "winning_team": "Hawks",
-          "losing_team": "Suns",
+          "winning_team": "Magic",
+          "losing_team": "Raptors",
           "score": "105-96"
         },
         {
@@ -174141,14 +174147,14 @@
         },
         {
           "date": "1978-03-22",
-          "winning_team": "Celtics",
-          "losing_team": "Cavaliers",
+          "winning_team": "Nets",
+          "losing_team": "Bulls",
           "score": "105-99"
         },
         {
           "date": "1978-03-22",
-          "winning_team": "Nets",
-          "losing_team": "Bulls",
+          "winning_team": "Celtics",
+          "losing_team": "Cavaliers",
           "score": "105-99"
         },
         {
@@ -176556,14 +176562,14 @@
         },
         {
           "date": "1987-03-21",
-          "winning_team": "Warriors",
-          "losing_team": "Suns",
+          "winning_team": "76ers",
+          "losing_team": "Bucks",
           "score": "105-102"
         },
         {
           "date": "1987-03-21",
-          "winning_team": "76ers",
-          "losing_team": "Bucks",
+          "winning_team": "Warriors",
+          "losing_team": "Suns",
           "score": "105-102"
         },
         {
@@ -185282,14 +185288,14 @@
         },
         {
           "date": "1994-01-05",
-          "winning_team": "SuperSonics",
-          "losing_team": "Clippers",
+          "winning_team": "Kings",
+          "losing_team": "Lakers",
           "score": "106-98"
         },
         {
           "date": "1994-01-05",
-          "winning_team": "Kings",
-          "losing_team": "Lakers",
+          "winning_team": "SuperSonics",
+          "losing_team": "Clippers",
           "score": "106-98"
         },
         {
@@ -186393,14 +186399,14 @@
         },
         {
           "date": "1972-12-29",
-          "winning_team": "Suns",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Bulls",
+          "losing_team": "Celtics",
           "score": "106-99"
         },
         {
           "date": "1972-12-29",
-          "winning_team": "Bulls",
-          "losing_team": "Celtics",
+          "winning_team": "Suns",
+          "losing_team": "Trail Blazers",
           "score": "106-99"
         },
         {
@@ -187961,14 +187967,14 @@
         },
         {
           "date": "1979-11-24",
-          "winning_team": "Warriors",
-          "losing_team": "Bulls",
+          "winning_team": "Celtics",
+          "losing_team": "Hawks",
           "score": "106-101"
         },
         {
           "date": "1979-11-24",
-          "winning_team": "Celtics",
-          "losing_team": "Hawks",
+          "winning_team": "Warriors",
+          "losing_team": "Bulls",
           "score": "106-101"
         },
         {
@@ -188188,6 +188194,12 @@
       "losing_score": 102,
       "occurred": true,
       "games": [
+        {
+          "date": "2026-03-04",
+          "winning_team": "76ers",
+          "losing_team": "Jazz",
+          "score": "106-102"
+        },
         {
           "date": "2026-03-01",
           "winning_team": "Cavaliers",
@@ -188544,14 +188556,14 @@
         },
         {
           "date": "2006-01-25",
-          "winning_team": "Kings",
-          "losing_team": "Knicks",
+          "winning_team": "Pistons",
+          "losing_team": "Bucks",
           "score": "106-102"
         },
         {
           "date": "2006-01-25",
-          "winning_team": "Pistons",
-          "losing_team": "Bucks",
+          "winning_team": "Kings",
+          "losing_team": "Knicks",
           "score": "106-102"
         },
         {
@@ -188700,14 +188712,14 @@
         },
         {
           "date": "1994-02-23",
-          "winning_team": "Jazz",
-          "losing_team": "Spurs",
+          "winning_team": "Nets",
+          "losing_team": "76ers",
           "score": "106-102"
         },
         {
           "date": "1994-02-23",
-          "winning_team": "Nets",
-          "losing_team": "76ers",
+          "winning_team": "Jazz",
+          "losing_team": "Spurs",
           "score": "106-102"
         },
         {
@@ -190484,14 +190496,14 @@
         },
         {
           "date": "1992-12-22",
-          "winning_team": "Celtics",
-          "losing_team": "Nets",
+          "winning_team": "Suns",
+          "losing_team": "Warriors",
           "score": "106-104"
         },
         {
           "date": "1992-12-22",
-          "winning_team": "Suns",
-          "losing_team": "Warriors",
+          "winning_team": "Celtics",
+          "losing_team": "Nets",
           "score": "106-104"
         },
         {
@@ -198203,14 +198215,14 @@
         },
         {
           "date": "1977-02-03",
-          "winning_team": "Trail Blazers",
-          "losing_team": "Pacers",
+          "winning_team": "Bulls",
+          "losing_team": "Spurs",
           "score": "107-98"
         },
         {
           "date": "1977-02-03",
-          "winning_team": "Bulls",
-          "losing_team": "Spurs",
+          "winning_team": "Trail Blazers",
+          "losing_team": "Pacers",
           "score": "107-98"
         },
         {
@@ -199795,14 +199807,14 @@
         },
         {
           "date": "1979-11-30",
-          "winning_team": "Spurs",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Bulls",
+          "losing_team": "Lakers",
           "score": "107-100"
         },
         {
           "date": "1979-11-30",
-          "winning_team": "Bulls",
-          "losing_team": "Lakers",
+          "winning_team": "Spurs",
+          "losing_team": "Trail Blazers",
           "score": "107-100"
         },
         {
@@ -204499,14 +204511,14 @@
         },
         {
           "date": "1990-02-25",
-          "winning_team": "Spurs",
-          "losing_team": "Clippers",
+          "winning_team": "Bulls",
+          "losing_team": "Nets",
           "score": "107-106"
         },
         {
           "date": "1990-02-25",
-          "winning_team": "Bulls",
-          "losing_team": "Nets",
+          "winning_team": "Spurs",
+          "losing_team": "Clippers",
           "score": "107-106"
         },
         {
@@ -225282,14 +225294,14 @@
         },
         {
           "date": "1990-12-29",
-          "winning_team": "Bucks",
-          "losing_team": "Knicks",
+          "winning_team": "Hornets",
+          "losing_team": "Magic",
           "score": "109-100"
         },
         {
           "date": "1990-12-29",
-          "winning_team": "Hornets",
-          "losing_team": "Magic",
+          "winning_team": "Bucks",
+          "losing_team": "Knicks",
           "score": "109-100"
         },
         {
@@ -225943,14 +225955,14 @@
         },
         {
           "date": "1994-11-19",
-          "winning_team": "Rockets",
-          "losing_team": "Nuggets",
+          "winning_team": "Spurs",
+          "losing_team": "Timberwolves",
           "score": "109-101"
         },
         {
           "date": "1994-11-19",
-          "winning_team": "Spurs",
-          "losing_team": "Timberwolves",
+          "winning_team": "Rockets",
+          "losing_team": "Nuggets",
           "score": "109-101"
         },
         {
@@ -230202,14 +230214,14 @@
         },
         {
           "date": "1977-02-04",
-          "winning_team": "Warriors",
-          "losing_team": "Suns",
+          "winning_team": "Bullets",
+          "losing_team": "SuperSonics",
           "score": "109-106"
         },
         {
           "date": "1977-02-04",
-          "winning_team": "Bullets",
-          "losing_team": "SuperSonics",
+          "winning_team": "Warriors",
+          "losing_team": "Suns",
           "score": "109-106"
         },
         {
@@ -251941,14 +251953,14 @@
         },
         {
           "date": "1983-03-22",
-          "winning_team": "Hawks",
-          "losing_team": "Pacers",
+          "winning_team": "Mavericks",
+          "losing_team": "Warriors",
           "score": "111-102"
         },
         {
           "date": "1983-03-22",
-          "winning_team": "Mavericks",
-          "losing_team": "Warriors",
+          "winning_team": "Hawks",
+          "losing_team": "Pacers",
           "score": "111-102"
         },
         {
@@ -256212,14 +256224,14 @@
         },
         {
           "date": "1980-01-09",
-          "winning_team": "Clippers",
-          "losing_team": "Bucks",
+          "winning_team": "Hawks",
+          "losing_team": "Cavaliers",
           "score": "111-107"
         },
         {
           "date": "1980-01-09",
-          "winning_team": "Hawks",
-          "losing_team": "Cavaliers",
+          "winning_team": "Clippers",
+          "losing_team": "Bucks",
           "score": "111-107"
         },
         {
@@ -265465,14 +265477,14 @@
         },
         {
           "date": "1994-11-05",
-          "winning_team": "Pacers",
-          "losing_team": "Celtics",
+          "winning_team": "Mavericks",
+          "losing_team": "Nets",
           "score": "112-103"
         },
         {
           "date": "1994-11-05",
-          "winning_team": "Mavericks",
-          "losing_team": "Nets",
+          "winning_team": "Pacers",
+          "losing_team": "Celtics",
           "score": "112-103"
         },
         {
@@ -267171,14 +267183,14 @@
         },
         {
           "date": "1973-03-25",
-          "winning_team": "Bullets",
-          "losing_team": "Hawks",
+          "winning_team": "Cavaliers",
+          "losing_team": "Bulls",
           "score": "112-105"
         },
         {
           "date": "1973-03-25",
-          "winning_team": "Cavaliers",
-          "losing_team": "Bulls",
+          "winning_team": "Bullets",
+          "losing_team": "Hawks",
           "score": "112-105"
         },
         {
@@ -267514,14 +267526,14 @@
         },
         {
           "date": "2013-11-30",
-          "winning_team": "Rockets",
-          "losing_team": "Spurs",
+          "winning_team": "Timberwolves",
+          "losing_team": "Mavericks",
           "score": "112-106"
         },
         {
           "date": "2013-11-30",
-          "winning_team": "Timberwolves",
-          "losing_team": "Mavericks",
+          "winning_team": "Rockets",
+          "losing_team": "Spurs",
           "score": "112-106"
         },
         {
@@ -280267,14 +280279,14 @@
         },
         {
           "date": "1986-02-22",
-          "winning_team": "Nuggets",
-          "losing_team": "Mavericks",
+          "winning_team": "Pistons",
+          "losing_team": "Trail Blazers",
           "score": "113-106"
         },
         {
           "date": "1986-02-22",
-          "winning_team": "Pistons",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Nuggets",
+          "losing_team": "Mavericks",
           "score": "113-106"
         },
         {
@@ -280465,14 +280477,14 @@
         },
         {
           "date": "1969-02-12",
-          "winning_team": "Celtics",
-          "losing_team": "Pistons",
+          "winning_team": "Hawks",
+          "losing_team": "Bucks",
           "score": "113-106"
         },
         {
           "date": "1969-02-12",
-          "winning_team": "Hawks",
-          "losing_team": "Bucks",
+          "winning_team": "Celtics",
+          "losing_team": "Pistons",
           "score": "113-106"
         },
         {
@@ -287201,14 +287213,14 @@
         },
         {
           "date": "1985-11-27",
-          "winning_team": "Bucks",
-          "losing_team": "Hawks",
+          "winning_team": "Jazz",
+          "losing_team": "Bulls",
           "score": "114-96"
         },
         {
           "date": "1985-11-27",
-          "winning_team": "Jazz",
-          "losing_team": "Bulls",
+          "winning_team": "Bucks",
+          "losing_team": "Hawks",
           "score": "114-96"
         },
         {
@@ -293026,14 +293038,14 @@
         },
         {
           "date": "1977-01-08",
-          "winning_team": "Cavaliers",
-          "losing_team": "Bullets",
+          "winning_team": "Warriors",
+          "losing_team": "Jazz",
           "score": "114-107"
         },
         {
           "date": "1977-01-08",
-          "winning_team": "Warriors",
-          "losing_team": "Jazz",
+          "winning_team": "Cavaliers",
+          "losing_team": "Bullets",
           "score": "114-107"
         },
         {
@@ -296992,14 +297004,14 @@
         },
         {
           "date": "1987-01-31",
-          "winning_team": "Clippers",
-          "losing_team": "Jazz",
+          "winning_team": "Pistons",
+          "losing_team": "Knicks",
           "score": "114-113"
         },
         {
           "date": "1987-01-31",
-          "winning_team": "Pistons",
-          "losing_team": "Knicks",
+          "winning_team": "Clippers",
+          "losing_team": "Jazz",
           "score": "114-113"
         },
         {
@@ -302177,14 +302189,14 @@
         },
         {
           "date": "1986-02-28",
-          "winning_team": "Lakers",
-          "losing_team": "Suns",
+          "winning_team": "Pistons",
+          "losing_team": "Hawks",
           "score": "115-103"
         },
         {
           "date": "1986-02-28",
-          "winning_team": "Pistons",
-          "losing_team": "Hawks",
+          "winning_team": "Lakers",
+          "losing_team": "Suns",
           "score": "115-103"
         },
         {
@@ -306371,14 +306383,14 @@
         },
         {
           "date": "1979-03-20",
-          "winning_team": "Trail Blazers",
-          "losing_team": "Clippers",
+          "winning_team": "Hawks",
+          "losing_team": "Cavaliers",
           "score": "115-109"
         },
         {
           "date": "1979-03-20",
-          "winning_team": "Hawks",
-          "losing_team": "Cavaliers",
+          "winning_team": "Trail Blazers",
+          "losing_team": "Clippers",
           "score": "115-109"
         },
         {
@@ -315970,14 +315982,14 @@
         },
         {
           "date": "1989-01-21",
-          "winning_team": "Suns",
-          "losing_team": "Bulls",
+          "winning_team": "Bucks",
+          "losing_team": "Nuggets",
           "score": "116-107"
         },
         {
           "date": "1989-01-21",
-          "winning_team": "Bucks",
-          "losing_team": "Nuggets",
+          "winning_team": "Suns",
+          "losing_team": "Bulls",
           "score": "116-107"
         },
         {
@@ -326810,14 +326822,14 @@
         },
         {
           "date": "2017-03-24",
-          "winning_team": "Rockets",
-          "losing_team": "Pelicans",
+          "winning_team": "76ers",
+          "losing_team": "Bulls",
           "score": "117-107"
         },
         {
           "date": "2017-03-24",
-          "winning_team": "76ers",
-          "losing_team": "Bulls",
+          "winning_team": "Rockets",
+          "losing_team": "Pelicans",
           "score": "117-107"
         },
         {
@@ -327681,14 +327693,14 @@
         },
         {
           "date": "1971-03-07",
-          "winning_team": "Bullets",
-          "losing_team": "Suns",
+          "winning_team": "Lakers",
+          "losing_team": "Bulls",
           "score": "117-108"
         },
         {
           "date": "1971-03-07",
-          "winning_team": "Lakers",
-          "losing_team": "Bulls",
+          "winning_team": "Bullets",
+          "losing_team": "Suns",
           "score": "117-108"
         },
         {
@@ -332944,6 +332956,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2026-03-04",
+          "winning_team": "Hornets",
+          "losing_team": "Celtics",
+          "score": "118-89"
+        },
+        {
           "date": "2025-03-20",
           "winning_team": "Bucks",
           "losing_team": "Lakers",
@@ -334984,14 +335002,14 @@
         },
         {
           "date": "1981-01-25",
-          "winning_team": "Trail Blazers",
-          "losing_team": "Spurs",
+          "winning_team": "Bullets",
+          "losing_team": "Nets",
           "score": "118-100"
         },
         {
           "date": "1981-01-25",
-          "winning_team": "Bullets",
-          "losing_team": "Nets",
+          "winning_team": "Trail Blazers",
+          "losing_team": "Spurs",
           "score": "118-100"
         },
         {
@@ -338202,14 +338220,14 @@
         },
         {
           "date": "1988-03-23",
-          "winning_team": "SuperSonics",
-          "losing_team": "Trail Blazers",
+          "winning_team": "Nuggets",
+          "losing_team": "Clippers",
           "score": "118-108"
         },
         {
           "date": "1988-03-23",
-          "winning_team": "Nuggets",
-          "losing_team": "Clippers",
+          "winning_team": "SuperSonics",
+          "losing_team": "Trail Blazers",
           "score": "118-108"
         },
         {
@@ -340161,14 +340179,14 @@
         },
         {
           "date": "1969-12-21",
-          "winning_team": "Bucks",
-          "losing_team": "Suns",
+          "winning_team": "Hawks",
+          "losing_team": "Bulls",
           "score": "118-111"
         },
         {
           "date": "1969-12-21",
-          "winning_team": "Hawks",
-          "losing_team": "Bulls",
+          "winning_team": "Bucks",
+          "losing_team": "Suns",
           "score": "118-111"
         },
         {
@@ -341652,14 +341670,14 @@
         },
         {
           "date": "1979-12-04",
-          "winning_team": "Knicks",
-          "losing_team": "Suns",
+          "winning_team": "Celtics",
+          "losing_team": "Pistons",
           "score": "118-114"
         },
         {
           "date": "1979-12-04",
-          "winning_team": "Celtics",
-          "losing_team": "Pistons",
+          "winning_team": "Knicks",
+          "losing_team": "Suns",
           "score": "118-114"
         },
         {
@@ -351969,14 +351987,14 @@
         },
         {
           "date": "1982-11-06",
-          "winning_team": "76ers",
-          "losing_team": "Celtics",
+          "winning_team": "Bullets",
+          "losing_team": "Pacers",
           "score": "119-115"
         },
         {
           "date": "1982-11-06",
-          "winning_team": "Bullets",
-          "losing_team": "Pacers",
+          "winning_team": "76ers",
+          "losing_team": "Celtics",
           "score": "119-115"
         },
         {
@@ -360475,14 +360493,14 @@
         },
         {
           "date": "1980-03-05",
-          "winning_team": "76ers",
-          "losing_team": "Pacers",
+          "winning_team": "Pistons",
+          "losing_team": "Knicks",
           "score": "120-113"
         },
         {
           "date": "1980-03-05",
-          "winning_team": "Pistons",
-          "losing_team": "Knicks",
+          "winning_team": "76ers",
+          "losing_team": "Pacers",
           "score": "120-113"
         },
         {
@@ -368968,14 +368986,14 @@
         },
         {
           "date": "1978-12-20",
-          "winning_team": "Nuggets",
-          "losing_team": "Jazz",
+          "winning_team": "Hawks",
+          "losing_team": "Knicks",
           "score": "121-112"
         },
         {
           "date": "1978-12-20",
-          "winning_team": "Hawks",
-          "losing_team": "Knicks",
+          "winning_team": "Nuggets",
+          "losing_team": "Jazz",
           "score": "121-112"
         },
         {
@@ -373973,14 +373991,14 @@
         },
         {
           "date": "1992-04-14",
-          "winning_team": "Warriors",
-          "losing_team": "Timberwolves",
+          "winning_team": "Suns",
+          "losing_team": "SuperSonics",
           "score": "122-100"
         },
         {
           "date": "1992-04-14",
-          "winning_team": "Suns",
-          "losing_team": "SuperSonics",
+          "winning_team": "Warriors",
+          "losing_team": "Timberwolves",
           "score": "122-100"
         },
         {
@@ -378209,6 +378227,12 @@
       "losing_score": 114,
       "occurred": true,
       "games": [
+        {
+          "date": "2026-03-04",
+          "winning_team": "Trail Blazers",
+          "losing_team": "Grizzlies",
+          "score": "122-114"
+        },
         {
           "date": "2025-03-16",
           "winning_team": "Nets",
@@ -414112,14 +414136,14 @@
         },
         {
           "date": "1991-03-15",
-          "winning_team": "Lakers",
-          "losing_team": "Nuggets",
+          "winning_team": "Hawks",
+          "losing_team": "Mavericks",
           "score": "127-117"
         },
         {
           "date": "1991-03-15",
-          "winning_team": "Hawks",
-          "losing_team": "Mavericks",
+          "winning_team": "Lakers",
+          "losing_team": "Nuggets",
           "score": "127-117"
         },
         {
@@ -420833,14 +420857,14 @@
         },
         {
           "date": "1962-02-17",
-          "winning_team": "Hawks",
-          "losing_team": "Warriors",
+          "winning_team": "Lakers",
+          "losing_team": "Knicks",
           "score": "128-121"
         },
         {
           "date": "1962-02-17",
-          "winning_team": "Lakers",
-          "losing_team": "Knicks",
+          "winning_team": "Hawks",
+          "losing_team": "Warriors",
           "score": "128-121"
         }
       ]
@@ -428744,6 +428768,12 @@
       "occurred": true,
       "games": [
         {
+          "date": "2026-03-04",
+          "winning_team": "Clippers",
+          "losing_team": "Pacers",
+          "score": "130-107"
+        },
+        {
           "date": "2025-02-21",
           "winning_team": "Thunder",
           "losing_team": "Jazz",
@@ -433712,6 +433742,12 @@
       "losing_score": 113,
       "occurred": true,
       "games": [
+        {
+          "date": "2026-03-04",
+          "winning_team": "Hawks",
+          "losing_team": "Bucks",
+          "score": "131-113"
+        },
         {
           "date": "2022-12-11",
           "winning_team": "76ers",
